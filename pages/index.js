@@ -8,7 +8,11 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-red-300">asdadsd</div>
+      <div className="flex flex-col bg-black text-white flex-grow items-stretch text-center justify-between	w-screen">
+        <div className="text-4xl p-20">Hi, I'm Navin Kodag</div>
+        <div className="text-4xl">Hi, I'm Navin Kodag</div>
+        <div className="text-4xl">Hi, I'm Navin Kodag</div>
+      </div>
     </div>
   );
 }
