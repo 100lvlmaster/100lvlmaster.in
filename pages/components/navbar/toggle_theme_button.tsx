@@ -16,13 +16,11 @@ export const ToggleThemeButton = () => {
   useEffect(() => onChangeTheme(getTheme()), []);
   ///
   return (
-    <div className="p-2 rounded dark:bg-gray-800 bg-gray-200 select-none">
-      <img
-        height="20"
-        width="20"
-        onClick={() => onChangeTheme(theme === "dark" ? "light" : "dark")}
-        src={imgUrl}
-      ></img>
+    <div
+      className="p-2 rounded dark:bg-gray-800 bg-gray-200 select-none"
+      onClick={() => onChangeTheme(theme === "dark" ? "light" : "dark")}
+    >
+      <img height="20" width="20" src={imgUrl}></img>
     </div>
   );
 };

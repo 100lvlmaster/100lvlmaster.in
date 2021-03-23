@@ -11,12 +11,18 @@ export const HomePage = () => {
           type="image/x-icon"
         ></link>
       </Head>
-      <div className="dark:bg-black dark:text-white text-black bg-white flex flex-col justify-between	 h-screen">
+      <div className="dark:bg-black dark:text-white text-black bg-white flex flex-col justify-between	h-screen p-10">
         <NavBar />
-        <div className="self-center	">Hi, I'm Navin Kodag</div>
-        <div className="p-10 flex flex-row justify-end">
-          <span>my work</span>
-          <img src="" />
+        <div className="">
+          Hi, I'm Navin Kodag
+          <br />
+          I'm a developer
+          <br />I design, create and optimize
+        </div>
+
+        <div className=" flex flex-row justify-end align-items-baseline">
+          <span className="pr-2">my work</span>
+          <img className="h-10 w-10 " src="/assets/down-arrow-white.svg" />
         </div>
       </div>
     </div>
