@@ -5,6 +5,11 @@ export const HomePage = () => {
     <div>
       <Head>
         <title>Henlo</title>
+        <link
+          rel="icon"
+          href="/assets/website_title_link.png"
+          type="image/x-icon"
+        ></link>
       </Head>
       <div className="dark:bg-black dark:text-white text-black bg-white flex flex-col justify-between	 h-screen">
         <NavBar />
