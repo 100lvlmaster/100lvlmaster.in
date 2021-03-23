@@ -9,6 +9,9 @@
     "paths": {
       "@utils/*": [
         "./utils/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
       ]
     },
     "allowJs": true,
