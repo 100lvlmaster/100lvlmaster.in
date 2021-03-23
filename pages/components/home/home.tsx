@@ -1,6 +1,21 @@
 import Head from "next/head";
-import { NavBar } from "../navbar/navbar";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { saveTheme, getTheme } from "../../../utils/theme_helper";
+import { ToggleThemeButton } from "../navbar/toggle_theme_button";
+// import { NavBar } from "../navbar/navbar";
 export const HomePage = () => {
+  const [imgUrl, toggleImgUrl] = useState("/assets/sun.svg");
+  const { theme, setTheme } = useTheme();
+  /// Change theme
+  const onChangeTheme = (val: string) => {
+    setTheme(val);
+    saveTheme(val);
+    toggleImgUrl(val === "dark" ? "/assets/sun.svg" : "/assets/moon.svg");
+  };
+  /// Call on mount
+  useEffect(() => onChangeTheme(getTheme()), []);
+  ///
   return (
     <div>
       <Head>
@@ -12,7 +27,17 @@ export const HomePage = () => {
         ></link>
       </Head>
       <div className="dark:bg-black dark:text-white text-black bg-white flex flex-col justify-between	h-screen p-10">
-        <NavBar />
+        <div className="fixed flex flex-row items-center">
+          <ToggleThemeButton
+            imgUrl={imgUrl}
+            onToggle={() => onChangeTheme(theme == "dark" ? "light" : "dark")}
+          />
+          <div className="flex-grow"></div>
+          <span className="pl-5">about</span>
+          <span className="pl-5">contact</span>
+          <span className="pl-5">work</span>
+        </div>
+        <span></span>
         <div className="">
           Hi, I'm Navin Kodag
           <br />
@@ -20,9 +45,16 @@ export const HomePage = () => {
           <br />I design, create and optimize
         </div>
 
-        <div className=" flex flex-row justify-end align-items-baseline">
+        <div className="pb-10 flex flex-row justify-end align-items-baseline">
           <span className="pr-2">my work</span>
-          <img className="h-10 w-10 " src="/assets/down-arrow-white.svg" />
+          <img
+            className="h-10 w-10 "
+            src={
+              (theme ?? "dark") == "dark"
+                ? "/assets/down-arrow-white.svg"
+                : "/assets/down-arrow.svg"
+            }
+          />
         </div>
       </div>
     </div>
