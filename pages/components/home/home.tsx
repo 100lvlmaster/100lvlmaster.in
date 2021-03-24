@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { saveTheme, getTheme } from "../../../utils/theme_helper";
 import { ToggleThemeButton } from "../navbar/toggle_theme_button";
+import { NowPlaying } from "./now_playing";
 // import { NavBar } from "../navbar/navbar";
 export const HomePage = () => {
   const [imgUrl, toggleImgUrl] = useState("/assets/sun.svg");
@@ -27,17 +28,16 @@ export const HomePage = () => {
         ></link>
       </Head>
       <div className="dark:bg-black dark:text-white text-black bg-white flex flex-col justify-between	h-screen p-10">
-        <div className="fixed flex flex-row items-center">
+        <div className=" flex flex-row items-center">
           <ToggleThemeButton
             imgUrl={imgUrl}
             onToggle={() => onChangeTheme(theme == "dark" ? "light" : "dark")}
           />
-          <div className="flex-grow"></div>
+          <span className="flex-grow"></span>
           <span className="pl-5">about</span>
           <span className="pl-5">contact</span>
           <span className="pl-5">work</span>
         </div>
-        <span></span>
         <div className="">
           Hi, I'm Navin Kodag
           <br />
@@ -57,6 +57,7 @@ export const HomePage = () => {
           />
         </div>
       </div>
+      <NowPlaying />
     </div>
   );
 };
