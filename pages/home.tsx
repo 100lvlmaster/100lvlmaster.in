@@ -4,7 +4,7 @@ import { Footer } from "../components/footer/footer";
 const HomePage = () => {
   return (
     <div>
-      <Container id="home" className="w-screen h-screen">
+      <Container id="home" className="h-screen">
         <Spacer></Spacer>
         <span>
           <span className="text-xl pb-20">Hi, I'm Navin Kodag,</span>
@@ -13,12 +13,13 @@ const HomePage = () => {
             I'm a developer.
             <br />I design, create and optimize.
           </span>
-          <br></br>
-          <br></br>
-          <p className="text-sm dark:text-gray-400 text-gray-600">
+          <br />
+          <br />
+          <p className="text-sm dark:text-gray-400 text-gray-600 pr-10">
             I see, you've stumbled upon my small kingdom on the internet.
-            <br></br>I write, read, listen and everything in between.
-            <span> Feel free to contact</span>
+            <br />I write, read, listen and everything in between.
+            <br />
+            <span> Feel free to contact me for projects</span>
           </p>
         </span>
         <Spacer></Spacer>
@@ -26,8 +27,8 @@ const HomePage = () => {
           <span className="pr-2">my work</span>
           <Link href="/work">
             <svg
-              width="35"
-              height="50"
+              height="30"
+              width="30"
               xmlns="http://www.w3.org/2000/svg"
               fillRule="evenodd"
               clipRule="evenodd"
@@ -38,7 +39,6 @@ const HomePage = () => {
           </Link>
         </div>
       </Container>
-      <Container id="about"></Container>
       <Footer></Footer>
     </div>
   );

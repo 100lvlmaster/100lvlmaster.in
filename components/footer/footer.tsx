@@ -15,6 +15,11 @@ export const Footer = () => {
         <div className="flex  flex-row ">
           <span>About</span>
         </div>
+      </Link>{" "}
+      <Link href="/work">
+        <div className="flex  flex-row ">
+          <span>Work</span>
+        </div>
       </Link>
       <a target="_blank" href="https://discord.com/users/0821">
         <div className="flex flex-row space-x-2">

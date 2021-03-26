@@ -5,12 +5,14 @@ export const Container = (props) => {
     <div
       id={props.id}
       className={
-        "dark:bg-black w-4/5 dark:text-white flex flex-col w-screen text-black bg-white "
+        "dark:bg-black dark:text-white text-black bg-white md:pl-80 md:pr-80"
       }
     >
       <NavBar />
       <div
-        className={"flex flex-col h-screen p-10 pt-28 ".concat(props.className)}
+        className={
+          "flex flex-col justify-items-stretch p-10 pt-28 " + props.className
+        }
       >
         {props.children}
       </div>
