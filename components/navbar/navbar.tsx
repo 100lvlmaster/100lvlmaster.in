@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useEffect } from "react";
 import { saveTheme, getTheme } from "../../utils/theme_helper";
 //
@@ -46,8 +47,13 @@ export const NavBar = () => {
         )}
       </button>
       <span className="flex-grow"></span>
-      <span className="pl-5">about</span>
-      <span className="pl-5">contact</span>
+      <Link href="#about">
+        <span className="pl-5">about</span>
+      </Link>
+
+      <Link href="#contact">
+        <span className="pl-5">contact</span>
+      </Link>
       <span className="pl-5">work</span>
     </nav>
   );

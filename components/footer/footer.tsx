@@ -1,7 +1,10 @@
 import Link from "next/link";
 export const Footer = () => {
   return (
-    <div className="dark:bg-black dark:text-white text-black bg-white flex flex-col pl-10 pb-10 space-y-3">
+    <div
+      id="contact"
+      className="dark:bg-black dark:text-white text-black bg-white flex flex-col pl-10 pb-10 space-y-3"
+    >
       <Link href="#home">
         <div className="flex flex-row">
           <div></div>

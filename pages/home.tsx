@@ -3,8 +3,8 @@ import { Container, Spacer } from "../components/container";
 import { Footer } from "../components/footer/footer";
 const HomePage = () => {
   return (
-    <div id="home">
-      <Container className="w-screen h-screen">
+    <div>
+      <Container id="home" className="w-screen h-screen">
         <Spacer></Spacer>
         <span>
           Hi, I'm Navin Kodag
@@ -31,6 +31,7 @@ const HomePage = () => {
           </Link>
         </div>
       </Container>
+      <Container id="about"></Container>
       <Footer></Footer>
     </div>
   );
