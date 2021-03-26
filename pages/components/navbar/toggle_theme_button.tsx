@@ -1,5 +1,5 @@
 //
-export const ToggleThemeButton = (props) => {
+const ToggleThemeButton = (props) => {
   return (
     <div
       onClick={props.onToggle}
@@ -9,3 +9,4 @@ export const ToggleThemeButton = (props) => {
     </div>
   );
 };
+export default ToggleThemeButton;
