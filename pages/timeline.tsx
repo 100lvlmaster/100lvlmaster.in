@@ -1,8 +1,14 @@
+import { Footer } from "../components/footer/footer";
+import { Container } from "../components/container";
 const TimeLine = () => {
   return (
-    <div>
+    <Container>
       <span>yes</span>
-    </div>
+      <div className="flex-grow">s</div>
+      <div className="">
+        <Footer />
+      </div>
+    </Container>
   );
 };
 export default TimeLine;
