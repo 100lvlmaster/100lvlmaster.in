@@ -1,11 +1,17 @@
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
+
 import { saveTheme, getTheme } from "../../utils/theme_helper";
+import { getRouteRegex } from "next/dist/next-server/lib/router/utils";
 //
 export const NavBar = () => {
   const mounted = true;
   const { theme, setTheme } = useTheme();
+
+  /// Router to get current route
+  const router = useRouter();
   /// Change theme
   const onChangeTheme = (val: string) => {
     setTheme(val);
@@ -15,7 +21,7 @@ export const NavBar = () => {
   useEffect(() => onChangeTheme(getTheme()), []);
   ///
   return (
-    <nav className="sticky-nav fixed flex flex-row  justify-between w-screen items-center p-8 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60">
+    <nav className="sticky-nav fixed flex flex-row  justify-between w-screen items-center p-8 md:my-8 mx-auto bg-white dark:bg-black dark:bg-opacity-90 bg-opacity-60">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>
@@ -46,15 +52,28 @@ export const NavBar = () => {
           </svg>
         )}
       </button>
-      <span className="flex-grow"></span>
-      <Link href="#about">
-        <span className="pl-5">about</span>
-      </Link>
 
-      <Link href="#contact">
-        <span className="pl-5">contact</span>
+      <span className="flex-grow"></span>
+      {router.route == "/about" ? (
+        ""
+      ) : (
+        <Link href="/about">
+          <span className="pl-5">about</span>
+        </Link>
+      )}
+      {router.route == "/" ? (
+        ""
+      ) : (
+        <Link href="/">
+          <span className="pl-5">home</span>
+        </Link>
+      )}
+      {/* <Link href="/">
+        <span className="pl-5">home</span>
+      </Link> */}
+      <Link href="/work">
+        <span className="pl-5">work</span>
       </Link>
-      <span className="pl-5">work</span>
     </nav>
   );
 };
