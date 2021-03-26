@@ -9,8 +9,10 @@ const HomePage = () => {
         <span>
           Hi, I'm Navin Kodag
           <br />
-          I'm a developer
-          <br />I design, create and optimize
+          <span className="dark:text-gray-400 text-gray-600">
+            I'm a developer
+            <br />I design, create and optimize
+          </span>
         </span>
         <Spacer></Spacer>
         <div className="pb-10 flex flex-row justify-end align-items-baseline">

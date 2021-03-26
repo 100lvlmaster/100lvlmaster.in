@@ -5,7 +5,8 @@ html,
 body {
   padding: 0;
   margin: 120;
-  font-family: "Montserrat", monospace;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", "Courier New", Courier, monospace;
 }
 
 a {
