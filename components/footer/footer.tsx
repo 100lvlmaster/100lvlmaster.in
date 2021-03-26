@@ -5,7 +5,7 @@ export const Footer = () => {
       id="contact"
       className="dark:bg-black dark:text-white text-black bg-white flex flex-col pl-10 pb-10 space-y-3"
     >
-      <Link href="/home">
+      <Link href="/">
         <div className="flex flex-row">
           <div></div>
           <span>Home</span>
