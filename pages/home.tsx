@@ -1,55 +1,36 @@
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { saveTheme, getTheme } from "../utils/theme_helper";
-import ToggleThemeButton from "../components/navbar/toggle_theme_button";
 import Link from "next/link";
 import { Container, Spacer } from "../components/container";
+import { Footer } from "../components/footer/footer";
 const HomePage = () => {
-  const [imgUrl, toggleImgUrl] = useState("/assets/sun.svg");
-  const { theme, setTheme } = useTheme();
-  /// Change theme
-  const onChangeTheme = (val: string) => {
-    setTheme(val);
-    saveTheme(val);
-    toggleImgUrl(val === "dark" ? "/assets/sun.svg" : "/assets/moon.svg");
-  };
-  /// Call on mount
-  useEffect(() => onChangeTheme(getTheme()), []);
-  ///
   return (
-    <Container>
-      <div className=" flex flex-row items-center">
-        <ToggleThemeButton
-          imgUrl={imgUrl}
-          onToggle={() => onChangeTheme(theme == "dark" ? "light" : "dark")}
-        />
-        <span className="flex-grow"></span>
-        <span className="pl-5">about</span>
-        <span className="pl-5">contact</span>
-        <span className="pl-5">work</span>
-      </div>
-      <Spacer></Spacer>
-      <div className="">
-        Hi, I'm Navin Kodag
-        <br />
-        I'm a developer
-        <br />I design, create and optimize
-      </div>
-      <Spacer></Spacer>
-      <div className="pb-10 flex flex-row justify-end align-items-baseline">
-        <span className="pr-2">my work</span>
-        <Link href="/timeline">
-          <img
-            className="h-10 w-10 "
-            src={
-              (theme ?? "dark") == "dark"
-                ? "/assets/down-arrow-white.svg"
-                : "/assets/down-arrow.svg"
-            }
-          />
-        </Link>
-      </div>
-    </Container>
+    <div id="home">
+      <Container className="w-screen h-screen">
+        <Spacer></Spacer>
+        <span>
+          Hi, I'm Navin Kodag
+          <br />
+          I'm a developer
+          <br />I design, create and optimize
+        </span>
+        <Spacer></Spacer>
+        <div className="pb-10 flex flex-row justify-end align-items-baseline">
+          <span className="pr-2">my work</span>
+          <Link href="/timeline">
+            <svg
+              width="35"
+              height="50"
+              xmlns="http://www.w3.org/2000/svg"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              fill="currentColor"
+            >
+              <path d="M24 12c0-6.623-5.377-12-12-12s-12 5.377-12 12 5.377 12 12 12 12-5.377 12-12zm-1 0c0-6.071-4.929-11-11-11s-11 4.929-11 11 4.929 11 11 11 11-4.929 11-11zm-11.5 4.828l-3.763-4.608-.737.679 5 6.101 5-6.112-.753-.666-3.747 4.604v-11.826h-1v11.828z" />
+            </svg>
+          </Link>
+        </div>
+      </Container>
+      <Footer></Footer>
+    </div>
   );
 };
 export default HomePage;

@@ -5,9 +5,6 @@ const TimeLine = () => {
     <Container>
       <span>yes</span>
       <div className="flex-grow">s</div>
-      <div className="">
-        <Footer />
-      </div>
     </Container>
   );
 };
