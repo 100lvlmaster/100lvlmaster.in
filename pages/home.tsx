@@ -7,7 +7,7 @@ const HomePage = () => {
       <Container id="home" className="h-screen">
         <Spacer></Spacer>
         <span>
-          <span className="text-xl pb-20">Hi, I'm Navin Kodag,</span>
+          <span className="text-3xl pb-20">Hi, I'm Navin Kodag,</span>
           <br />
           <span className="dark:text-gray-400 text-gray-600">
             I'm a developer.
