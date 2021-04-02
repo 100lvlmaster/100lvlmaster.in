@@ -32,7 +32,7 @@ const WorkPage = () => {
                         <img
                           key={key}
                           src={item.thumbnail}
-                          className="rounded pt-1 pb-1"
+                          className="rounded"
                           alt={`thumbnail-${item.thumbnail}`}
                         />
                         <span className="text-sm text-gray-600 dark:text-gray-400">
