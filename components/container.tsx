@@ -5,7 +5,7 @@ export const Container = (props) => {
   return (
     <div
       id={props.id}
-      className="dark:bg-black dark:text-white text-black w-screen bg-white lg:px-80  items-stretch justify-items-stretch"
+      className="dark:bg-black flex flex-col dark:text-white text-black w-screen bg-white items-stretch justify-items-stretch"
     >
       <NavBar />
       <div

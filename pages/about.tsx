@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <Container>
         <span className="text-2xl">about</span>
-        <div className="dark:text-gray-400 text-sm text-gray-800 pt-14">
+        <div className="dark:text-gray-400 text-sm text-gray-800 py-14">
           <p>
             {`
               I am a full-stack junior developer at mybytecode, 
@@ -26,7 +26,7 @@ const About = () => {
             date={"June/2019"}
             title={"Started pursuing a Bachelor's degree in computer science"}
             description={
-              "The time i had been waiting since 10th grade, who needs chemistry when i can make a twitter bot to tweet memes. Twitter meme bot goes brrrrr."
+              "The time i had been waiting since 10th grade, who needs chemistry when i can make a twitter bot tweet memes for me. Twitter meme-bot goes brrrrr."
             }
           />
           <Milestone
@@ -38,7 +38,7 @@ const About = () => {
             date={"July/2020"}
             title={"Joined mybytecode as an intern"}
             description={
-              <ul className="list-disc">
+              <ul className="list-disc list-disc space-y-2">
                 <li>
                   {` Worked on flutter with MVC architecture to make authentication
                   modules.`}
@@ -55,8 +55,7 @@ const About = () => {
                   {`Used ffmpeg to complete media manipulation operation`}{" "}
                 </li>
                 <li>
-                  {`Used firebase to design and create a realtime social media app
-`}{" "}
+                  {`Used firebase to design and create a realtime social media app`}
                 </li>
               </ul>
             }
@@ -64,7 +63,19 @@ const About = () => {
           <Milestone
             date={`October/2020`}
             title={`Promoted to junior developer`}
-            description={`A full stack meme client to render memes from reddit. Two asdsa asdas web clients, in react and svelte, And  a mobile client made with flutter`}
+            description={
+              <ul className="list-disc space-y-2">
+                <li>
+                  {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
+                </li>
+                <li>
+                  {`Handled development of two front-end mobile clients and a node.js backend 💯`}
+                </li>
+                <li>
+                  {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
+                </li>
+              </ul>
+            }
           ></Milestone>
         </Timeline>
       </Container>

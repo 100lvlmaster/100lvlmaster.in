@@ -23,7 +23,7 @@ export const Milestone = (props) => {
             />
           </svg>
         </div>
-        <div className="bg-black flex-grow dark:bg-white mx-2 w-1 rounded" />
+        <div className="bg-black flex-grow dark:bg-white mx-2 w-1" />
       </div>
       {/* text-> title and description */}
       <div className="flex flex-col flex-grow">
