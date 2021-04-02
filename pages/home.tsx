@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Container, Spacer } from "../components/container";
-import { Footer } from "../components/footer/footer";
 const HomePage = () => {
   return (
     <div>
@@ -39,7 +38,6 @@ const HomePage = () => {
           </Link>
         </div>
       </Container>
-      <Footer></Footer>
     </div>
   );
 };

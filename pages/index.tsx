@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Henlo</title>
+        <title>navinko</title>
         <link
           rel="icon"
           href="/assets/website_title_link.png"

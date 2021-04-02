@@ -1,9 +1,11 @@
 import Link from "next/link";
-export const Footer = () => {
+export const Footer = (props) => {
   return (
     <div
       id="contact"
-      className="dark:bg-black dark:text-white text-black bg-white flex flex-col pl-10 pb-10 space-y-3"
+      className={"dark:bg-black dark:text-white text-black bg-white flex flex-col space-y-3".concat(
+        ` ${props.className}`
+      )}
     >
       <Link href="/">
         <div className="flex flex-row">

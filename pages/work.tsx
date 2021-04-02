@@ -1,4 +1,3 @@
-import { Footer } from "../components/footer/footer";
 import { Container } from "../components/container";
 import { fetchArticles } from "../lib/medium";
 import { useEffect, useState } from "react";
@@ -23,6 +22,7 @@ const WorkPage = () => {
       <Container className="flex flex-col">
         <div className="flex flex-col">
           <h2>Side projects</h2>
+          <h2>Articles</h2>
           <ul>
             {isMounted
               ? articles.data.items.map((item: any, key: number) => (
@@ -46,7 +46,6 @@ const WorkPage = () => {
           </ul>
         </div>
       </Container>
-      <Footer />
     </div>
   );
 };
