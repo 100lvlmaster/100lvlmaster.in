@@ -21,7 +21,7 @@ export const NavBar = () => {
   useEffect(() => onChangeTheme(getTheme()), []);
   ///
   return (
-    <nav className="sticky-nav fixed flex flex-row w-screen justify-between items-center p-8 bg-white dark:bg-black  dark:bg-opacity-90 bg-opacity-60 ">
+    <nav className="sticky-nav sticky flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>
@@ -47,8 +47,7 @@ export const NavBar = () => {
           </svg>
         )}
       </button>
-      <div className="flex-grow"></div>
-      {/* <Spacer></Spacer> */}
+      <Spacer></Spacer>
 
       <Link href="/about">
         <span className="pl-5">about</span>

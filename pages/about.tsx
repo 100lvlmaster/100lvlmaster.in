@@ -1,10 +1,9 @@
-import "../components/container";
-
 import { Container, Spacer } from "../components/container";
+import { Timeline } from "../components/timeline";
 const About = () => {
   return (
     <div className="">
-      <Container className="h-screen items-center">
+      <Container className="items-center">
         <div className="flex flex-row text-xl">
           <p>About</p>
           <Spacer />
@@ -25,6 +24,7 @@ const About = () => {
           <br />
           <p>I've got experience using and writing REST APIs and GraphQL</p>
         </div>
+        <Timeline />
       </Container>
     </div>
   );
