@@ -20,7 +20,7 @@ const WorkPage = () => {
   return (
     <div>
       <Container className="flex flex-col">
-        <div className="flex flex-col">
+        <div className="flex  flex-col">
           <h2>Side projects</h2>
           <h2>Articles</h2>
           <ul>

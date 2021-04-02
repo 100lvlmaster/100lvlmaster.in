@@ -21,7 +21,7 @@ export const NavBar = () => {
   useEffect(() => onChangeTheme(getTheme()), []);
   ///
   return (
-    <nav className="sticky-nav sticky flex justify-between items-center max-w-4xl w-full p-8 my-0 md:my-8 mx-auto bg-white dark:bg-black bg-opacity-60">
+    <nav className="sticky-nav fixed flex justify-between items-center max-w-4xl w-full p-8 my-0 mx-auto bg-white dark:bg-black bg-opacity-60">
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>

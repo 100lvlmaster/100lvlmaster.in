@@ -94,7 +94,8 @@ export const Footer = (props) => {
           </svg>
           <span>Youtube</span>
         </div>
-      </a>{" "}
+      </a>
+      <span className="text-xs text-center pt-5 dark:text-gray-700">{`Made with Next.js & ❤️`}</span>
     </div>
   );
 };
