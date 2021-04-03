@@ -24,23 +24,42 @@ const HomePage = () => {
           </p>
         </span>
         <Spacer />
-        <div className="pb-20 flex flex-row justify-end align-items-baseline">
-          <span className="pr-2">my work</span>
-          <Link href="/work">
-            <svg
-              height="30"
-              width="30"
-              xmlns="http://www.w3.org/2000/svg"
-              fillRule="evenodd"
-              clipRule="evenodd"
-              fill="currentColor"
-            >
-              <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 12l-4.5 4.5 1.527 1.5 5.973-6-5.973-6-1.527 1.5 4.5 4.5z" />
-            </svg>
-          </Link>
+        <div className="pb-20 flex flex-row align-items-baseline">
+          <div>
+            <span className="pr-2">scroll</span>
+            <Link href="#timeline">
+              <svg
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="currentColor"
+              >
+                <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z" />
+              </svg>
+            </Link>
+          </div>
+          <Spacer />
+
+          <div>
+            <span className="pr-2">my work</span>
+            <Link href="/work">
+              <svg
+                height="30"
+                width="30"
+                xmlns="http://www.w3.org/2000/svg"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                fill="currentColor"
+              >
+                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 12l-4.5 4.5 1.527 1.5 5.973-6-5.973-6-1.527 1.5 4.5 4.5z" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </Container>
-      <Container hideNav={true}>
+      <Container id={"timeline"} hideNav={true}>
         {" "}
         <Timeline>
           <Milestone
