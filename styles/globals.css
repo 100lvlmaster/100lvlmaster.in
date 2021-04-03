@@ -15,8 +15,6 @@ a {
 }
 
 * {
-  font-family: monospace;
-
   box-sizing: border-box;
-  /* font-weight: 400; */
+  font-family: monospace;
 }

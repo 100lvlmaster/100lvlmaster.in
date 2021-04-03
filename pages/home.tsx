@@ -4,7 +4,7 @@ import { Milestone, Timeline } from "../components/timeline";
 const HomePage = () => {
   return (
     <div>
-      <Container id="home" className=" h-screen" showFooter={false}>
+      <Container id="home" className=" h-screen " showFooter={false}>
         <span className="pt-28">
           <span className="text-3xl pb-20">Hi, I'm Navin Kodag,</span>
           <br />
