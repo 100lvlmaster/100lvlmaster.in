@@ -13,7 +13,7 @@ export const Container = (props) => {
         <html lang={`en`} />
 
         <meta charSet="UTF-8" />
-        <meta name="description" content="Portfolio website" />
+        <meta name="description" content="navin's website" />
         <meta
           name="keywords"
           content="HTML, CSS, JavaScript,Next.js,Tailwind"
