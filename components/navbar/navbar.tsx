@@ -21,7 +21,9 @@ export const NavBar = () => {
   useEffect(() => onChangeTheme(getTheme()), []);
   ///
   return (
-    <nav className="sticky-nav fixed flex flex-row items-center p-8 lg:px-60 md:px-20 w-full bg-white bg-white dark:bg-black dark:bg-opacity-95 bg-opacity-80">
+    <nav
+      className={`sticky-nav text-base fixed flex flex-row items-center p-8 lg:px-60 md:px-20 w-full bg-white bg-white dark:bg-black dark:bg-opacity-95 bg-opacity-80`}
+    >
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
       </a>
@@ -56,7 +58,7 @@ export const NavBar = () => {
         <span className="pl-5">home</span>
       </Link>
       <Link href="/work">
-        <span className="pl-5">work</span>
+        <span className="pl-5 ">work</span>
       </Link>
     </nav>
   );
