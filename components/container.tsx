@@ -9,13 +9,17 @@ export const Container = (props) => {
     >
       <NavBar />
       <div
-        className={"flex flex-col justify-items-stretch text-lg pt-28 p-10"
+        className={"flex flex-col justify-items-stretch md:px-40 lg:px-80 text-lg pt-28 p-10"
           .concat(" ")
           .concat(props.className)}
       >
         {props.children}
       </div>
-      <Footer className="p-10" />
+      {props.showFooter ?? true ? (
+        <Footer className="p-10 md:px-40 lg:px-80" />
+      ) : (
+        ``
+      )}
     </div>
   );
 };

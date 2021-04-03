@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Container, Spacer } from "../components/container";
+import { Milestone, Timeline } from "../components/timeline";
 const HomePage = () => {
   return (
     <div>
-      <Container id="home" className="h-screen">
+      <Container id="home" className="h-screen" showFooter={false}>
         <Spacer></Spacer>
         <span>
           <span className="text-3xl pb-20">Hi, I'm Navin Kodag,</span>
@@ -37,6 +38,66 @@ const HomePage = () => {
             </svg>
           </Link>
         </div>
+      </Container>
+      <Container>
+        {" "}
+        <Timeline>
+          <Milestone
+            date={"June/2019"}
+            title={"Started pursuing a Bachelor's degree in computer science"}
+            description={
+              "The time i had been waiting since 10th grade, who needs chemistry when i can make a twitter bot tweet memes for me. Twitter meme-bot goes brrrrr."
+            }
+          />
+          <Milestone
+            date={`March/2020`}
+            title={`Launched maymay_v1`}
+            description={`A full stack meme client to render memes from reddit. Two web clients, in react and svelte, And  a mobile client made with flutter.`}
+          ></Milestone>
+          <Milestone
+            date={"July/2020"}
+            title={"Joined mybytecode as an intern"}
+            description={
+              <ul className="list-disc list-disc space-y-2">
+                <li>
+                  {` Worked on flutter with MVC architecture to make authentication
+                  modules.`}
+                </li>
+                <li>
+                  {` Helped to create and maintain a product similar to inshorts
+                  and hacker news`}
+                </li>
+                <li>
+                  {`Used laravel to paginate REST API responses, reducing load
+                  times by`}
+                </li>
+                <li>
+                  {`Used ffmpeg to complete media manipulation operation`}{" "}
+                </li>
+                <li>
+                  {`Used firebase to design and create a realtime social media app`}
+                </li>
+              </ul>
+            }
+          />
+          <Milestone
+            date={`October/2020`}
+            title={`Promoted to junior developer`}
+            description={
+              <ul className="list-disc space-y-2">
+                <li>
+                  {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
+                </li>
+                <li>
+                  {`Handled development of two front-end mobile clients and a node.js backend 💯`}
+                </li>
+                <li>
+                  {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
+                </li>
+              </ul>
+            }
+          ></Milestone>
+        </Timeline>
       </Container>
     </div>
   );

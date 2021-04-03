@@ -28,7 +28,7 @@ const WorkPage = () => {
               <Card
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 title={`Maymay v2`}
-                thumbnailSize={"h-28 w-28"}
+                thumbnailSize={"h-28 w-25"}
                 thumbnail={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 description={`maymay is an open source flutter app made to spawn random memes from reddit and have the user scroll through them as if a social media app but purely for memes.`}
               />{" "}
