@@ -11,11 +11,7 @@ export const Container = (props) => {
       <Head>
         <title>navinko</title>
         <html lang={`en`} />
-        <link
-          rel="icon"
-          href="/assets/website_title_link.png"
-          type="image/x-icon"
-        />
+
         <meta charSet="UTF-8" />
         <meta name="description" content="Portfolio website" />
         <meta
