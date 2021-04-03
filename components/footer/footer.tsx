@@ -23,7 +23,7 @@ export const Footer = (props) => {
           <span>{`Work`}</span>
         </div>
       </Link>
-      <a target="_blank" href="https://discord.com/users/0821">
+      <a rel="noreferrer" target="_blank" href="https://discord.com/users/0821">
         <div className="flex flex-row space-x-2">
           <svg
             width="24"
@@ -38,7 +38,11 @@ export const Footer = (props) => {
           <span>{`Discord`}</span>
         </div>
       </a>
-      <a target="_blank" href="https://medium.com/@100lvlmaster">
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://medium.com/@100lvlmaster"
+      >
         <div className="flex flex-row space-x-2">
           <svg
             width="24"
@@ -53,7 +57,11 @@ export const Footer = (props) => {
           <span>{`Medium`}</span>
         </div>
       </a>
-      <a href="https://github.com/100lvlmaster" target="_blank">
+      <a
+        rel="noreferrer"
+        href="https://github.com/100lvlmaster"
+        target="_blank"
+      >
         <div className="flex flex-row space-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +75,11 @@ export const Footer = (props) => {
           <span>Github</span>
         </div>
       </a>
-      <a href="https://www.linkedin.com/in/navin-kodag/" target="_blank">
+      <a
+        rel="noreferrer"
+        href="https://www.linkedin.com/in/navin-kodag/"
+        target="_blank"
+      >
         <div className="flex flex-row space-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +93,11 @@ export const Footer = (props) => {
           <span>{`LinkedIn`}</span>
         </div>
       </a>
-      <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
         <div className="flex flex-row space-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +111,7 @@ export const Footer = (props) => {
           <span>{`Youtube`}</span>
         </div>
       </a>
-      <span className="text-xs text-center pt-5 dark:text-gray-600">
+      <span className="text-xs text-center pt-5 dark:text-gray-400">
         {`Made with Next.js & ❤️`}
       </span>
     </div>

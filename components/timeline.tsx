@@ -28,7 +28,9 @@ export const Milestone = (props) => {
       {/* text-> title and description */}
       <div className="flex flex-col flex-grow">
         <div className="text-sm">{props.date}</div>
-        <div className="text-lg py-2">{props.title}</div>
+        <div className="text-lg text-black dark:text-white py-2">
+          {props.title}
+        </div>
         <div className="flex-grow text-sm dark:text-gray-400 text-gray-600">
           {props.description}
         </div>

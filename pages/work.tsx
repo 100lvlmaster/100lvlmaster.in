@@ -72,7 +72,7 @@ export default WorkPage;
 const Card = (props) => {
   return (
     <li key={props.guid}>
-      <a href={props.href} target="_blank_">
+      <a rel="noreferrer" href={props.href} target="_blank_">
         <div className="pt-5 pb-5">
           <img
             src={props.thumbnail}
