@@ -26,6 +26,7 @@ const WorkPage = () => {
           <div>
             <ul>
               <Card
+                href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 title={`Maymay v2`}
                 thumbnailSize={"h-28 w-25"}
@@ -33,6 +34,7 @@ const WorkPage = () => {
                 description={`maymay is an open source flutter app made to spawn random memes from reddit and have the user scroll through them as if a social media app but purely for memes.`}
               />{" "}
               <Card
+                href="https://github.com/100lvlmaster/stacked_page_view"
                 key={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
                 title={`Stacked page view`}
                 thumbnailSize={"h-28 w-28"}
