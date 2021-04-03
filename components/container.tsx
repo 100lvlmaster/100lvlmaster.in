@@ -7,7 +7,7 @@ export const Container = (props) => {
       id={props.id}
       className="dark:bg-black flex flex-col dark:text-white text-black w-screen bg-white items-stretch justify-items-stretch"
     >
-      <NavBar />
+      {props.hideNav ?? false ? `` : <NavBar />}
       <div
         className={"flex flex-col justify-items-stretch md:px-40 lg:px-80 text-lg pt-28 p-10"
           .concat(" ")

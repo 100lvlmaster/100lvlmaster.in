@@ -78,7 +78,7 @@ const Card = (props) => {
             alt={`${props.thumbnail}`}
           />
           <div className="text-sm flex flex-row py-4 text-gray-600 dark:text-gray-400">
-            <div className={`flex flex-col`}>
+            <div className={`flex flex-col flex-grow`}>
               <span className={`text-black dark:text-white text-lg`}>
                 {props.title}
               </span>

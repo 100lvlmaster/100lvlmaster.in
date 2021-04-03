@@ -4,11 +4,12 @@ import { Milestone, Timeline } from "../components/timeline";
 const HomePage = () => {
   return (
     <div>
-      <Container id="home" className="h-screen" showFooter={false}>
-        <Spacer></Spacer>
-        <span>
+      <Container id="home" className=" h-screen" showFooter={false}>
+        <span className="pt-28">
           <span className="text-3xl pb-20">Hi, I'm Navin Kodag,</span>
           <br />
+          <Spacer />
+
           <span className="dark:text-gray-400 text-gray-600">
             I'm a developer.
             <br />I design, create and optimize.
@@ -22,8 +23,8 @@ const HomePage = () => {
             <span> Feel free to contact me for projects</span>
           </p>
         </span>
-        <Spacer></Spacer>
-        <div className="pb-10 flex flex-row justify-end align-items-baseline">
+        <Spacer />
+        <div className="pb-20 flex flex-row justify-end align-items-baseline">
           <span className="pr-2">my work</span>
           <Link href="/work">
             <svg
@@ -39,7 +40,7 @@ const HomePage = () => {
           </Link>
         </div>
       </Container>
-      <Container>
+      <Container hideNav={true}>
         {" "}
         <Timeline>
           <Milestone
