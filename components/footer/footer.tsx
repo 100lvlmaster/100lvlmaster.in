@@ -111,8 +111,11 @@ export const Footer = (props) => {
           <span>{`Youtube`}</span>
         </div>
       </a>
-      <span className="text-xs text-center pt-5 dark:text-gray-400">
-        {`Made with Next.js & ❤️`}
+      <span className="text-xs flex flex-col text-center pt-5 dark:text-gray-400">
+        {`Made with Next.js & ❤️ `}
+        <div className="text-xs">
+          {`© 2021 Navin Kodag. All rights reserved`}.
+        </div>
       </span>
     </div>
   );
