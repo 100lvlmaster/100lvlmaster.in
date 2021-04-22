@@ -26,13 +26,21 @@ const WorkPage = () => {
           <div>
             <ul>
               <Card
+                href="https://github.com/100lvlmaster/youtube_metadata"
+                key={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
+                title={`Youtube Metadata`}
+                thumbnailSize={"h-28 w-25"}
+                thumbnail={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
+                description={`A flutter package to fetch a videos metadata from the link using the oembed API`}
+              />{" "}
+              <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 title={`Maymay v2`}
                 thumbnailSize={"h-28 w-25"}
                 thumbnail={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 description={`maymay is an open source flutter app made to spawn random memes from reddit and have the user scroll through them as if a social media app but purely for memes.`}
-              />{" "}
+              />
               <Card
                 href="https://github.com/100lvlmaster/stacked_page_view"
                 key={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
