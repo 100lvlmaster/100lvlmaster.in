@@ -21,18 +21,10 @@ const WorkPage = () => {
   return (
     <div>
       <Container className="flex flex-col">
-        <div className="flex  flex-col">
+        <div className=" flex  flex-col">
           <h2>Side projects</h2>
           <div>
-            <ul>
-              <Card
-                href="https://github.com/100lvlmaster/youtube_metadata"
-                key={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
-                title={`Youtube Metadata`}
-                thumbnailSize={"h-28 w-25"}
-                thumbnail={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
-                description={`A flutter package to fetch a videos metadata from the link using the oembed API`}
-              />{" "}
+            <ul className="lg:grid grid-cols-2 space-x-5 justify-items-start">
               <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
@@ -49,17 +41,26 @@ const WorkPage = () => {
                 thumbnail={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
                 description={`A Flutter pacakge that provides vertical pageview carousel in flutter`}
               />
+              <Card
+                href="https://github.com/100lvlmaster/youtube_metadata"
+                key={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
+                title={`Youtube Metadata`}
+                thumbnailSize={"h-28 w-25"}
+                thumbnail={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
+                description={`A flutter package to fetch a videos metadata from the link using the oembed API`}
+              />
             </ul>
           </div>
           <h2>Articles</h2>
           {isMounted ? (
-            <ul>
+            <ul className="lg:grid grid-cols-2 lg:space-x-5 justify-items-start">
               {articles.data.items.map((item: any) => (
                 <Card
                   key={item.guid}
                   href={item.guid}
                   description={item.title}
                   thumbnail={item.thumbnail}
+                  thumbnailSize={"lg:h-28 lg:w-auto"}
                 />
               ))}
             </ul>
