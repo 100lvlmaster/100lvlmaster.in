@@ -41,7 +41,7 @@ export const Footer = (props) => {
       <a
         rel="noreferrer"
         target="_blank"
-        href="https://medium.com/@100lvlmaster"
+        href="https://100lvlmaster.medium.com/"
       >
         <div className="flex flex-row space-x-2">
           <svg

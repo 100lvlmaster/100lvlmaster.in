@@ -38,7 +38,7 @@ const About = () => {
             date={"July/2020"}
             title={"Joined mybytecode as an intern"}
             description={
-              <ul className="list-disc list-disc space-y-2">
+              <ul className="list-disc  space-y-2">
                 <li>
                   {` Worked on flutter with MVC architecture to make authentication
                   modules.`}
