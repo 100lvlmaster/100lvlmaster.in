@@ -15,6 +15,8 @@ const WorkPage = () => {
   };
 
   //
+  ///adasdad
+
   useEffect(() => {
     loadArticles();
   }, []);
@@ -24,7 +26,7 @@ const WorkPage = () => {
         <div className=" flex  flex-col">
           <h2>Side projects</h2>
           <div>
-            <ul className="lg:grid grid-cols-2 md:space-x-5 justify-items-start">
+            <ul className="lg:grid grid-cols-2 lg:px-2 justify-items-start">
               <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
@@ -57,16 +59,24 @@ const WorkPage = () => {
                 thumbnail={`https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png`}
                 description={`A flutter package to fetch a spotify song/playlist's metadata from the link using the oembed API`}
               />
+              <Card
+                href="https://github.com/100lvlmaster/one_for_all_theme"
+                key={`https://raw.githubusercontent.com/100lvlmaster/one_for_all_theme/master/theme_logo.png`}
+                title={`One for all`}
+                thumbnailSize={"h-14 w-14 md:h-24 md:w-24"}
+                thumbnail={`https://raw.githubusercontent.com/100lvlmaster/one_for_all_theme/master/theme_logo.png`}
+                description={`VS code theme built using Atom's one dark pro color scheme with a minimal design and eye candy colors`}
+              />
             </ul>
           </div>
           <h2>Articles</h2>
           {isMounted ? (
-            <ul className="lg:grid grid-cols-2 lg:space-x-5 justify-items-start">
+            <ul className="lg:grid grid-cols-2 justify-items-start">
               {articles.data.items.map((item: any) => (
                 <Card
                   key={item.guid}
                   href={item.guid}
-                  description={item.title}
+                  title={item.title}
                   thumbnail={item.thumbnail}
                   thumbnailSize={"lg:h-28 lg:w-auto"}
                 />
@@ -88,9 +98,12 @@ export default WorkPage;
 
 const Card = (props) => {
   return (
-    <li key={props.guid}>
+    <li
+      className={"border border-gray-800 m-2 rounded shadow-2xl"}
+      key={props.guid}
+    >
       <a rel="noreferrer" href={props.href} target="_blank_">
-        <div className="pt-5 pb-5">
+        <div className="p-3">
           <img
             src={props.thumbnail}
             className={"rounded ".concat(props.thumbnailSize)}
@@ -98,21 +111,10 @@ const Card = (props) => {
           />
           <div className="text-sm flex flex-row py-4 text-gray-600 dark:text-gray-400">
             <div className={`flex flex-col flex-grow`}>
-              <span className={`text-black dark:text-white text-lg`}>
+              <span className={`text-black dark:text-white text-md`}>
                 {props.title}
               </span>
               <span>{props.description}</span>
-            </div>
-            <div className="px-3 self-start">
-              <svg
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
-              </svg>
             </div>
           </div>
         </div>

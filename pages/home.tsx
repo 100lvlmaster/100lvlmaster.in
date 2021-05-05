@@ -29,14 +29,13 @@ const HomePage = () => {
             <span className="pr-2">scroll</span>
             <Link href="#timeline">
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
-                xmlns="http://www.w3.org/2000/svg"
-                fillRule="evenodd"
-                clipRule="evenodd"
+                viewBox="0 0 24 24"
                 fill="currentColor"
               >
-                <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z" />
+                <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
               </svg>
             </Link>
           </div>
@@ -46,14 +45,13 @@ const HomePage = () => {
             <span className="pr-2">my work</span>
             <Link href="/work">
               <svg
-                height="30"
-                width="30"
                 xmlns="http://www.w3.org/2000/svg"
-                fillRule="evenodd"
-                clipRule="evenodd"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
                 fill="currentColor"
               >
-                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 12l-4.5 4.5 1.527 1.5 5.973-6-5.973-6-1.527 1.5 4.5 4.5z" />
+                <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
               </svg>
             </Link>
           </div>
@@ -78,7 +76,7 @@ const HomePage = () => {
             date={"July/2020"}
             title={"Joined mybytecode as an intern"}
             description={
-              <ul className="list-disc list-disc space-y-2">
+              <ul className="list-disc space-y-2">
                 <li>
                   {` Worked on flutter with MVC architecture to make authentication
                   modules.`}
