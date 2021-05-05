@@ -111,7 +111,9 @@ const Card = (props) => {
           />
           <div className="text-sm flex flex-row py-4 text-gray-600 dark:text-gray-400">
             <div className={`flex flex-col flex-grow`}>
-              <span className={`text-black dark:text-white text-md`}>
+              <span
+                className={`text-black dark:text-white font-medium text-md`}
+              >
                 {props.title}
               </span>
               <span>{props.description}</span>

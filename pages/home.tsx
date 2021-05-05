@@ -26,7 +26,7 @@ const HomePage = () => {
         <Spacer />
         <div className="pb-20 flex flex-row align-items-baseline">
           <div>
-            <span className="pr-2">scroll</span>
+            <span className="pr-2 text-sm">scroll</span>
             <Link href="#timeline">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const HomePage = () => {
           <Spacer />
 
           <div>
-            <span className="pr-2">my work</span>
+            <span className="pr-2 text-sm">my work</span>
             <Link href="/work">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
