@@ -31,7 +31,7 @@ export const Container = (props) => {
       </Head>
       {props.hideNav ?? false ? `` : <NavBar />}
       <div
-        className={"flex flex-col justify-items-stretch md:px-40 lg:px-80 text-lg pt-28 p-10"
+        className={"flex flex-col justify-items-stretch md:px-40 lg:px-80 text-lg md:py-28 py-28 md:p-10 px-5"
           .concat(" ")
           .concat(props.className)}
       >

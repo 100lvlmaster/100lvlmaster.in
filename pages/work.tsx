@@ -26,7 +26,7 @@ const WorkPage = () => {
         <div className=" flex  flex-col">
           <h2>Side projects</h2>
           <div>
-            <ul className="lg:grid grid-cols-2 lg:px-2 justify-items-start">
+            <ul className="lg:grid grid-cols-2 lg:px-2 py-5 justify-items-start">
               <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
@@ -71,7 +71,7 @@ const WorkPage = () => {
           </div>
           <h2>Articles</h2>
           {isMounted ? (
-            <ul className="lg:grid grid-cols-2 justify-items-start">
+            <ul className="lg:grid grid-cols-2 lg:px-2 py-5 justify-items-start">
               {articles.data.items.map((item: any) => (
                 <Card
                   key={item.guid}
@@ -83,7 +83,7 @@ const WorkPage = () => {
               ))}
             </ul>
           ) : (
-            <div className="flex flex-col items-stretch	">
+            <div className="lg:grid grid-cols-2 lg:px-2 py-5 justify-items-start">
               <PulseLoader className="h-40 w-40" />
               <PulseLoader className="h-5" />
               <PulseLoader className="h-5" />
@@ -99,7 +99,9 @@ export default WorkPage;
 const Card = (props) => {
   return (
     <li
-      className={"border border-gray-800 m-2 rounded shadow-2xl"}
+      className={
+        "border border-gray-200 dark:border-gray-800 m-2 rounded hover:shadow-md"
+      }
       key={props.guid}
     >
       <a rel="noreferrer" href={props.href} target="_blank_">
