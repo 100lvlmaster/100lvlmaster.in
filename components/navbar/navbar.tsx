@@ -22,7 +22,7 @@ export const NavBar = () => {
   ///
   return (
     <nav
-      className={`sticky-nav text-base fixed flex flex-row items-center p-8 lg:px-60 md:px-20 w-full bg-white dark:bg-black dark:bg-opacity-95 bg-opacity-80`}
+      className={`sticky-nav text-base fixed flex flex-row items-center p-8 lg:px-80 md:px-40 px-10 w-full bg-white dark:bg-black dark:bg-opacity-95 bg-opacity-80`}
     >
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
