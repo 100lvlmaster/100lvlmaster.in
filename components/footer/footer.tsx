@@ -23,7 +23,11 @@ export const Footer = (props) => {
           <span>{`Work`}</span>
         </div>
       </Link>
-      <a rel="noreferrer" target="_blank" href="https://discord.com/users/0821">
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://discordapp.com/users/392213395031719957/"
+      >
         <div className="flex flex-row space-x-2">
           <svg
             width="24"

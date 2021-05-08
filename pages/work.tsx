@@ -31,15 +31,23 @@ const WorkPage = () => {
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 title={`Maymay v2`}
-                thumbnailSize={"h-14 w-14 md:h-24 md:w-24"}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 description={`maymay is an open source flutter app made to spawn random memes from reddit and have the user scroll through them as if a social media app but purely for memes.`}
+              />
+              <Card
+                href="https://github.com/100lvlmaster/time_tracker"
+                key={`https://raw.githubusercontent.com/100lvlmaster/time_tracker/master/assets/icons/splash_logo.png`}
+                title={`Time tracker`}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
+                thumbnail={`https://raw.githubusercontent.com/100lvlmaster/time_tracker/master/assets/icons/splash_logo.png`}
+                description={`Todos and Note-taking in realtime with firebase.`}
               />
               <Card
                 href="https://github.com/100lvlmaster/stacked_page_view"
                 key={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
                 title={`Stacked page view`}
-                thumbnailSize={"h-14 w-14 md:h-24 md:w-24"}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
                 description={`A Flutter pacakge that provides vertical pageview carousel in flutter`}
               />
@@ -47,7 +55,7 @@ const WorkPage = () => {
                 href="https://github.com/100lvlmaster/youtube_metadata"
                 key={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
                 title={`Youtube Metadata`}
-                thumbnailSize={"h-14 w-14 md:h-24 md:w-24"}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
                 description={`A flutter package to fetch a videos metadata from the link using the oembed API`}
               />
@@ -55,7 +63,7 @@ const WorkPage = () => {
                 href="https://github.com/100lvlmaster/spotify_metadata"
                 key={`https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png`}
                 title={`Spotify Metadata`}
-                thumbnailSize={"h-14 w-14 md:h-24 md:w-24"}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png`}
                 description={`A flutter package to fetch a spotify song/playlist's metadata from the link using the oembed API`}
               />
@@ -63,7 +71,7 @@ const WorkPage = () => {
                 href="https://github.com/100lvlmaster/one_for_all_theme"
                 key={`https://raw.githubusercontent.com/100lvlmaster/one_for_all_theme/master/theme_logo.png`}
                 title={`One for all`}
-                thumbnailSize={"h-14 w-14 md:h-24 md:w-24"}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://raw.githubusercontent.com/100lvlmaster/one_for_all_theme/master/theme_logo.png`}
                 description={`VS code theme built using Atom's one dark pro color scheme with a minimal design and eye candy colors`}
               />
