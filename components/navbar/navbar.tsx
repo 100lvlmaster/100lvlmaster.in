@@ -22,7 +22,7 @@ export const NavBar = () => {
   ///
   return (
     <nav
-      className={`sticky-nav text-base fixed flex flex-row items-center p-8 lg:px-80 md:px-40 px-10 w-full bg-white dark:bg-black dark:bg-opacity-95 bg-opacity-80`}
+      className={`sticky-nav text-base flex flex-row items-center p-5 bg-white w-full max-w-2xl dark:bg-black dark:bg-opacity-95 bg-opacity-80`}
     >
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
@@ -30,7 +30,7 @@ export const NavBar = () => {
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="bg-gray-200 dark:bg-gray-800 rounded p-3 h-10 w-10"
+        className="bg-gray-200 flex flex-col justify-cente items-center dark:bg-gray-800 rounded p-2.5 h-8 w-8"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {mounted && (

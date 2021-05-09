@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Container, Spacer } from "../components/container";
-import { Milestone, Timeline } from "../components/timeline";
+import { TimelineComponent } from "../components/timeline";
 const HomePage = () => {
   return (
     <div>
-      <Container id="home" className=" h-screen " showFooter={false}>
+      <Container id="home" className=" ">
         <span className="pt-28">
-          <span className="text-3xl pb-20">Hi, I'm Navin Kodag,</span>
+          <span className="text-3xl font-bold pb-20">Hi, I'm Navin Kodag,</span>
           <br />
           <Spacer />
 
@@ -24,21 +24,7 @@ const HomePage = () => {
           </p>
         </span>
         <Spacer />
-        <div className="pb-20 flex flex-row align-items-baseline">
-          <div>
-            <span className="pr-2 text-sm">scroll</span>
-            <Link href="#timeline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
-              </svg>
-            </Link>
-          </div>
+        <div className="p-16 flex flex-row align-items-baseline">
           <Spacer />
 
           <div>
@@ -51,71 +37,12 @@ const HomePage = () => {
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
-                <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2 12l-4.5 4.5 1.527 1.5 5.973-6-5.973-6-1.527 1.5 4.5 4.5z" />
               </svg>
             </Link>
           </div>
         </div>
-      </Container>
-      <Container id={"timeline"} hideNav={true}>
-        {" "}
-        <Timeline>
-          <Milestone
-            date={"June/2019"}
-            title={"Started pursuing a Bachelor's degree in computer science"}
-            description={
-              "The time i had been waiting since 10th grade, who needs chemistry when i can make a twitter bot tweet memes for me. Twitter meme-bot goes brrrrr."
-            }
-          />
-          <Milestone
-            date={`March/2020`}
-            title={`Launched maymay_v1`}
-            description={`A full stack meme client to render memes from reddit. Two web clients, in react and svelte, And  a mobile client made with flutter.`}
-          ></Milestone>
-          <Milestone
-            date={"July/2020"}
-            title={"Joined mybytecode as an intern"}
-            description={
-              <ul className="list-disc space-y-2">
-                <li>
-                  {` Worked on flutter with MVC architecture to make authentication
-                  modules.`}
-                </li>
-                <li>
-                  {` Helped to create and maintain a product similar to inshorts
-                  and hacker news`}
-                </li>
-                <li>
-                  {`Used laravel to paginate REST API responses, reducing load
-                  times by`}
-                </li>
-                <li>
-                  {`Used ffmpeg to complete media manipulation operation`}{" "}
-                </li>
-                <li>
-                  {`Used firebase to design and create a realtime social media app`}
-                </li>
-              </ul>
-            }
-          />
-          <Milestone
-            date={`October/2020`}
-            title={`Promoted to junior developer`}
-            description={
-              <ul className="list-disc space-y-2">
-                <li>
-                  {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
-                </li>
-                <li>
-                  {`Handled development of two front-end mobile clients and a node.js backend 💯`}
-                </li>
-                <li>
-                  {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
-                </li>
-              </ul>
-            }
-          ></Milestone>
-        </Timeline>
+        <TimelineComponent />
       </Container>
     </div>
   );

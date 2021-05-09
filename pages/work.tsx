@@ -24,9 +24,9 @@ const WorkPage = () => {
     <div>
       <Container className="flex flex-col">
         <div className=" flex  flex-col">
-          <h2>Side projects</h2>
+          <h2 className="font-bold text-xl">Side projects</h2>
           <div>
-            <ul className="lg:grid grid-cols-2 lg:px-2 py-5 justify-items-start">
+            <ul className="lg:grid grid-cols-2 py-5 justify-items-start">
               <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
@@ -77,9 +77,9 @@ const WorkPage = () => {
               />
             </ul>
           </div>
-          <h2>Articles</h2>
+          <h2 className="font-bold text-xl">Articles</h2>
           {isMounted ? (
-            <ul className="lg:grid grid-cols-2 lg:px-2 py-5 justify-items-start">
+            <ul className="lg:grid grid-cols-2 py-5 justify-items-start">
               {articles.data.items.map((item: any) => (
                 <Card
                   key={item.guid}
@@ -108,7 +108,7 @@ const Card = (props) => {
   return (
     <li
       className={
-        "border border-gray-200 dark:border-gray-800 m-2 rounded hover:shadow-md"
+        "border border-gray-200 dark:border-gray-800 m-1 rounded hover:shadow-md text-xs"
       }
       key={props.guid}
     >
@@ -119,10 +119,10 @@ const Card = (props) => {
             className={"rounded ".concat(props.thumbnailSize)}
             alt={`${props.thumbnail}`}
           />
-          <div className="text-sm flex flex-row py-4 text-gray-600 dark:text-gray-400">
-            <div className={`flex flex-col flex-grow`}>
+          <div className=" flex flex-row py-4 text-gray-600 dark:text-gray-400">
+            <div className={`flex flex-col text-xs flex-grow`}>
               <span
-                className={`text-black dark:text-white font-medium text-md`}
+                className={`text-black dark:text-white font-medium text-lg`}
               >
                 {props.title}
               </span>

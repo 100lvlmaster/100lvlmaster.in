@@ -1,7 +1,7 @@
-export const Timeline = (props) => {
+const Timeline = (props) => {
   return <div className="flex flex-col-reverse pt-10">{props.children}</div>;
 };
-export const Milestone = (props) => {
+const Milestone = (props) => {
   return (
     <div className="flex flex-row items-stretch text-sm text-gray-600 dark:text-gray-300">
       {/* dot and progress line */}
@@ -17,15 +17,15 @@ export const Milestone = (props) => {
             <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 17.292l-4.5-4.364 1.857-1.858 2.643 2.506 5.643-5.784 1.857 1.857-7.5 7.643z" />
           </svg>
         </div>
-        <div className="bg-black flex-grow dark:bg-white mx-2 w-1" />
+        <div className="bg-black flex-grow dark:bg-white mx-2 w-0.5 rounded-lg" />
       </div>
       {/* text-> title and description */}
       <div className="flex flex-col flex-grow">
         <div className="text-sm">{props.date}</div>
-        <div className="text-lg text-black dark:text-white py-2">
+        <div className="text-lg text-black font-bold dark:text-white py-2">
           {props.title}
         </div>
-        <div className="flex-grow text-sm dark:text-gray-400 text-gray-600">
+        <div className="flex-grow text-xs dark:text-gray-400 text-gray-600">
           {props.description}
         </div>
         <div className="h-10" />
@@ -33,3 +33,61 @@ export const Milestone = (props) => {
     </div>
   );
 };
+
+export const TimelineComponent = () => (
+  <Timeline>
+    <Milestone
+      date={"June/2019"}
+      title={"Started pursuing a Bachelor's degree in computer science"}
+      description={
+        "The time i had been waiting since 10th grade, who needs chemistry when i can make a twitter bot tweet memes for me. Twitter meme-bot goes brrrrr."
+      }
+    />
+    <Milestone
+      date={`March/2020`}
+      title={`Launched maymay_v1`}
+      description={`A full stack meme client to render memes from reddit. Two web clients, in react and svelte, And  a mobile client made with flutter.`}
+    ></Milestone>
+    <Milestone
+      date={"July/2020"}
+      title={"Joined mybytecode as an intern"}
+      description={
+        <ul className="list-disc space-y-2">
+          <li>
+            {` Worked on flutter with MVC architecture to make authentication
+        modules.`}
+          </li>
+          <li>
+            {` Helped to create and maintain a product similar to inshorts
+        and hacker news`}
+          </li>
+          <li>
+            {`Used laravel to paginate REST API responses, reducing load
+        times by`}
+          </li>
+          <li>{`Used ffmpeg to complete media manipulation operation`} </li>
+          <li>
+            {`Used firebase to design and create a realtime social media app`}
+          </li>
+        </ul>
+      }
+    />
+    <Milestone
+      date={`October/2020`}
+      title={`Promoted to junior developer`}
+      description={
+        <ul className="list-disc space-y-2">
+          <li>
+            {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
+          </li>
+          <li>
+            {`Handled development of two front-end mobile clients and a node.js backend 💯`}
+          </li>
+          <li>
+            {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
+          </li>
+        </ul>
+      }
+    ></Milestone>
+  </Timeline>
+);

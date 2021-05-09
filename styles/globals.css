@@ -1,11 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  src: url(/fonts/Raleway.woff2) format("woff2");
+}
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   scroll-behavior: smooth;
   /* -moz-user-select: none;
   -khtml-user-select: none;
@@ -14,12 +17,15 @@ body {
   user-select: none;
 } */
 }
-a {
-  color: inherit;
-  text-decoration: none;
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: monospace;
+.sticky-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.1 ease-in-out;
 }
