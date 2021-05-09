@@ -26,7 +26,7 @@ const WorkPage = () => {
         <div className=" flex  flex-col">
           <h2 className="font-bold text-xl">Side projects</h2>
           <div>
-            <ul className="lg:grid grid-cols-2 py-5 justify-items-start">
+            <ul className=" grid grid-cols-2 py-5 justify-items-start">
               <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
