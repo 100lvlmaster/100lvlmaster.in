@@ -9,7 +9,7 @@ export const Container = (props) => {
   const meta = {
     title: "Navin Kodag – Developer",
     description: `Full stack developer, onw to 10x developer 🚀`,
-    image: "/assets/website_title_link.png",
+    image: "https://navinko.netlify.app/assets/website_title_link.png",
     type: "website",
     ...customMeta,
   };
