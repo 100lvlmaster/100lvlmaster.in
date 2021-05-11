@@ -10,12 +10,6 @@
 html,
 body {
   scroll-behavior: smooth;
-  /* -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
 }
 ::selection {
   background-color: #47a3f3;
@@ -28,4 +22,13 @@ body {
   top: 0;
   backdrop-filter: saturate(180%) blur(20px);
   transition: background-color 0.1 ease-in-out;
+}
+a[href],
+input[type="submit"],
+input[type="image"],
+label[for],
+select,
+button,
+.pointer {
+  cursor: pointer;
 }

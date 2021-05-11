@@ -9,8 +9,6 @@ export const NavBar = () => {
   const [mounted, setMount] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  /// Router to get current route
-  const router = useRouter();
   /// Change theme
   const onChangeTheme = (val: string) => {
     setTheme(val);
@@ -22,7 +20,7 @@ export const NavBar = () => {
   ///
   return (
     <nav
-      className={`sticky-nav text-base flex flex-row items-center p-5 bg-white w-full max-w-2xl dark:bg-black dark:bg-opacity-95 bg-opacity-80`}
+      className={`sticky-nav text-base flex flex-row items-center p-5 bg-white w-full max-w-2xl dark:bg-black dark:bg-opacity-75 bg-opacity-80`}
     >
       <a href="#skip" className="sr-only focus:not-sr-only">
         Skip to content
@@ -52,13 +50,19 @@ export const NavBar = () => {
       <Spacer></Spacer>
 
       <Link href="/about">
-        <span className="pl-5">about</span>
+        <a>
+          <span className="px-3">about</span>
+        </a>
       </Link>
       <Link href="/">
-        <span className="pl-5">home</span>
+        <a>
+          <span className="px-3">home</span>
+        </a>
       </Link>
       <Link href="/work">
-        <span className="pl-5 ">work</span>
+        <a>
+          <span className="px-3 ">work</span>
+        </a>
       </Link>
     </nav>
   );

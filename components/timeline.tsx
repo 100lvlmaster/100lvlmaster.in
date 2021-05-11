@@ -1,7 +1,13 @@
-const Timeline = (props) => {
-  return <div className="flex flex-col-reverse pt-10">{props.children}</div>;
+interface MilstoneProps {
+  date: string;
+  title: string;
+  subtitle: string;
+  description: any;
+}
+const Timeline = ({ children }) => {
+  return <div className="flex flex-col-reverse pt-10">{children}</div>;
 };
-const Milestone = (props) => {
+const Milestone = ({ date, title, subtitle, description }: MilstoneProps) => {
   return (
     <div className="flex flex-row items-stretch text-sm text-gray-600 dark:text-gray-300">
       {/* dot and progress line */}
@@ -9,8 +15,8 @@ const Milestone = (props) => {
         <div className="dark:text-white text-black ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="currentColor"
           >
@@ -21,12 +27,17 @@ const Milestone = (props) => {
       </div>
       {/* text-> title and description */}
       <div className="flex flex-col flex-grow">
-        <div className="text-sm">{props.date}</div>
-        <div className="text-lg text-black font-bold dark:text-white py-2">
-          {props.title}
+        <div className="text-sm">{date}</div>
+        <div className="text-md text-black font-bold dark:text-white py-2">
+          {title}
+          {subtitle ? (
+            <div className="text-gray-400 font-medium">{subtitle}</div>
+          ) : (
+            ""
+          )}
         </div>
         <div className="flex-grow text-xs dark:text-gray-400 text-gray-600">
-          {props.description}
+          {description}
         </div>
         <div className="h-10" />
       </div>
@@ -39,18 +50,21 @@ export const TimelineComponent = () => (
     <Milestone
       date={"June/2019"}
       title={"Started pursuing a Bachelor's degree in computer science"}
+      subtitle={`PCACS`}
       description={
         "The time i had been waiting since 10th grade, who needs chemistry when i can make a twitter bot tweet memes for me. Twitter meme-bot goes brrrrr."
       }
     />
     <Milestone
       date={`March/2020`}
+      subtitle={``}
       title={`Launched maymay_v1`}
       description={`A full stack meme client to render memes from reddit. Two web clients, in react and svelte, And  a mobile client made with flutter.`}
     ></Milestone>
     <Milestone
       date={"July/2020"}
-      title={"Joined mybytecode as an intern"}
+      title={"Intern"}
+      subtitle={`mybytecode`}
       description={
         <ul className="list-disc space-y-2">
           <li>
@@ -63,7 +77,7 @@ export const TimelineComponent = () => (
           </li>
           <li>
             {`Used laravel to paginate REST API responses, reducing load
-        times by`}
+        times by 60% 💨`}
           </li>
           <li>{`Used ffmpeg to complete media manipulation operation`} </li>
           <li>
@@ -74,7 +88,8 @@ export const TimelineComponent = () => (
     />
     <Milestone
       date={`October/2020`}
-      title={`Promoted to junior developer`}
+      title={`Full stack developer`}
+      subtitle={"mybytecode"}
       description={
         <ul className="list-disc space-y-2">
           <li>
@@ -89,5 +104,23 @@ export const TimelineComponent = () => (
         </ul>
       }
     ></Milestone>
+    {/* <Milestone
+      date={`April/2020`}
+      subtitle={"RedCarpetUp.com"}
+      title={`Full stack developer`}
+      description={
+        <ul className="list-disc space-y-2">
+          <li>
+            {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
+          </li>
+          <li>
+            {`Handled development of two front-end mobile clients and a node.js backend 💯`}
+          </li>
+          <li>
+            {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
+          </li>
+        </ul>
+      }
+    ></Milestone> */}
   </Timeline>
 );

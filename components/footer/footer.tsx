@@ -15,19 +15,26 @@ export const Footer = (props) => {
     >
       <div className="grid md:grid-cols-3 text-sm items-center lg:gap-1 grid-cols-1 space-y-2">
         <Link href="/">
-          <div className="flex items-center flex-row">
-            <span className={linkClassName}>{`Home`}</span>
-          </div>
+          <a>
+            <div className="flex items-center flex-row">
+              <span className={linkClassName}>{`Home`}</span>
+            </div>
+          </a>
         </Link>
         <Link href="/about">
-          <div className="flex  flex-row ">
-            <span className={linkClassName}>{`About`}</span>
-          </div>
+          <a>
+            {" "}
+            <div className="flex  flex-row ">
+              <span className={linkClassName}>{`About`}</span>
+            </div>
+          </a>
         </Link>
         <Link href="/work">
-          <div className="flex items-center flex-row">
-            <span className={linkClassName}>{`Work`}</span>
-          </div>
+          <a>
+            <div className="flex items-center flex-row">
+              <span className={linkClassName}>{`Work`}</span>
+            </div>
+          </a>
         </Link>
         <ExternalLink href={`https://dev.to/100lvlmaster`}>
           <div className="flex flex-row items-center space-x-2">
@@ -131,7 +138,7 @@ export const Footer = (props) => {
           </div>
         </ExternalLink>
       </div>
-      <span className="text-xs flex flex-col text-center pt-5 dark:text-gray-400">
+      <span className="text-xs flex flex-col text-center pt-5 text-gray-500 dark:text-gray-400">
         {`Made with Next.js & ❤️ `}
         <div className="text-xs">
           {`© 2021 Navin Kodag. All rights reserved`}.
