@@ -2,7 +2,6 @@ import { Container } from "../components/container";
 import { fetchArticles } from "../lib/medium";
 import { useEffect, useState } from "react";
 import { AxiosResponse } from "axios";
-import { PulseLoader } from "../components/loader_pulse";
 const BlogPage = () => {
   //
   const [isMounted, setMounted] = useState(false);
@@ -25,25 +24,19 @@ const BlogPage = () => {
       <Container className="flex flex-col">
         <div className=" flex  flex-col">
           <h2 className="font-bold text-xl">Articles</h2>
-          {isMounted ? (
-            <ul className="flex flex-col py-5 justify-items-start">
-              {articles.data.items.map((item: any) => (
-                <ArticleCard
-                  key={item.guid}
-                  href={item.guid}
-                  title={item.title}
-                  description={""}
-                  imgUrl={item.thumbnail}
-                />
-              ))}
-            </ul>
-          ) : (
-            <div className="lg:grid grid-cols-2 lg:px-2 py-5 justify-items-start">
-              <PulseLoader className="h-40 w-40" />
-              <PulseLoader className="h-5" />
-              <PulseLoader className="h-5" />
-            </div>
-          )}
+          <ul className="flex flex-col py-5 items-stretch">
+            {isMounted
+              ? articles.data.items.map((item: any) => (
+                  <ArticleCard
+                    key={item.guid}
+                    href={item.guid}
+                    title={item.title}
+                    description={""}
+                    imgUrl={item.thumbnail}
+                  />
+                ))
+              : [1, 2, 3].map((item) => <PulseLoader key={item} />)}
+          </ul>
         </div>
       </Container>
     </div>
@@ -71,3 +64,14 @@ const ArticleCard = ({ title, imgUrl, description, href }) => (
     </div>
   </a>
 );
+const PulseLoader = () => {
+  const loader: string = " animate-pulse bg-gray-400  rounded my-2";
+  return (
+    <div className="border border-gray-200 dark:border-gray-800 m-1 rounded hover:shadow-md text-sm my-1 p-2">
+      <div className="flex flex-row space-x-2">
+        <div className={"h-5 w-80".concat(loader)}>{}</div>
+        <div className={"h-16 w-16".concat(loader)}></div>
+      </div>
+    </div>
+  );
+};
