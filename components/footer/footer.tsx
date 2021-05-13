@@ -1,5 +1,5 @@
 import Link from "next/link";
-const linkClassName: string = `text-gray-500 hover:text-gray-700 transition`;
+const linkClassName: string = `dark:text-gray-400 dark:hover:text-gray-200 text-gray-500 hover:text-gray-800 transition`;
 const ExternalLink = (props) => (
   <a rel="noreferrer" target="_blank" href={props.href}>
     {props.children}
