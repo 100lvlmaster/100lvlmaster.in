@@ -48,7 +48,6 @@ export const NavBar = () => {
         )}
       </button>
       <Spacer></Spacer>
-
       <Link href="/about">
         <a>
           <span className="px-3">about</span>
@@ -62,6 +61,11 @@ export const NavBar = () => {
       <Link href="/work">
         <a>
           <span className="px-3 ">work</span>
+        </a>
+      </Link>{" "}
+      <Link href="/blog">
+        <a>
+          <span className="px-3 ">blog</span>
         </a>
       </Link>
     </nav>
