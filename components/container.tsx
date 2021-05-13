@@ -19,13 +19,6 @@ export const Container = (props) => {
       className="dark:bg-black flex flex-col dark:text-white text-black w-full bg-white items-center justify-items-stretch py-5"
     >
       <NextHead>
-        <link
-          rel="preload"
-          href="/fonts/Raleway.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
@@ -72,8 +65,6 @@ export const Container = (props) => {
           content="HTML, CSS, JavaScript, Next.js, Tailwind"
         />
         <meta name="author" content="Navin Kodag" />
-        <html lang={`en`} />
-        <meta charSet="UTF-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"

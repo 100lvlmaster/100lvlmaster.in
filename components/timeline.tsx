@@ -106,7 +106,7 @@ export const TimelineComponent = () => (
     ></Milestone>
     <Milestone
       date={`April/2020`}
-      subtitle={"RedCarpetUp.com"}
+      subtitle={"RedCarpetUp"}
       title={`Full stack developer`}
       description={
         <ul className="list-disc space-y-2">
