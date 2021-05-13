@@ -37,26 +37,43 @@ export const Container = (props) => {
           rel="canonical"
           href={`https://100lvlmaster.in${router.asPath}`}
         />
+        <meta
+          property="og:description"
+          content={meta.description}
+          key="ogsitename"
+        />
+        <meta property="og:image" content={meta.image} key="ogimage" />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Navin Kodag" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:title" content={meta.title} key="ogtitle" />
+        <meta property="og:site_name" content="Navin Kodag" key="ogsitename" />
+        <meta
+          property="og:url"
+          content={"https://100lvlmaster.in"}
+          key="ogurl"
+        />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+          key="twhandle"
+        />
         <meta name="twitter:site" content="@100lvlmaster" />
+        <meta name="twitter:creator" content={"@100lvlmaster"} key="twhandle" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        <meta name="description" content={meta.description} />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
-        <html lang={`en`} />
-        <meta charSet="UTF-8" />
+
         <meta
           name="keywords"
           content="HTML, CSS, JavaScript, Next.js, Tailwind"
         />
         <meta name="author" content="Navin Kodag" />
+        <html lang={`en`} />
+        <meta charSet="UTF-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
