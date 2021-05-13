@@ -2,7 +2,7 @@ import { Footer } from "./footer/footer";
 import "./navbar/navbar";
 import { NavBar } from "./navbar/navbar";
 import { useRouter } from "next/router";
-import Head from "next/head";
+import NextHead from "next/head";
 export const Container = (props) => {
   const router = useRouter();
   const { id, children, customMeta, className } = props;
@@ -18,7 +18,7 @@ export const Container = (props) => {
       id={id}
       className="dark:bg-black flex flex-col dark:text-white text-black w-full bg-white items-center justify-items-stretch py-5"
     >
-      <Head>
+      <NextHead>
         <link
           rel="preload"
           href="/fonts/Raleway.woff2"
@@ -61,7 +61,7 @@ export const Container = (props) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-      </Head>
+      </NextHead>
       <NavBar />
       <div
         className={"flex flex-col justify-items-stretch max-w-2xl px-8 py-5 md:px-16"
