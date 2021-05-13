@@ -35,6 +35,13 @@ export const Footer = (props) => {
               <span className={linkClassName}>{`Work`}</span>
             </div>
           </a>
+        </Link>{" "}
+        <Link href="/blog">
+          <a>
+            <div className="flex items-center flex-row">
+              <span className={linkClassName}>{`Blog`}</span>
+            </div>
+          </a>
         </Link>
         <ExternalLink href={`https://dev.to/100lvlmaster`}>
           <div className="flex flex-row items-center space-x-2">

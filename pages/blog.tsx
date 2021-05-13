@@ -59,11 +59,15 @@ const ArticleCard = ({ title, imgUrl, description, href }) => (
     target="_blank_"
   >
     <div className="flex flex-row">
-      <div className="flex-grow flex flex-col py-3">
+      <div className="flex-grow flex flex-col p-3 overflow-ellipsis	">
         <div>{title}</div>
         <div>{description}</div>
       </div>
-      <img className=" w-20 object-cover	" src={imgUrl} alt={`${imgUrl}.png`} />
+      <img
+        className="h-16 w-16 object-cover"
+        src={imgUrl}
+        alt={`${imgUrl}.png`}
+      />
     </div>
   </a>
 );

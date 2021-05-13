@@ -4,9 +4,9 @@ const WorkPage = () => {
     <div>
       <Container className="flex flex-col">
         <div className=" flex  flex-col">
-          <h2 className="font-bold text-xl">Side projects</h2>
+          <h2 className="font-bold text-xl">{"Projects"}</h2>
           <div>
-            <ul className=" grid grid-cols-2 py-5 justify-items-start">
+            <ul className=" grid grid-cols-1 lg:grid-cols-2 py-5 justify-items-stretch	">
               <Card
                 href="https://github.com/100lvlmaster/maymay"
                 key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
