@@ -27,7 +27,7 @@ export const Container = (props) => {
           <meta content={meta.description} name="description" />
           <meta
             property="og:url"
-            content={`https://navinkodag.netlify.app${router.asPath}`}
+            content={`https://100lvlmaster.in${router.asPath}`}
           />
           <link
             rel="canonical"
@@ -46,6 +46,13 @@ export const Container = (props) => {
           {meta.date && (
             <meta property="article:published_time" content={meta.date} />
           )}
+          <link
+            rel="preload"
+            href="/fonts/Raleway.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <link
             rel="icon"
             href="/assets/website_title_link.png"
