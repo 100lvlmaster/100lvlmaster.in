@@ -10,6 +10,7 @@ export const Container = (props) => {
     title: "Navin Kodag – Developer",
     description: `Full stack developer, onw to 10x developer 🚀`,
     image: "https://100lvlmaster.in/assets/website_title_link.png",
+    date: new Date(),
     type: "website",
     ...customMeta,
   };
@@ -22,6 +23,13 @@ export const Container = (props) => {
         ``
       ) : (
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/Raleway.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <title>{meta.title}</title>
           <meta name="robots" content="follow, index" />
           <meta content={meta.description} name="description" />
@@ -31,7 +39,7 @@ export const Container = (props) => {
           />
           <link
             rel="canonical"
-            href={`https://navinkodag.netlify.app${router.asPath}`}
+            href={`https://100lvlmaster.in${router.asPath}`}
           />
           <meta property="og:type" content={meta.type} />
           <meta property="og:site_name" content="Navin Kodag" />
@@ -46,26 +54,13 @@ export const Container = (props) => {
           {meta.date && (
             <meta property="article:published_time" content={meta.date} />
           )}
-          <link
-            rel="preload"
-            href="/fonts/Raleway.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="icon"
-            href="/assets/website_title_link.png"
-            type="image/x-icon"
-          />
-          <title>navinko</title>
+
           <html lang={`en`} />
 
           <meta charSet="UTF-8" />
-          <meta name="description" content="navin's website" />
           <meta
             name="keywords"
-            content="HTML, CSS, JavaScript,Next.js,Tailwind"
+            content="HTML, CSS, JavaScript, Next.js, Tailwind"
           />
           <meta name="author" content="Navin Kodag" />
           <meta
