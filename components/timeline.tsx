@@ -104,13 +104,13 @@ export const TimelineComponent = () => (
         </ul>
       }
     ></Milestone>
-    {/* <Milestone
+    <Milestone
       date={`April/2020`}
       subtitle={"RedCarpetUp.com"}
       title={`Full stack developer`}
       description={
         <ul className="list-disc space-y-2">
-          <li>
+          {/* <li>
             {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
           </li>
           <li>
@@ -118,9 +118,9 @@ export const TimelineComponent = () => (
           </li>
           <li>
             {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
-          </li>
+          </li> */}
         </ul>
       }
-    ></Milestone> */}
+    ></Milestone>
   </Timeline>
 );
