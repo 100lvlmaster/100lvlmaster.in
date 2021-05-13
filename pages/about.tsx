@@ -8,9 +8,9 @@ const About = () => {
         <div className="dark:text-gray-400 text-sm text-gray-800 py-10">
           <p>
             {`
-              I am a full-stack junior developer at mybytecode, 
+              I am a full-stack junior developer at alekha.net, 
               I started out as a self-taught developer and 
-              now I am a second-year student pursuing a degree in Computer Science here in India.
+              now I am a third-year student pursuing a degree in Computer Science here in India.
                 `}
           </p>
           <br />

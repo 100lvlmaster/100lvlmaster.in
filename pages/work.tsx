@@ -79,7 +79,7 @@ const WorkPage = () => {
           </div>
           <h2 className="font-bold text-xl">Articles</h2>
           {isMounted ? (
-            <ul className="lg:grid grid-cols-2 py-5 justify-items-start">
+            <ul className="flex flex-col py-5 justify-items-start">
               {articles.data.items.map((item: any) => (
                 <Card
                   key={item.guid}
