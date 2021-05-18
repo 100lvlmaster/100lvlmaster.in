@@ -11,6 +11,7 @@ export const Container = (props) => {
     description: `Full stack developer, onw to 10x developer 🚀`,
     image: "https://100lvlmaster.in/assets/logo_art.jpg",
     type: "website",
+    url: "https://100lvlmaster.in",
   };
   return (
     <div
@@ -20,29 +21,14 @@ export const Container = (props) => {
       <NextHead>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
-        <meta content={meta.description} name="description" />
-        <meta
-          property="og:url"
-          content={`https://100lvlmaster.in${router.asPath}`}
-        />
-        <link
-          rel="canonical"
-          href={`https://100lvlmaster.in${router.asPath}`}
-        />
-        <meta
-          property="og:description"
-          content={meta.description}
-          key="ogsitename"
-        />
+        <meta property="og:url" content={`${meta.url}${router.asPath}`} />
+        <link rel="canonical" href={`${meta.url}${router.asPath}`} />
+        <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.image} key="ogimage" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:title" content={meta.title} key="ogtitle" />
         <meta property="og:site_name" content="Navin Kodag" key="ogsitename" />
-        <meta
-          property="og:url"
-          content={"https://100lvlmaster.in"}
-          key="ogurl"
-        />
+        <meta property="og:url" content={`${meta.url}`} key="ogurl" />
 
         <meta
           name="twitter:card"
