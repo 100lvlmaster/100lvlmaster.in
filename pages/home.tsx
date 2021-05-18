@@ -42,7 +42,9 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-        <TimelineComponent />
+        <div>
+          <TimelineComponent />
+        </div>
       </Container>
     </div>
   );
