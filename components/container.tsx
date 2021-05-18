@@ -20,15 +20,16 @@ export const Container = (props) => {
     >
       <NextHead>
         <title>{meta.title}</title>
-        <meta name="robots" content="follow, index" />
-        <meta property="og:url" content={`${meta.url}${router.asPath}`} />
+        <meta name="author" content="Navin Kodag" />
+        <meta name="stuff" content="follow, index" />
+        <meta name="description" content={meta.description} />
         <link rel="canonical" href={`${meta.url}${router.asPath}`} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.image} key="ogimage" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:title" content={meta.title} key="ogtitle" />
         <meta property="og:site_name" content="Navin Kodag" key="ogsitename" />
-        <meta property="og:url" content={`${meta.url}`} key="ogurl" />
+        <meta property="og:url" content={`${meta.url}${router.asPath}`} />
 
         <meta
           name="twitter:card"
@@ -40,12 +41,10 @@ export const Container = (props) => {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-        <meta name="description" content={meta.description} />
         <meta
           name="keywords"
           content="HTML, CSS, JavaScript, Next.js, Tailwind"
         />
-        <meta name="author" content="Navin Kodag" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
