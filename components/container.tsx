@@ -5,13 +5,12 @@ import { useRouter } from "next/router";
 import NextHead from "next/head";
 export const Container = (props) => {
   const router = useRouter();
-  const { id, children, customMeta, className } = props;
+  const { id, children, className } = props;
   const meta = {
     title: "Navin Kodag – Developer",
     description: `Full stack developer, onw to 10x developer 🚀`,
     image: "https://100lvlmaster.in/assets/logo_art.jpg",
     type: "website",
-    ...customMeta,
   };
   return (
     <div
@@ -56,10 +55,6 @@ export const Container = (props) => {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         <meta name="description" content={meta.description} />
-        {meta.date && (
-          <meta property="article:published_time" content={meta.date} />
-        )}
-
         <meta
           name="keywords"
           content="HTML, CSS, JavaScript, Next.js, Tailwind"
