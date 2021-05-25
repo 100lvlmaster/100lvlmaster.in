@@ -10,6 +10,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  font-display: optional;
 }
 ::selection {
   background-color: #47a3f3;
