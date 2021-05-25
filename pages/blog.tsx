@@ -10,7 +10,7 @@ const BlogPage = () => {
   //
   const loadArticles = async () => {
     setArticles(await fetchArticles());
-    // setMounted(true);
+    setMounted(true);
   };
 
   //
