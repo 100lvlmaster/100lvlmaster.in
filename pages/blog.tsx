@@ -24,7 +24,7 @@ const BlogPage = () => {
       <Container className="flex flex-col w-screen">
         <h2 className="font-bold text-xl">Articles</h2>
         <ul className="flex flex-col py-5 items-stretch ">
-          {false
+          {isMounted
             ? articles.data.items.map((item: any) => (
                 <ArticleCard
                   key={item.guid}
