@@ -43,7 +43,7 @@ export const Container = (props) => {
         <meta name="twitter:image" content={meta.image} />
         <meta
           name="keywords"
-          content="HTML, CSS, JavaScript, Next.js, Tailwind"
+          content="100lvlmaster, Navin Kodag, HTML, CSS, JavaScript, Next.js, Tailwind, "
         />
         <meta
           name="viewport"
