@@ -20,7 +20,7 @@ const WorkPage = () => {
                 key={`https://raw.githubusercontent.com/100lvlmaster/time_tracker/master/assets/icons/splash_logo.png`}
                 title={`Time tracker`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
-                thumbnail={`https://raw.githubusercontent.com/100lvlmaster/time_tracker/master/assets/icons/splash_logo.png`}
+                thumbnail={`https://i.ibb.co/YR0H5pJ/play-store-logo.png`}
                 description={`Todos and Note-taking in realtime with firebase.`}
               />
               <Card
