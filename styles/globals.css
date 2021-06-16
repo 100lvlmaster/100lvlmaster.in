@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: "Raleway";
+  font-family: "Helvetica-Nue";
   font-style: normal;
-  src: url(/fonts/Raleway.woff2) format("woff2");
+  src: url(/fonts/helveticanue.woff2) format("woff2");
 }
 
 html,

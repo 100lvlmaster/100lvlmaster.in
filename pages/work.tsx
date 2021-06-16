@@ -6,10 +6,23 @@ const WorkPage = () => {
         <div className=" flex  flex-col">
           <h2 className="font-bold text-xl">{"Projects"}</h2>
           <div>
-            <ul className=" grid grid-cols-1 lg:grid-cols-2 py-5 justify-items-stretch	">
+            <ul className="grid grid-cols-1 lg:grid-cols-2 py-5 justify-items-stretch	">
+              <Card
+                href="https://github.com/100lvlmaster/the-intersect"
+                title={`The intersect project`}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
+                thumbnail={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUvftboJ79mGZyKh1IztzFzVlmtwHThznQ3XDi20l10KHVnFH26PNpNCX_uEqRPgRGxuQ&usqp=CAU`}
+                description={`An prototype weekend project inspired from the famous series "Chuck"`}
+              />
+              <Card
+                href="https://github.com/100lvlmaster/Intersect_api"
+                title={`Image search API`}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
+                thumbnail={`https://www.pngkit.com/png/detail/380-3801403_go-programming-language-logo-golang-logo-png.png`}
+                description={`An API made with gin-gonic to scrape images from various sources`}
+              />
               <Card
                 href="https://github.com/100lvlmaster/maymay"
-                key={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
                 title={`Maymay v2`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://raw.githubusercontent.com/100lvlmaster/maymay/development/assets/icon/logo.png`}
@@ -17,7 +30,6 @@ const WorkPage = () => {
               />
               <Card
                 href="https://github.com/100lvlmaster/time_tracker"
-                key={`https://raw.githubusercontent.com/100lvlmaster/time_tracker/master/assets/icons/splash_logo.png`}
                 title={`Time tracker`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://i.ibb.co/YR0H5pJ/play-store-logo.png`}
@@ -25,7 +37,6 @@ const WorkPage = () => {
               />
               <Card
                 href="https://github.com/100lvlmaster/stacked_page_view"
-                key={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
                 title={`Stacked page view`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_flutter_icon_130599.png`}
@@ -33,7 +44,6 @@ const WorkPage = () => {
               />
               <Card
                 href="https://github.com/100lvlmaster/youtube_metadata"
-                key={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
                 title={`Youtube Metadata`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png`}
@@ -41,7 +51,6 @@ const WorkPage = () => {
               />
               <Card
                 href="https://github.com/100lvlmaster/spotify_metadata"
-                key={`https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png`}
                 title={`Spotify Metadata`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png`}
@@ -49,7 +58,6 @@ const WorkPage = () => {
               />
               <Card
                 href="https://github.com/100lvlmaster/one_for_all_theme"
-                key={`https://raw.githubusercontent.com/100lvlmaster/one_for_all_theme/master/theme_logo.png`}
                 title={`One for all`}
                 thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
                 thumbnail={`https://raw.githubusercontent.com/100lvlmaster/one_for_all_theme/master/theme_logo.png`}

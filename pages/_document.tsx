@@ -7,7 +7,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/Raleway.woff2"
+            href="/fonts/helveticanue.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
