@@ -1,12 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: "Helvetica-Nue";
-  font-style: normal;
-  src: url(/fonts/helveticanue.woff2) format("woff2");
-}
-
 html,
 body {
   scroll-behavior: smooth;
