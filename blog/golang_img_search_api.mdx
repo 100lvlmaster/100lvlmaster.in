@@ -1,0 +1,243 @@
+---
+title: Golang image search api
+description: This is a series to build the intersect project .. ish
+publishedAt: "2021-10-06"
+---
+
+## Building the REST API
+
+### I'll be using gin for this part of project.
+
+> Gin is a web framework written in Go (Golang). It features a martini-like API with performance that is up to 40 times faster thanks to httprouter. If you need performance and good productivity, you will love Gin.
+
+## TLDR
+
+- [The colly code for scraping](https://github.com/100lvlmaster/Intersect_api/blob/master/scraper/search.go)
+
+First we create our `go.mod` file:
+
+```
+ go mod init Intersect_api
+```
+
+Then we'll create our `main.go` file and add the following code.
+
+```
+// main.go
+package main
+import (
+	"Intersect/server"
+	"log"
+	"os"
+	"time"
+
+	"github.com/getsentry/sentry-go"
+)
+
+func main() {
+
+	// Initialize Libraries
+
+	// Initialize and defer Sentry
+	if err := sentry.Init(sentry.ClientOptions{
+		Dsn: os.Getenv("SENTRY_DSN"),
+	}); err != nil {
+		log.Fatalln("Sentry Init Error: ", err)
+	}
+
+	defer sentry.Flush(2 * time.Second)
+
+	// Initialize Server
+	server.Init()
+}
+```
+
+- Create a server module and initialize the server
+
+```
+/// server.go
+package server
+
+import "github.com/getsentry/sentry-go"
+
+// Init : Initialize the routes and server
+func Init() {
+	r := NewRouter()
+	err := r.Run()
+
+	if err != nil {
+		sentry.CaptureException(err)
+	}
+}
+
+```
+
+- Good rule of thumb to add some middleware with a token required
+
+```
+// middleware.go
+package server
+
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+func AuthMiddleware() gin.HandlerFunc {
+	authHeader := "let-me-in"
+	// os.Getenv("AUTHORIZATION_STRING")
+	return func(c *gin.Context) {
+		requiredAuth := c.Request.Header.Get("Authorization")
+		if requiredAuth != authHeader {
+			c.AbortWithStatusJSON(http.StatusUnauthorized, map[string]string{"message": "unauthorized peasant 😃"})
+		}
+		c.Next()
+		// middleware
+	}
+}
+
+```
+
+- Then we'll create default cors, routes and also call our middleware inside the router.use() method
+
+```
+package server
+
+import (
+	"Intersect/scraper"
+
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
+)
+
+/// router.go
+func NewRouter() *gin.Engine {
+	// gin.SetMode(gin.ReleaseMode)
+	router := gin.New()
+	// Gin and CORS Middlewares
+	router.Use(gin.Logger())
+	router.Use(gin.Recovery())
+	/// Cors
+	router.Use(setCors())
+	/// Declare Middleware
+	authorized := router.Group("/")
+	authorized.Use(AuthMiddleware())
+	{
+		authorized.GET("", scraper.Greet)
+		searchRouter := authorized.Group("search")
+		searchRouter.GET("", scraper.GetImgs)
+	}
+	return router
+}
+
+// Cors
+func setCors() gin.HandlerFunc {
+	return cors.New(cors.Config{
+		AllowOrigins:     []string{"*"},
+		AllowMethods:     []string{"GET", "OPTIONS", "PUT"},
+		AllowHeaders:     []string{"Origin", "Authorization"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+	})
+}
+
+```
+
+Then we'll create a scraper directory/module and create two files
+
+- `greeting.go` for default route and
+- `search.go` for the request route.
+  (Because the default route will be lonely).
+
+```
+package scraper
+
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+func Greet(c *gin.Context) {
+	c.JSON(http.StatusOK, map[string]string{"sup": "🤘🚀"})
+
+}
+
+```
+
+- And now the main component of the server, we'll scrape the images from various websites for free and non-stock images.
+  - https://unsplash.com
+  - https://burst.shopify.com
+  - https://www.pexels.com/
+  - https://www.flickr.com
+  - https://stocksnap.io
+  - https://google.com ... (because why not)
+
+```
+package scraper
+
+import (
+	"fmt"
+	"net/http"
+	"strings"
+
+	"github.com/gin-gonic/gin"
+	"github.com/gocolly/colly"
+)
+
+func GetImgs(c *gin.Context) {
+	searchQuery := c.Query("q")
+	res := getSearch(searchQuery)
+	c.JSON(http.StatusOK, res)
+}
+
+func getSearch(searchQuery string) Images {
+	searchString := strings.Replace(searchQuery, " ", "-", -1)
+	c := colly.NewCollector()
+	c.UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0"
+	c.AllowURLRevisit = true
+	c.DisableCookies()
+	array := []string{}
+
+	// Find and visit all links
+	c.OnHTML("img[src]", func(e *colly.HTMLElement) {
+		src := e.Attr("src")
+		if src != "" {
+			array = append(array, e.Attr("src"))
+		}
+	})
+	// Requesting a url for html
+	c.OnRequest(func(r *colly.Request) {
+		fmt.Println("Visiting", r.URL)
+	})
+	// search query
+	pexelsQuery := strings.Replace(searchString, "-", "%20", -1)
+	stocSnapQuery := strings.Replace(searchString, "-", "+", -1)
+	//
+	c.Visit("https://unsplash.com/s/" + searchString)
+	c.Visit("https://burst.shopify.com/photos/search?utf8=%E2%9C%93&q=" + searchString + "&button=")
+	c.Visit("https://www.pexels.com/search/" + pexelsQuery + "/")
+	c.Visit("https://www.flickr.com/search/?text=" + pexelsQuery)
+	c.Visit("http://www.google.com/images?q=" + stocSnapQuery)
+	c.Visit("https://stocksnap.io/search/" + stocSnapQuery)
+	//
+	return Images{
+		Count: len(array),
+		Data:  array}
+}
+
+type Images struct {
+	Count int      `json:"counts"`
+	Data  []string `json:"data"`
+}
+
+```
+
+After that, we'll build a binary using
+
+```
+go build -o /bin/Intersect_api -v .
+```
+
+### Now that's almost all the code we'll need.
