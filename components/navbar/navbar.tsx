@@ -1,9 +1,8 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { saveTheme, getTheme } from "../../utils/theme_helper";
-import { Spacer } from "../container";
 import Link from "next/link";
+import { Spacer } from "components/layouts/container";
 //
 export const NavBar = () => {
   const [mounted, setMount] = useState(false);

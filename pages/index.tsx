@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Container, Spacer } from "../components/container";
+import { Container, Spacer } from "../components/layouts/container";
+
 import { TimelineComponent } from "../components/timeline";
 export default function Home() {
   return (

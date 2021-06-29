@@ -1,4 +1,4 @@
-import { Container, Spacer } from "../components/container";
+import { Container, Spacer } from "../components/layouts/container";
 import { getAllArticles, Post } from "../lib/blog_pages";
 import dateformat from "dateformat";
 import NextLink from "next/link";
@@ -6,10 +6,14 @@ interface Props {
   posts: Post[];
 }
 const BlogPage = ({ posts }: Props) => {
+  const metaData = {
+    title: "Blog - 100lvlmaster",
+    description: "Blogs written by 100lvlmaster | Navin Kodag",
+  };
   //
   return (
     <div>
-      <Container className="flex flex-col w-screen">
+      <Container className="flex flex-col w-screen" metaData={metaData}>
         <h2 className="font-bold text-2xl">Blog</h2>
         <ul className="flex flex-col py-5 items-stretch space-y-5">
           {posts.map((post: Post) => (

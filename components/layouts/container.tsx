@@ -1,18 +1,18 @@
-import { Footer } from "./footer/footer";
-import "./navbar/navbar";
-import { NavBar } from "./navbar/navbar";
+import { Footer } from "../footer/footer";
+import { NavBar } from "../navbar/navbar";
 import { useRouter } from "next/router";
 import NextHead from "next/head";
 export const Container = (props) => {
   const router = useRouter();
-  const { id, children, className } = props;
-  const meta = {
+  const { id, children, className, metaData } = props;
+  let meta = {
     title: "Navin Kodag – Developer",
     description: `Full stack developer, onw to 10x developer 🚀`,
     image: "https://100lvlmaster.in/assets/logo_art.jpg",
     type: "website",
     url: "https://100lvlmaster.in",
   };
+  meta = { meta, ...metaData };
   return (
     <div
       id={id}

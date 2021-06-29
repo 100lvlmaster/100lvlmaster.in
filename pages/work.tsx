@@ -1,4 +1,5 @@
-import { Container } from "../components/container";
+import { Container, Spacer } from "../components/layouts/container";
+
 const WorkPage = () => {
   return (
     <div>
