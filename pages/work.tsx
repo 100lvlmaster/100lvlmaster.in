@@ -7,7 +7,14 @@ const WorkPage = () => {
         <div className=" flex  flex-col">
           <h2 className="font-bold text-xl">{"Projects"}</h2>
           <div>
-            <ul className="grid grid-cols-1 lg:grid-cols-2 py-5 justify-items-stretch	">
+            <ul className="grid grid-cols-2 lg:grid-cols-3  py-5 justify-items-stretch	">
+              <Card
+                href="https://flowfi.live"
+                title={`FlowFi`}
+                thumbnailSize={"h-14 w-14 md:h-22 md:w-22"}
+                thumbnail={`https://flowfi.live/favicon.svg`}
+                description={`An online markdown editor/scratchpad with LoFi beats to enter the state of flow`}
+              />{" "}
               <Card
                 href="https://github.com/100lvlmaster/the-intersect"
                 title={`The intersect project`}
