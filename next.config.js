@@ -1,8 +1,7 @@
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    turboMode: true,
-    eslint: true,
+  future: {
+    strictPostcssConfiguration: true,
   },
   async headers() {
     return [
