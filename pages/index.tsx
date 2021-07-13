@@ -1,4 +1,5 @@
 import { Container, Spacer } from "../components/layouts/container";
+import Card from "../components/card";
 export default function Home() {
   return (
     <div>
@@ -26,6 +27,29 @@ export default function Home() {
         <Spacer />
         <div className="p-16 flex flex-row align-items-baseline">
           <Spacer />
+        </div>
+        <div className="space-y-5">
+          <h1 className="font-bold text-xl">Projects</h1>
+          <div className="grid grid-cols-2 md:grid-cols-3">
+            <Card
+              href="https://flowfi.live"
+              title={`FlowFi`}
+              thumbnail={`https://flowfi.live/favicon.png`}
+              description={`An online markdown editor/scratchpad with LoFi beats to enter the state of flow`}
+            />{" "}
+            <Card
+              href="https://github.com/100lvlmaster/the-intersect"
+              title={`The intersect project`}
+              thumbnail={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUvftboJ79mGZyKh1IztzFzVlmtwHThznQ3XDi20l10KHVnFH26PNpNCX_uEqRPgRGxuQ&usqp=CAU`}
+              description={`An prototype weekend project inspired from the famous series "Chuck"`}
+            />
+            <Card
+              href="https://github.com/100lvlmaster/Intersect_api"
+              title={`Image search API`}
+              thumbnail={`https://www.pngkit.com/png/detail/380-3801403_go-programming-language-logo-golang-logo-png.png`}
+              description={`An API made with gin-gonic to scrape images from various sources`}
+            />
+          </div>
         </div>
       </Container>
     </div>
