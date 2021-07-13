@@ -19,7 +19,7 @@ const About = () => {
             Node.js and Firebase for back-end.`}
           </p>
           <br />
-          <p>I've got experience using and writing REST APIs and GraphQL</p>
+          <p>{`I've got experience using and writing REST APIs and GraphQL`}</p>
         </div>
         <TimelineComponent />
       </Container>

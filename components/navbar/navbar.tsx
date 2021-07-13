@@ -9,13 +9,17 @@ export const NavBar = () => {
   const { theme, setTheme } = useTheme();
 
   /// Change theme
-  const onChangeTheme = (val: string) => {
+  const onChangeTheme = (val: string): void => {
     setTheme(val);
     saveTheme(val);
-    if (!mounted) setMount(!mounted);
+    if (!mounted) {
+      setMount(true);
+    }
   };
   /// Call on mount
-  useEffect(() => onChangeTheme(getTheme()), []);
+  useEffect(() => {
+    onChangeTheme(getTheme());
+  }, []);
   ///
   return (
     <nav

@@ -2,10 +2,11 @@ import { Footer } from "../footer/footer";
 import { NavBar } from "../navbar/navbar";
 import { useRouter } from "next/router";
 import NextHead from "next/head";
+import { FrontMatter } from "lib/types";
 export const Container = (props) => {
   const router = useRouter();
   const { id, children, className, metaData } = props;
-  let meta = {
+  let meta: FrontMatter = {
     title: "Navin Kodag – Developer",
     description: `Full stack developer, onw to 10x developer 🚀`,
     image: "https://100lvlmaster.in/assets/logo_art.jpg",

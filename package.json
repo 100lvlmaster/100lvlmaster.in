@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-v1",
+  "name": "100lvlmaster",
   "version": "1.1.0",
   "private": true,
   "scripts": {
@@ -9,47 +9,29 @@
     "commit": "cz"
   },
   "dependencies": {
-    "@svgr/webpack": "^5.5.0",
     "@tailwindcss/typography": "^0.4.1",
-    "axios": "^0.21.1",
-    "commitizen": "^4.2.4",
     "dateformat": "^4.5.1",
-    "fs": "^0.0.1-security",
-    "gray-matter": "^4.0.3",
-    "mdx-prism": "^0.3.3",
     "next": "11.0.1",
-    "next-mdx-remote": "^3.0.2",
     "next-themes": "^0.0.15",
     "preact": "^10.5.14",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "reading-time": "^1.3.0",
+    "react-markdown": "^6.0.2",
     "remark-autolink-headings": "^6.0.1",
-    "remark-code-titles": "^0.1.2",
     "remark-gfm": "^1.0.0",
-    "remark-slug": "^6.0.0",
-    "yarn-audit-fix": "^6.3.5"
+    "remark-lint": "^8.0.0"
   },
   "devDependencies": {
     "@types/node": "^16.3.1",
     "@types/react": "^17.0.14",
     "autoprefixer": "^10.3.0",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.30.0",
     "eslint-config-next": "^11.0.1",
     "globby": "^11.0.4",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
-    "rehype": "11.0.0",
-    "remark-frontmatter": "3.0.0",
     "remark-parse": "9.0.0",
-    "remark-stringify": "9.0.1",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.3.5"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

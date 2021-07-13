@@ -1,4 +1,5 @@
-import { Container, Spacer } from "../components/layouts/container";
+import { Container } from "../components/layouts/container";
+import NextImage from "next/image";
 
 const WorkPage = () => {
   return (
@@ -122,7 +123,7 @@ const ArticleCard = ({ title, imgUrl, description, href }) => (
         <div>{title}</div>
         <div>{description}</div>
       </div>
-      <img className=" w-20 object-cover	" src={imgUrl} alt={`${imgUrl}.png`} />
+      <img className=" w-20 object-cover" src={imgUrl} alt={`${imgUrl}.png`} />
     </div>
   </a>
 );

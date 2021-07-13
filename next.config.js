@@ -11,6 +11,9 @@ module.exports = {
       },
     ];
   },
+  // images: {
+  //   domains: ["res.cloudinary.com", "cloudinary.com", "*"],
+  // },
   webpack: (config, { dev, isServer }) => {
     if (isServer) {
       require("./scripts/generate-sitemap");
