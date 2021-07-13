@@ -18,30 +18,33 @@ const BlogPage = ({ posts }: Props) => {
       <h2 className="font-bold text-2xl">Blog</h2>
       <ul className="flex flex-col py-5 items-stretch space-y-5">
         {posts.map((post: Post) => (
-          <NextLink key={post.slug} href={`/blog/${post.slug}`}>
-            <a>
-              <div className="flex flex-col space-y-1">
-                <img
-                  src={post.cover_image}
-                  alt={post.cover_image}
-                  // layout="fill"
-                  className="rounded-lg"
-                />
-
-                <div className="">{post.title}</div>
-
-                <div className="flex flex-col">
-                  <div className="text-xs dark:text-gray-400 text-gray-600">
-                    {post.description}
+          <li key={post.slug}>
+            <NextLink href={`/blog/${post.slug}`}>
+              <a>
+                <div className="flex flex-col space-y-1">
+                  <div className="relative h-36 md:h-44 lg:h-60	 w-full ">
+                    <NextImage
+                      src={post.cover_image}
+                      alt={post.cover_image}
+                      layout="fill"
+                      className="rounded-lg"
+                    />
                   </div>
-                  <div className="flex flex-row text-xs dark:text-gray-400 text-gray-600">
-                    <Spacer />
-                    {dateformat(post.published_at, `dd mmm yy`)}
+                  <div className="">{post.title}</div>
+
+                  <div className="flex flex-col">
+                    <div className="text-xs dark:text-gray-400 text-gray-600">
+                      {post.description}
+                    </div>
+                    <div className="flex flex-row text-xs dark:text-gray-400 text-gray-600">
+                      <Spacer />
+                      {dateformat(post.published_at, `dd mmm yy`)}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          </NextLink>
+              </a>
+            </NextLink>
+          </li>
         ))}
       </ul>
     </Container>

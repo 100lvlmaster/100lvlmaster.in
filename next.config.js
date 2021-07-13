@@ -11,9 +11,18 @@ module.exports = {
       },
     ];
   },
-  // images: {
-  //   domains: ["res.cloudinary.com", "cloudinary.com", "*"],
-  // },
+  images: {
+    domains: [
+      "res.cloudinary.com",
+      "flowfi.live",
+      "encrypted-tbn0.gstatic.com",
+      "www.pngkit.com",
+      "raw.githubusercontent.com",
+      "i.ibb.co",
+      "cdn.icon-icons.com",
+      "www.freepnglogos.com",
+    ],
+  },
   webpack: (config, { dev, isServer }) => {
     if (isServer) {
       require("./scripts/generate-sitemap");
