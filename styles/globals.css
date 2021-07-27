@@ -39,17 +39,8 @@ body {
 .prose sm {
   @apply text-black text-white;
 }
-.prose .anchor {
-  @apply absolute invisible;
-
-  margin-left: -1em;
-  padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
-  cursor: pointer;
-}
 .prose * {
-  @apply text-black dark:text-white;
+  @apply text-black dark:text-white p-0 m-0;
 }
 .anchor:hover {
   @apply visible no-underline;
@@ -69,11 +60,11 @@ body {
   @apply text-blue-500 underline;
 }
 .prose pre {
-  @apply text-gray-800 border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+  @apply text-gray-800 border bg-gray-50 dark:bg-gray-900;
 }
 
 .prose code {
-  @apply text-black dark:text-white px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+  @apply text-black dark:text-white border  rounded-md bg-gray-100 dark:bg-gray-900;
 }
 
 .prose img {
