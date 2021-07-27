@@ -17,7 +17,7 @@ export const Container = (props) => {
   return (
     <div
       id={id}
-      className="dark:bg-black flex flex-col dark:text-white text-black w-full bg-white items-center justify-items-stretch py-5"
+      className="flex flex-col bg-gray-100 dark:text-white dark:bg-background text-black w-full  items-center justify-items-stretch py-5"
     >
       <NextHead>
         <title>{meta.title}</title>
@@ -58,7 +58,7 @@ export const Container = (props) => {
           .concat(className)}
       >
         {children}
-        <Footer className="py-10" />
+        <Footer className="pt-10" />
       </div>
     </div>
   );
