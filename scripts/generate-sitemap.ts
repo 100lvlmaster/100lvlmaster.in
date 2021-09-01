@@ -1,11 +1,10 @@
-const fs = require("fs");
-
-const globby = require("globby");
-const prettier = require("prettier");
+import * as fs from "fs";
+import globby from "globby";
+import prettier from "prettier";
 
 (async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
-  const pages = await globby([
+  const pages = await globby.globby([
     "pages/*.tsx",
     "data/**/*.mdx",
     "!data/*.mdx",
