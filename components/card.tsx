@@ -9,7 +9,7 @@ const Card = (props) => {
     >
       <a rel="noreferrer" href={props.href} target="_blank_">
         <div className="p-3">
-          <div className="relative h-24 w-24 md:h-22 md:w-22 object-contain">
+          <div className="relative h-24 w-24 md:h-22 md:w-22 object-contain self-center flex flex-col items-center">
             <NextImage
               src={props.thumbnail}
               layout="fill"

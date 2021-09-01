@@ -3,17 +3,27 @@ import { NavBar } from "../navbar/navbar";
 import { useRouter } from "next/router";
 import NextHead from "next/head";
 import { FrontMatter } from "lib/types";
-export const Container = (props) => {
+
+interface Props {
+  children: JSX.Element | JSX.Element[];
+  metaData?: FrontMatter;
+  className?: string;
+  id?: string;
+}
+
+export const Container = (props: Props) => {
   const router = useRouter();
   const { id, children, className, metaData } = props;
-  let meta: FrontMatter = {
-    title: "Navin Kodag – Developer",
-    description: `Full stack developer, onw to 10x developer 🚀`,
-    image: "https://100lvlmaster.in/assets/logo_art.jpg",
-    type: "website",
-    url: "https://100lvlmaster.in",
+  const meta: FrontMatter = {
+    ...{
+      title: "Navin Kodag – Developer",
+      description: `Full stack developer, onw to 10x developer 🚀`,
+      image: "https://100lvlmaster.in/assets/logo_art.jpg",
+      type: "website",
+      url: "https://100lvlmaster.in",
+    },
+    ...metaData,
   };
-  meta = { meta, ...metaData };
   return (
     <div
       id={id}

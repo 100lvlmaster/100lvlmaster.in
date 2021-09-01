@@ -1,9 +1,16 @@
 import { Container } from "../components/layouts/container";
 import Card from "../components/card";
+import { FrontMatter } from "lib/types";
+///
 const WorkPage = () => {
+  const metaData: FrontMatter = {
+    title: "Project & Work - 100lvlmaster",
+    description: "Projects and works of 100lvlmaster | Navin Kodag",
+    url: `https://100lvlmaster.in/work/`,
+  };
   return (
     <div>
-      <Container className="flex flex-col">
+      <Container metaData={metaData} className="flex flex-col">
         <div className=" flex  flex-col">
           <h2 className="font-bold text-xl">{"Projects"}</h2>
           <div>
