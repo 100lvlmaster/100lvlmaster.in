@@ -10,12 +10,12 @@ const Card = ({ href, title, description, githubLink, lang }: Props) => {
     <a rel="noreferrer" href={githubLink ?? href} target="_blank_">
       <div className="flex flex-col px-3 py-2 space-y-2 bg-gray-100 dark:bg-card-bg rounded-md h-44 border-current dark:border-transparent">
         <div className="text-black dark:text-white text-lg">{title}</div>
-        <div className="text-gray-500 dark:text-gray-400 overflow-ellipsis">
+        <div className="text-xs text-gray-500 dark:text-gray-400 overflow-ellipsis">
           {description}
         </div>
         <div className="flex-grow"></div>
         <div className="flex flex-row items-center space-x-3">
-          <span className="text-xs dark:text-gray-200 tracking-widest uppercase">
+          <span className=" dark:text-gray-200 tracking-widest uppercase text-xs">
             {lang}
           </span>
           <div className="flex-grow"></div>

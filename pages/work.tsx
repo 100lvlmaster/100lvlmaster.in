@@ -55,21 +55,21 @@ const WorkPage = () => {
           githubLink="https://github.com/100lvlmaster/youtube_metadata"
           href="https://pub.dev/packages/youtube_metadata"
           title="Youtube Metadata"
-          description="A flutter package to fetch a videos metadata from the link using the oembed API"
+          description="A Flutter package to fetch a videos metadata from the link using the oembed API"
         />
         <Card
           lang="Dart"
           href="https://pub.dev/packages/spotify_metadata"
           githubLink="https://github.com/100lvlmaster/spotify_metadata"
           title="Spotify Metadata"
-          description="A flutter package to fetch a spotify song/playlist's metadata from the link using the oembed API"
+          description="A Flutter package to fetch a spotify song/playlist's metadata using the oembed API"
         />
         <Card
           lang="json"
           href="https://marketplace.visualstudio.com/items?itemName=100lvlmaster.one-for-all"
           githubLink="https://github.com/100lvlmaster/one_for_all_theme"
           title="One for all"
-          description="VS code theme built using Atom's one dark pro color scheme with a minimal design and eye candy colors"
+          description="VS code theme built using Atom's one dark pro color scheme with a minimal design."
         />
       </ul>
     </Container>
