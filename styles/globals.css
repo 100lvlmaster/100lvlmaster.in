@@ -34,10 +34,10 @@ body {
   }
 }
 .prose {
-  @apply text-black text-white text-sm;
+  @apply text-black dark:text-white text-sm;
 }
 .prose sm {
-  @apply text-black text-white;
+  @apply text-black dark:text-white;
 }
 .prose * {
   @apply text-black dark:text-white p-0 m-0;
