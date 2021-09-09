@@ -73,5 +73,3 @@ export const Container = (props: Props) => {
     </div>
   );
 };
-
-export const Spacer = () => <div className="flex-grow"></div>;

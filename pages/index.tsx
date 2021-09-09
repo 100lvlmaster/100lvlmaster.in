@@ -1,4 +1,4 @@
-import { Container, Spacer } from "../components/layouts/container";
+import { Container } from "../components/layouts/container";
 import Card from "../components/card";
 export default function Home() {
   return (
@@ -50,22 +50,10 @@ export default function Home() {
             >
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
-            {/* <svg
-                width="4"
-                height="4"
-                xmlns="http://www.w3.org/2000/svg"
-                fillRule="evenodd"
-                clipRule="evenodd"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-              >
-                <path d="M14 4h-13v18h20v-11h1v12h-22v-20h14v1zm10 5h-1v-6.293l-11.646 11.647-.708-.708 11.647-11.646h-6.293v-1h8v8z" />
-              </svg> */}
           </div>
         </a>
       </div>
-      <Spacer />
+      <div className="flex-grow" />
       <div className="space-y-5">
         <h1 className="font-medium text-xl tracking-wide">Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

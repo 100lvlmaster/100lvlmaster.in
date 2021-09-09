@@ -1,4 +1,4 @@
-import { Container, Spacer } from "../components/layouts/container";
+import { Container } from "../components/layouts/container";
 import NextLink from "next/link";
 import NextImage, { ImageProps } from "next/image";
 import { Post } from "../lib/types";
@@ -37,7 +37,7 @@ const BlogPage = ({ posts }: Props) => {
                       {post.description}
                     </div>
                     <div className="flex flex-row text-xs dark:text-gray-400 text-gray-600">
-                      <Spacer />
+                      <div className="flex-grow" />
                       {dateformat(post.published_at, `dd mmm yy`)}
                     </div>
                   </div>

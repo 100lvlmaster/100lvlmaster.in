@@ -2,7 +2,6 @@ import { useTheme } from "next-themes";
 import { useEffect, useState, useCallback } from "react";
 import { saveTheme, getTheme } from "../../utils/theme_helper";
 import Link from "next/link";
-import { Spacer } from "components/layouts/container";
 import { useRouter } from "next/router";
 //
 export const NavBar = () => {
@@ -45,7 +44,7 @@ export const NavBar = () => {
           <NextLink href="/blog" title={`Blog`} />
           <NextLink href="/work" title={`Work`} />
         </div>
-        <Spacer></Spacer>
+        <div className="flex-grow"></div>
         <button
           aria-label="Toggle Dark Mode"
           type="button"

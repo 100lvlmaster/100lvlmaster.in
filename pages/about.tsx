@@ -1,4 +1,4 @@
-import { Container, Spacer } from "../components/layouts/container";
+import { Container } from "../components/layouts/container";
 import { TimelineComponent } from "../components/timeline";
 const About = () => {
   return (
