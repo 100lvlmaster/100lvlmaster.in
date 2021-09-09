@@ -13,7 +13,7 @@ export const Footer = (props) => {
         ` ${props.className}`
       )}
     >
-      <div className="grid md:grid-cols-3 text-xs items-center lg:gap-1 grid-cols-1 space-y-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 text-sm items-center lg:gap-1 space-y-2">
         <Link href="/">
           <a>
             <div className="flex items-center flex-row">
@@ -23,8 +23,7 @@ export const Footer = (props) => {
         </Link>
         <Link href="/about">
           <a>
-            {" "}
-            <div className="flex  flex-row ">
+            <div className="flex items-center flex-row ">
               <span className={linkClassName}>{`About`}</span>
             </div>
           </a>

@@ -1,4 +1,4 @@
-const { spacing, fontFamily, colors } = require("tailwindcss/defaultTheme");
+const { spacing, fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -6,10 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#010101",
+        dark: "#111111",
+        light: "#ffffff",
+        "card-bg": "#262628",
       },
       fontFamily: {
-        sans: ["Helvetica-Nue", ...fontFamily.sans],
+        sans: ["Inter", ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {

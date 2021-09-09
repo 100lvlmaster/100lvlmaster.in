@@ -27,7 +27,7 @@ export const Container = (props: Props) => {
   return (
     <div
       id={id}
-      className="flex flex-col bg-gray-100 dark:text-white dark:bg-background text-black w-full  items-center justify-items-stretch py-5"
+      className="flex flex-col dark:text-white bg-light dark:bg-dark text-black w-full  items-center justify-items-stretch py-5"
     >
       <NextHead>
         <title>{meta.title}</title>

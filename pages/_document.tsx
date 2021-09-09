@@ -6,6 +6,13 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="UTF-8" />
+          <link
+            rel="preload"
+            href="/fonts/"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body className=" dark:bg-black text-white dark:text-black">
           <Main />
