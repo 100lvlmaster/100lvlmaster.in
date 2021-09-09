@@ -10,7 +10,7 @@ interface Props {
 const Card = ({ href, title, description, githubLink, lang }: Props) => {
   return (
     <a rel="noreferrer" href={href} target="_blank_">
-      <div className="flex flex-col px-3 py-2 space-y-2 bg-gray-100 dark:bg-card-bg rounded-md h-40 border-current dark:border-transparent">
+      <div className="flex flex-col px-3 py-2 space-y-2 bg-gray-100 dark:bg-card-bg rounded-md h-44 border-current dark:border-transparent">
         <div className="text-black dark:text-white text-lg">{title}</div>
         <div className="text-gray-500 dark:text-gray-400 overflow-ellipsis">
           {description}

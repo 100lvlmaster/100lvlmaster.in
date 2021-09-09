@@ -37,9 +37,7 @@ export const NavBar = () => {
   }, [onChangeTheme]);
   ///
   return (
-    <nav
-      className={`sticky-nav w-full flex flex-row justify-center bg-light dark:bg-dark dark:bg-opacity-95 bg-opacity-95 backdrop-blur-xl blur-xl`}
-    >
+    <nav className="sticky-nav w-full flex flex-row justify-center bg-light dark:bg-dark dark:bg-opacity-95 bg-opacity-95 backdrop-blur-xl blur-xl px-2">
       <div className="max-w-2xl w-full flex flex-row items-center p-5">
         <div className="space-x-5 flex flex-row">
           <NextLink href="/" title={`Home`} />
@@ -57,6 +55,8 @@ export const NavBar = () => {
           {mounted && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
               viewBox="0 0 24 24"
               fill="currentColor"
               stroke="currentColor"
