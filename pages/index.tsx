@@ -65,13 +65,15 @@ export default function Home() {
           />
           <Card
             lang="Javascript"
-            href="https://github.com/100lvlmaster/the-intersect"
+            href="https://the-intersect.vercel.app/"
+            githubLink="https://github.com/100lvlmaster/the-intersect"
             title={`The Intersect project`}
             description={`An prototype weekend project inspired from the famous series "Chuck"`}
           />
           <Card
             lang="Go"
             href="https://github.com/100lvlmaster/Intersect_api"
+            githubLink="https://github.com/100lvlmaster/Intersect_api"
             title={`Image search API`}
             description={`An API made with gin-gonic to scrape images from various sources`}
           />

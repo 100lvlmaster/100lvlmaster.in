@@ -15,56 +15,61 @@ const WorkPage = () => {
         <Card
           lang="Svelte"
           href="https://flowfi.live"
-          title={`FlowFi`}
-          description={`An online markdown editor/scratchpad with LoFi beats to enter the state of flow`}
+          title="FlowFi"
+          description="An online markdown editor/scratchpad with LoFi beats to enter the state of flow"
         />
         <Card
           lang="Typescript"
-          href="https://github.com/100lvlmaster/the-intersect"
+          href="https://the-intersect.vercel.app/"
+          githubLink="https://github.com/100lvlmaster/the-intersect"
           title="The Intersect project"
           description={`An prototype weekend project inspired from the famous series "Chuck"`}
         />
         <Card
           lang="GO"
-          href="https://github.com/100lvlmaster/Intersect_api"
+          githubLink="https://github.com/100lvlmaster/Intersect_api"
           title={`Image search API`}
           description={`An API made with gin-gonic to scrape images from various sources`}
         />
         <Card
           lang="Dart"
-          href="https://github.com/100lvlmaster/maymay"
-          title={`Maymay v2`}
+          githubLink="https://github.com/100lvlmaster/maymay"
+          title="Maymay"
           description="Open source Flutter app to fetch random memes at will"
         />
         <Card
           lang="Dart"
-          href="https://github.com/100lvlmaster/time_tracker"
+          githubLink="https://github.com/100lvlmaster/time_tracker"
           title={`Time tracker`}
           description={`Todos and Note-taking in realtime with Firebase and Flutter`}
         />
         <Card
           lang="Dart"
-          href="https://github.com/100lvlmaster/stacked_page_view"
+          githubLink="https://github.com/100lvlmaster/stacked_page_view"
+          href="https://pub.dev/packages/stacked_page_view"
           title={`Stacked page view`}
           description={`A Flutter pacakge that provides vertical pageview carousel in flutter`}
         />
         <Card
           lang="Dart"
-          href="https://github.com/100lvlmaster/youtube_metadata"
-          title={`Youtube Metadata`}
-          description={`A flutter package to fetch a videos metadata from the link using the oembed API`}
+          githubLink="https://github.com/100lvlmaster/youtube_metadata"
+          href="https://pub.dev/packages/youtube_metadata"
+          title="Youtube Metadata"
+          description="A flutter package to fetch a videos metadata from the link using the oembed API"
         />
         <Card
           lang="Dart"
-          href="https://github.com/100lvlmaster/spotify_metadata"
-          title={`Spotify Metadata`}
-          description={`A flutter package to fetch a spotify song/playlist's metadata from the link using the oembed API`}
+          href="https://pub.dev/packages/spotify_metadata"
+          githubLink="https://github.com/100lvlmaster/spotify_metadata"
+          title="Spotify Metadata"
+          description="A flutter package to fetch a spotify song/playlist's metadata from the link using the oembed API"
         />
         <Card
           lang="json"
-          href="https://github.com/100lvlmaster/one_for_all_theme"
-          title={`One for all`}
-          description={`VS code theme built using Atom's one dark pro color scheme with a minimal design and eye candy colors`}
+          href="https://marketplace.visualstudio.com/items?itemName=100lvlmaster.one-for-all"
+          githubLink="https://github.com/100lvlmaster/one_for_all_theme"
+          title="One for all"
+          description="VS code theme built using Atom's one dark pro color scheme with a minimal design and eye candy colors"
         />
       </ul>
     </Container>
