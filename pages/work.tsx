@@ -11,7 +11,7 @@ const WorkPage = () => {
   return (
     <Container metaData={metaData} className="flex flex-col space-y-5">
       <h2 className="font-black text-4xl">Work</h2>
-      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Card
           lang="Svelte"
           href="https://flowfi.live"

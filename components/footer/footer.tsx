@@ -1,7 +1,12 @@
-import Link from "next/link";
-const linkClassName: string = `dark:text-gray-400 dark:hover:text-gray-200 text-gray-500 hover:text-gray-800 transition`;
+import NextLink from "next/link";
+const linkClassName: string = `dark:text-gray-400 dark:hover:text-gray-200 text-gray-500 hover:text-gray-800 transition no-underline`;
 const ExternalLink = (props) => (
-  <a rel="noreferrer" target="_blank" href={props.href}>
+  <a
+    className="no-underline"
+    rel="noreferrer"
+    target="_blank"
+    href={props.href}
+  >
     {props.children}
   </a>
 );
@@ -9,39 +14,39 @@ export const Footer = (props) => {
   return (
     <div
       id="contact"
-      className={"dark:text-gray-300 text-black flex flex-col space-y-3".concat(
+      className={"w-full max-w-2xl dark:text-gray-300 text-black flex flex-col space-y-3 px-28 md:p-16 pt-10".concat(
         ` ${props.className}`
       )}
     >
       <div className="grid grid-cols-2 md:grid-cols-3 text-sm items-center lg:gap-1 space-y-2">
-        <Link href="/">
+        <NextLink href="/">
           <a>
             <div className="flex items-center flex-row">
               <span className={linkClassName}>{`Home`}</span>
             </div>
           </a>
-        </Link>
-        <Link href="/about">
+        </NextLink>
+        <NextLink href="/about">
           <a>
             <div className="flex items-center flex-row ">
               <span className={linkClassName}>{`About`}</span>
             </div>
           </a>
-        </Link>
-        <Link href="/work">
+        </NextLink>
+        <NextLink href="/work">
           <a>
             <div className="flex items-center flex-row">
               <span className={linkClassName}>{`Work`}</span>
             </div>
           </a>
-        </Link>{" "}
-        <Link href="/blog">
+        </NextLink>{" "}
+        <NextLink href="/blog">
           <a>
             <div className="flex items-center flex-row">
               <span className={linkClassName}>{`Blog`}</span>
             </div>
           </a>
-        </Link>
+        </NextLink>
         <ExternalLink href={`https://dev.to/100lvlmaster`}>
           <div className="flex flex-row items-center space-x-2">
             <span className={linkClassName}>{`Dev.to`}</span>

@@ -68,8 +68,8 @@ export const Container = (props: Props) => {
           .concat(className)}
       >
         {children}
-        <Footer className="pt-10" />
       </div>
+      <Footer />
     </div>
   );
 };
