@@ -56,12 +56,6 @@ export const TimelineComponent = () => (
       }
     />
     <Milestone
-      date={`March/2020`}
-      subtitle={``}
-      title={`Launched maymay_v1`}
-      description={`A full stack meme client to render memes from reddit. Two web clients, in react and svelte, And  a mobile client made with flutter.`}
-    ></Milestone>
-    <Milestone
       date={"July/2020"}
       title={"Intern"}
       subtitle={`mybytecode`}
@@ -88,7 +82,7 @@ export const TimelineComponent = () => (
     />
     <Milestone
       date={`October/2020`}
-      title={`Full stack developer`}
+      title={`SDE`}
       subtitle={"mybytecode"}
       description={
         <ul className="list-disc space-y-2">
@@ -107,20 +101,8 @@ export const TimelineComponent = () => (
     <Milestone
       date={`April/2020`}
       subtitle={"RedCarpetUp"}
-      title={`Full stack developer`}
-      description={
-        <ul className="list-disc space-y-2">
-          {/* <li>
-            {`Utilized GraphQL to reduce over-fetching and under-fetching of data by 75% 🚀`}
-          </li>
-          <li>
-            {`Handled development of two front-end mobile clients and a node.js backend 💯`}
-          </li>
-          <li>
-            {`Combined MVC and BLoC for the architecture of the mobile client created in Flutter`}
-          </li> */}
-        </ul>
-      }
+      title={`SDE`}
+      description={<ul className="list-disc space-y-2"></ul>}
     ></Milestone>
   </Timeline>
 );
