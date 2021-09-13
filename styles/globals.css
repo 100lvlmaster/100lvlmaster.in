@@ -40,19 +40,18 @@ body {
   @apply text-black dark:text-white;
 }
 .prose * {
-  @apply text-black dark:text-white p-0 m-0;
+  @apply text-black dark:text-white;
 }
 .anchor:hover {
   @apply visible no-underline;
 }
 .prose a {
-  @apply text-blue-300 dark:text-blue-700;
+  @apply text-blue-300 dark:text-red-700 break-all;
 }
 .prose .anchor:after {
-  @apply text-blue-300 dark:text-blue-700;
+  @apply text-red-300 dark:text-blue-700;
   content: "#";
 }
-
 .prose *:hover > .anchor {
   @apply visible no-underline;
 }

@@ -45,7 +45,7 @@ const BlogPost = ({ post }: Props) => {
         </p>
       </div>
       <ReactMarkdown plugins={[gfm, lint]} className="prose">
-        {post.body_html}
+        {post.body_markdown}
       </ReactMarkdown>
     </Container>
     // <BlogLayout frontMatter={frontMatter}>
