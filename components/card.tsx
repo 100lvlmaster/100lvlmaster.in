@@ -42,8 +42,8 @@ const Card = ({ href, title, description, githubLink, lang }: Props) => {
           )}
           {githubLink && (
             <a
-              id="github-link"
               href={githubLink}
+              id="url_link"
               target="_blank_"
               rel="noreferrer"
             >
