@@ -62,7 +62,7 @@ export const Container = ({ id, children, className, frontMatter }: Props) => {
       </NextHead>
       <NavBar />
       <div
-        className={"flex flex-col w-full max-w-2xl px-4 py-5 md:px-16"
+        className={"flex flex-col w-full items-center max-w-2xl px-4 py-5 md:px-16"
           .concat(" ")
           .concat(className)}
       >

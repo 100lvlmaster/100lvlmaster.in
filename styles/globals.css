@@ -12,6 +12,7 @@ body {
 }
 ::-webkit-scrollbar {
   width: 0.3em;
+  height: 0.3em;
 }
 
 ::-webkit-scrollbar-track {
@@ -21,18 +22,6 @@ body {
   @apply bg-black dark:bg-white rounded-full;
 }
 
-.sticky-nav {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  transition: background-color 0.1 ease-in-out;
-}
-@supports not (backdrop-filter: none) {
-  .sticky-nav {
-    backdrop-filter: none;
-    @apply bg-opacity-100;
-  }
-}
 .prose {
   @apply text-black dark:text-white text-sm;
 }
@@ -46,7 +35,7 @@ body {
   @apply visible no-underline;
 }
 .prose a {
-  @apply text-blue-300 dark:text-red-700 break-all;
+  @apply text-blue-300 dark:text-blue-700 break-all;
 }
 .prose .anchor:after {
   @apply text-red-300 dark:text-blue-700;
@@ -58,13 +47,10 @@ body {
 .prose .anchor {
   @apply text-blue-500 underline;
 }
-.prose pre {
-  @apply text-gray-800 border bg-gray-50 dark:bg-gray-900;
-}
 
-.prose code {
+/* .prose code {
   @apply text-black dark:text-white border  rounded-md bg-gray-100 dark:bg-gray-900;
-}
+} */
 
 .prose img {
   /* Don't apply styles to next/image */

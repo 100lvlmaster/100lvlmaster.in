@@ -7,14 +7,14 @@ interface Props {
   posts: Post[];
 }
 const BlogPage = ({ posts }: Props) => {
-  const metaData = {
+  const frontMatter = {
     title: "Blog - 100lvlmaster",
     description: "Blogs written by 100lvlmaster | Navin Kodag",
     url: `https://100lvlmaster.in/blog/`,
   };
   //
   return (
-    <Container className="flex flex-col w-screen" metaData={metaData}>
+    <Container className="flex flex-col w-screen" frontMatter={frontMatter}>
       <h2 className="font-black text-4xl">Blog</h2>
       <ul className="flex flex-col py-5 items-stretch space-y-5">
         {posts.map((post: Post) => (
@@ -22,14 +22,6 @@ const BlogPage = ({ posts }: Props) => {
             <NextLink href={`/blog/${post.slug}`}>
               <a>
                 <div className="flex flex-col space-y-1">
-                  {/* <div className="relative h-36 md:h-44 lg:h-60	 w-full "> */}
-                  {/* <NextImage
-                      src={post.cover_image}
-                      alt={post.cover_image}
-                      layout="fill"
-                      className="rounded-lg"
-                    /> */}
-                  {/* </div> */}
                   <div className="font-bold text-xl">{post.title}</div>
 
                   <div className="flex flex-col">

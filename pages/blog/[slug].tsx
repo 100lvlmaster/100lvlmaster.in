@@ -5,6 +5,10 @@ import NextImage from "next/image";
 import gfm from "remark-gfm";
 import lint from "remark-lint";
 import ReactMarkdown from "react-markdown";
+// import highlight from "remark-syntax-highlight";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+
+import { vs } from "react-syntax-highlighter/dist/cjs/styles/prism";
 interface Props {
   post: Post;
 }
@@ -32,7 +36,7 @@ const BlogPost = ({ post }: Props) => {
       <div className="font-bold text-3xl md:text-5xl tracking-tight text-black dark:text-white">
         {frontMatter.title}
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-2">
+      <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center mt-2">
         <div className="flex items-center">
           <p className="text-sm text-gray-700 dark:text-gray-300">
             {"Navin Kodag"}
@@ -44,7 +48,30 @@ const BlogPost = ({ post }: Props) => {
           {dateformat(frontMatter.publishedAt, `dd mmm yyyy`)}
         </p>
       </div>
-      <ReactMarkdown plugins={[gfm, lint]} className="prose">
+      <ReactMarkdown
+        plugins={[gfm, lint]}
+        className="prose"
+        // remarkPlugins={[highlight]}
+        components={{
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || "");
+            return !inline && match ? (
+              <SyntaxHighlighter
+                style={vs}
+                language={match[1]}
+                PreTag="pre"
+                {...(props as any)}
+              >
+                {String(children).replace(/\n$/, "")}
+              </SyntaxHighlighter>
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+        }}
+      >
         {post.body_markdown}
       </ReactMarkdown>
     </Container>
