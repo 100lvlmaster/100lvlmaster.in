@@ -22,6 +22,7 @@
     "remark-lint": "^9.0.1"
   },
   "devDependencies": {
+    "@types/dateformat": "^3.0.1",
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.19",
     "autoprefixer": "^10.3.3",

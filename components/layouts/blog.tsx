@@ -1,10 +1,14 @@
 import { FrontMatter } from "lib/types";
 import { Container } from "./container";
 import dateformat from "dateformat";
-const BlogLayout = ({ children, frontMatter }) => {
-  frontMatter = frontMatter as FrontMatter;
+
+interface Props {
+  children: JSX.Element | JSX.Element[];
+  frontMatter: FrontMatter;
+}
+const BlogLayout = ({ children, frontMatter }: Props) => {
   return (
-    <Container metaData={frontMatter} className={`prose`}>
+    <Container frontMatter={frontMatter} className={`prose`}>
       <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
         {frontMatter.title}
       </h1>

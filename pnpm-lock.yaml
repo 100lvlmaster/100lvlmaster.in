@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@tailwindcss/typography': ^0.4.1
+  '@types/dateformat': ^3.0.1
   '@types/node': ^16.7.10
   '@types/react': ^17.0.19
   autoprefixer: ^10.3.3
@@ -38,6 +39,7 @@ dependencies:
   remark-lint: 9.0.1
 
 devDependencies:
+  '@types/dateformat': 3.0.1
   '@types/node': 16.7.10
   '@types/react': 17.0.19
   autoprefixer: 10.3.3_postcss@8.3.6
@@ -290,6 +292,10 @@ packages:
       lodash.uniq: 4.5.0
       tailwindcss: 2.2.9_3ae63246f7b6ebdbe8521b4b745e51c3
     dev: false
+
+  /@types/dateformat/3.0.1:
+    resolution: {integrity: sha512-KlPPdikagvL6ELjWsljbyDIPzNCeliYkqRpI+zea99vBBbCIA5JNshZAwQKTON139c87y9qvTFVgkFd14rtS4g==}
+    dev: true
 
   /@types/debug/4.1.7:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}

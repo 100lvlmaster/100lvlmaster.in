@@ -6,14 +6,13 @@ import { FrontMatter } from "lib/types";
 
 interface Props {
   children: JSX.Element | JSX.Element[];
-  metaData?: FrontMatter;
+  frontMatter?: FrontMatter;
   className?: string;
   id?: string;
 }
 
-export const Container = (props: Props) => {
+export const Container = ({ id, children, className, frontMatter }: Props) => {
   const router = useRouter();
-  const { id, children, className, metaData } = props;
   const meta: FrontMatter = {
     ...{
       title: "Navin Kodag – Developer",
@@ -22,7 +21,7 @@ export const Container = (props: Props) => {
       type: "website",
       url: "https://100lvlmaster.in",
     },
-    ...metaData,
+    ...frontMatter,
   };
   return (
     <div

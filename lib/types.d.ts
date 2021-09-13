@@ -12,16 +12,10 @@ export interface FrontMatter {
   publishedAt?: Date;
   image?: string;
   type?: string;
-  readingTime?: string;
+  readingTime?: number;
   url?: string;
 }
-export interface MetaData {
-  title: string;
-  description: string;
-  image: string;
-  type: string;
-  url: string;
-}
+
 export interface Post {
   type_of: TypeOf;
   id: number;

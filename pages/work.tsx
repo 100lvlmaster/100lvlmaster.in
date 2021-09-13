@@ -9,7 +9,7 @@ const WorkPage = () => {
     url: `https://100lvlmaster.in/work/`,
   };
   return (
-    <Container metaData={metaData} className="flex flex-col space-y-5">
+    <Container frontMatter={metaData} className="flex flex-col space-y-5">
       <h2 className="font-black text-4xl">Work</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Card
