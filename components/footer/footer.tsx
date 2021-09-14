@@ -10,11 +10,11 @@ const ExternalLink = (props) => (
     {props.children}
   </a>
 );
-export const Footer = (props) => {
+export const Footer = () => {
   return (
     <div className="w-full max-w-xl ">
       <hr className="w-full border-1 border-gray-200 dark:border-gray-800 my-8" />
-      <div className="grid w-full max-w-xl grid-cols-2 md:grid-cols-3 items-start gap-1 text-base justify-items-start place-content-start justify-start lg:gap-1">
+      <div className="grid w-full max-w-xl grid-cols-2 md:grid-cols-3 items-start gap-1 text-base p-5 justify-items-start place-content-start justify-start lg:gap-1">
         <NextLink href="/">
           <a>
             <span className={linkClassName}>{`Home`}</span>
