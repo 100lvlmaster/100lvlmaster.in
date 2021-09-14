@@ -24,14 +24,14 @@ const BlogPost = ({ post }: Props) => {
 
   return (
     <Container frontMatter={frontMatter} className="space-y-5">
-      <div className="w-full relative h-52">
+      {/* <div className="w-full relative h-52">
         <NextImage
           className="rounded-lg"
           src={post.cover_image}
           alt={post.cover_image}
           layout="fill"
         />
-      </div>
+      </div> */}
       <div className="font-bold text-3xl md:text-5xl tracking-tight text-black dark:text-white">
         {frontMatter.title}
       </div>
@@ -49,7 +49,7 @@ const BlogPost = ({ post }: Props) => {
       </div>
       <ReactMarkdown
         plugins={[gfm, lint]}
-        className="prose"
+        className="prose dark:prose-dark w-full"
         // remarkPlugins={[highlight]}
         // components={{
         //   code({ node, inline, className, children, ...props }) {

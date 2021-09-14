@@ -24,9 +24,9 @@ export const Container = ({ id, children, className, frontMatter }: Props) => {
     ...frontMatter,
   };
   return (
-    <main
+    <div
       id={id}
-      className="flex flex-col dark:text-white items-center bg-light dark:bg-dark text-black w-full py-5"
+      className="flex flex-col dark:text-white  items-center bg-light dark:bg-dark text-black w-full py-5"
     >
       <NextHead>
         <title>{meta.title}</title>
@@ -69,6 +69,6 @@ export const Container = ({ id, children, className, frontMatter }: Props) => {
         {children}
       </div>
       <Footer />
-    </main>
+    </div>
   );
 };
