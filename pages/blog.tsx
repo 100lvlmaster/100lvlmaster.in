@@ -25,7 +25,7 @@ const BlogPage = ({ posts }: Props) => {
                   <div className="font-bold text-xl">{post.title}</div>
 
                   <div className="flex flex-col">
-                    <div className="text-xs dark:text-gray-400 text-gray-600">
+                    <div className="text-sm dark:text-gray-400 text-gray-600">
                       {post.description}
                     </div>
                     <div className="flex flex-row text-xs dark:text-gray-400 text-gray-600">

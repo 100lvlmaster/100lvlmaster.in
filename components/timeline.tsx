@@ -9,7 +9,7 @@ const Timeline = ({ children }) => {
 };
 const Milestone = ({ date, title, subtitle, description }: MilstoneProps) => {
   return (
-    <div className="flex flex-row items-stretch text-sm text-gray-600 dark:text-gray-300">
+    <div className="flex flex-row items-stretch text-base text-gray-600 dark:text-gray-300">
       {/* dot and progress line */}
       <div className="flex flex-col mr-3 pr-3 items-center progress-line">
         <div className="dark:text-white text-black ">
@@ -28,7 +28,7 @@ const Milestone = ({ date, title, subtitle, description }: MilstoneProps) => {
       {/* text-> title and description */}
       <div className="flex flex-col flex-grow">
         <div className="text-sm">{date}</div>
-        <div className="text-md text-black font-bold dark:text-white py-2">
+        <div className="text-base text-black font-bold dark:text-white py-2">
           {title}
           {subtitle ? (
             <div className="text-gray-400 font-medium">{subtitle}</div>
@@ -36,7 +36,7 @@ const Milestone = ({ date, title, subtitle, description }: MilstoneProps) => {
             ""
           )}
         </div>
-        <div className="flex-grow text-xs dark:text-gray-400 text-gray-600">
+        <div className="flex-grow text-sm dark:text-gray-400 text-gray-600">
           {description}
         </div>
         <div className="h-10" />

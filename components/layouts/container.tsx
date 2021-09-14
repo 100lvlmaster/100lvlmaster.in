@@ -69,6 +69,12 @@ export const Container = ({ id, children, className, frontMatter }: Props) => {
         {children}
       </div>
       <Footer />
+      <span className="text-xs flex flex-col text-center pt-5 text-gray-500 dark:text-gray-400">
+        {`Made with Next.js & ❤️ `}
+        <div className="text-xs">
+          {`© 2021 Navin Kodag. All rights reserved`}.
+        </div>
+      </span>
     </div>
   );
 };

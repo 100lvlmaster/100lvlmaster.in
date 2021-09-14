@@ -23,7 +23,7 @@ body {
 }
 
 .prose {
-  @apply text-black dark:text-white text-sm;
+  @apply text-black dark:text-white text-base;
 }
 .prose sm {
   @apply text-black dark:text-white;
