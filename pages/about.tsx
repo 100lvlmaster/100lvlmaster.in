@@ -7,7 +7,7 @@ const About = () => {
   };
   return (
     <Container frontMatter={frontMatter}>
-      <h2 className="font-black text-4xl">About</h2>
+      <h2 className="font-black text-4xl text-left w-full">About</h2>
       <div className="dark:text-gray-400 text-sm text-gray-800 py-10">
         <p>
           I started out as a self-taught teenage script kiddie at 16. Then

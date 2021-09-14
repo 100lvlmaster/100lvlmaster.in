@@ -47,6 +47,13 @@ body {
 .prose .anchor {
   @apply text-blue-500 underline;
 }
+.prose pre {
+  @apply text-gray-800 border bg-gray-50 dark:bg-gray-900;
+}
+
+.prose code {
+  @apply text-black dark:text-white border  rounded-md bg-gray-100 dark:bg-gray-900;
+}
 
 /* .prose code {
   @apply text-black dark:text-white border  rounded-md bg-gray-100 dark:bg-gray-900;

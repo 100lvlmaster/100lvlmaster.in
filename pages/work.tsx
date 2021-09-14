@@ -10,7 +10,7 @@ const WorkPage = () => {
   };
   return (
     <Container frontMatter={metaData} className="flex flex-col space-y-5">
-      <h2 className="font-black text-4xl">Work</h2>
+      <h2 className="font-black text-4xl text-left w-full">Work</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Card
           lang="Svelte"

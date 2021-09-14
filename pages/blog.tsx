@@ -15,7 +15,7 @@ const BlogPage = ({ posts }: Props) => {
   //
   return (
     <Container className="flex flex-col w-screen" frontMatter={frontMatter}>
-      <h2 className="font-black text-4xl">Blog</h2>
+      <h2 className="font-black text-4xl text-left w-full">Blog</h2>
       <ul className="flex flex-col py-5 items-stretch space-y-5">
         {posts.map((post: Post) => (
           <li key={post.slug}>

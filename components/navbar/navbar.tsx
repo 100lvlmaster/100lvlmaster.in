@@ -34,7 +34,7 @@ export const NavBar = () => {
   }, [onChangeTheme]);
   ///
   return (
-    <nav className="sticky z-10 bg-white dark:bg-dark top-0 w-full flex flex-row dark:bg-opacity-95 bg-opacity-95 items-center space-x-5 max-w-2xl px-5 md:px-0 py-2 backdrop-filter backdrop-blur-sm">
+    <nav className="sticky z-10 bg-white dark:bg-dark top-0 w-full flex flex-row dark:bg-opacity-95 bg-opacity-95 items-center space-x-5 max-w-2xl px-5  py-2 backdrop-filter backdrop-blur-sm">
       <NextLink href="/" title={`Home`} />
       <NextLink href="/about" title={`About`} />
       <NextLink href="/blog" title={`Blog`} />

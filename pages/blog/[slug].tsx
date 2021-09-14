@@ -6,9 +6,8 @@ import gfm from "remark-gfm";
 import lint from "remark-lint";
 import ReactMarkdown from "react-markdown";
 // import highlight from "remark-syntax-highlight";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import { vs } from "react-syntax-highlighter/dist/cjs/styles/prism";
 interface Props {
   post: Post;
 }
@@ -52,25 +51,25 @@ const BlogPost = ({ post }: Props) => {
         plugins={[gfm, lint]}
         className="prose"
         // remarkPlugins={[highlight]}
-        components={{
-          code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || "");
-            return !inline && match ? (
-              <SyntaxHighlighter
-                style={vs}
-                language={match[1]}
-                PreTag="pre"
-                {...(props as any)}
-              >
-                {String(children).replace(/\n$/, "")}
-              </SyntaxHighlighter>
-            ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
-            );
-          },
-        }}
+        // components={{
+        //   code({ node, inline, className, children, ...props }) {
+        //     const match = /language-(\w+)/.exec(className || "");
+        //     return !inline && match ? (
+        //       <SyntaxHighlighter
+        //         style={atomDark}
+        //         language={match[1]}
+        //         PreTag="pre"
+        //         {...(props as any)}
+        //       >
+        //         {String(children).replace(/\n$/, "")}
+        //       </SyntaxHighlighter>
+        //     ) : (
+        //       <code className={className} {...props}>
+        //         {children}
+        //       </code>
+        //     );
+        //   },
+        // }}
       >
         {post.body_markdown}
       </ReactMarkdown>
