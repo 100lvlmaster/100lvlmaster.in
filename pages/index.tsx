@@ -60,6 +60,7 @@ export default function Home() {
           <Card
             lang="Svelte"
             href="https://flowfi.live"
+            playStoreUrl="https://play.google.com/store/apps/details?id=live.flowfi.twa"
             title="FlowFi"
             description="An online markdown editor/scratchpad with LoFi beats to enter the state of flow"
           />

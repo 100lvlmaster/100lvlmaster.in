@@ -16,6 +16,7 @@ const WorkPage = () => {
           lang="Svelte"
           href="https://flowfi.live"
           title="FlowFi"
+          playStoreUrl="https://play.google.com/store/apps/details?id=live.flowfi.twa"
           description="An online markdown editor/scratchpad with LoFi beats to enter the state of flow"
         />
         <Card
