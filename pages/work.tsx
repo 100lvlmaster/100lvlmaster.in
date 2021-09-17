@@ -20,6 +20,20 @@ const WorkPage = () => {
         />
         <Card
           lang="Typescript"
+          href="https://5chan.vercel.app/"
+          githubLink="https://github.com/100lvlmaster/5chan"
+          title="5chan"
+          description={`The 4chan clone with a one-up. Made with NextJs.`}
+        />
+        <Card
+          lang="GO"
+          // href="https://the-intersect.vercel.app/"
+          githubLink="https://github.com/100lvlmaster/5chan-go"
+          title="5chan BE"
+          description={`The backend for 5chan. The 4chan with a one-up. Written in go using Go-fiber.`}
+        />
+        <Card
+          lang="Typescript"
           href="https://the-intersect.vercel.app/"
           githubLink="https://github.com/100lvlmaster/the-intersect"
           title="The Intersect project"

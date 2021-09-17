@@ -64,6 +64,13 @@ export default function Home() {
             description="An online markdown editor/scratchpad with LoFi beats to enter the state of flow"
           />
           <Card
+            lang="Typescript"
+            href="https://5chan.vercel.app/"
+            githubLink="https://github.com/100lvlmaster/5chan"
+            title="5chan"
+            description={`The 4chan clone with a one-up. Made with NextJs.`}
+          />
+          <Card
             lang="Javascript"
             href="https://the-intersect.vercel.app/"
             githubLink="https://github.com/100lvlmaster/the-intersect"
