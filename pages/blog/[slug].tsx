@@ -5,6 +5,7 @@ import NextImage from "next/image";
 import gfm from "remark-gfm";
 import lint from "remark-lint";
 import ReactMarkdown from "react-markdown";
+import { articleById, blogArticles } from "lib/blog";
 // import highlight from "remark-syntax-highlight";
 // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -89,14 +90,11 @@ const BlogPost = ({ post }: Props) => {
 export default BlogPost;
 ///
 export async function getStaticPaths() {
-  const posts = (await (
-    await fetch("https://dev.to/api/articles?username=100lvlmaster")
-  ).json()) as Post[];
+  const posts = await blogArticles();
   return {
     paths: posts.map((p) => ({
       params: {
         slug: p.slug,
-        id: p.id,
       },
     })),
     fallback: false,
@@ -104,12 +102,8 @@ export async function getStaticPaths() {
 }
 ///
 export async function getStaticProps({ params }) {
-  const posts = (await (
-    await fetch(`https://dev.to/api/articles?username=100lvlmaster`)
-  ).json()) as Post[];
+  const posts = await blogArticles();
   const { id } = posts.find((e) => e.slug == params.slug);
-  const post = (await (
-    await fetch(`https://dev.to/api/articles/${id}`)
-  ).json()) as Post;
+  const post = await articleById(id);
   return { props: { post } };
 }

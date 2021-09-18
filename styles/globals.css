@@ -61,7 +61,7 @@ body {
 
 .prose img {
   /* Don't apply styles to next/image */
-  @apply m-0 rounded-lg;
+  @apply m-0 rounded-lg my-3;
 }
 .prose p {
   @apply text-black dark:text-white;

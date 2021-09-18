@@ -3,6 +3,7 @@ import NextLink from "next/link";
 import NextImage, { ImageProps } from "next/image";
 import { Post } from "../lib/types";
 import dateformat from "dateformat";
+import { blogArticles } from "lib/blog";
 interface Props {
   posts: Post[];
 }
@@ -46,9 +47,6 @@ const BlogPage = ({ posts }: Props) => {
 export default BlogPage;
 ///
 export async function getStaticProps() {
-  const posts: Post[] = (await (
-    await fetch(`https://dev.to/api/articles?username=100lvlmaster`)
-  ).json()) as Post[];
-
+  const posts = await blogArticles();
   return { props: { posts } };
 }

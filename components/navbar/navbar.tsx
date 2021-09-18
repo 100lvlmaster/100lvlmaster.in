@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState, useCallback } from "react";
-import { saveTheme, getTheme } from "../../utils/theme_helper";
+import { saveTheme, getTheme } from "../../lib/theme";
 import Link from "next/link";
 import { useRouter } from "next/router";
 //

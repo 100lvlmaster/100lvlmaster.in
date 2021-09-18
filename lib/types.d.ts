@@ -28,7 +28,7 @@ export interface Post {
   comments_count: number;
   public_reactions_count: number;
   collection_id: number | null;
-  published_timestamp: Date;
+  published_timestamp: string;
   positive_reactions_count: number;
   cover_image: string;
   social_image: string;
@@ -36,7 +36,7 @@ export interface Post {
   created_at: Date;
   edited_at: Date | null;
   crossposted_at: null;
-  published_at: Date;
+  published_at: string;
   last_comment_at: Date;
   reading_time_minutes: number;
   tag_list: string[];
