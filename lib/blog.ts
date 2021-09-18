@@ -16,7 +16,6 @@ export const blogArticles = async (): Promise<Post[]> => {
   return unSortedPosts.sort((prev, curr) =>
     prev.published_at > curr.published_at ? -1 : 1
   );
-  return posts;
 };
 
 export const articleById = async (id: number): Promise<Post> => {
