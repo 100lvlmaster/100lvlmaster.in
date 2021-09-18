@@ -5,7 +5,7 @@ import NextImage from "next/image";
 import gfm from "remark-gfm";
 import lint from "remark-lint";
 import ReactMarkdown from "react-markdown";
-import { articleById, blogArticles } from "lib/blog";
+import { articleBySlug, blogArticles } from "lib/blog";
 // import highlight from "remark-syntax-highlight";
 // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -102,8 +102,6 @@ export async function getStaticPaths() {
 }
 ///
 export async function getStaticProps({ params }) {
-  const posts = await blogArticles();
-  const { id } = posts.find((e) => e.slug == params.slug);
-  const post = await articleById(id);
+  const post = await articleBySlug(params.slug);
   return { props: { post } };
 }

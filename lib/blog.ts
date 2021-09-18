@@ -1,17 +1,15 @@
 import { Post } from "./types";
 
 const requestInit: RequestInit = {
+  cache: "force-cache",
   headers: {
     "User-Agent": "*",
-    // "api-key": process.env.NEXT_PUBLIC_DEVTO_API_KEY,
+    "api-key": process.env.NEXT_PUBLIC_DEVTO_API_KEY,
   },
 };
 
 export const blogArticles = async (): Promise<Post[]> => {
-  const response = await fetch(
-    `https://dev.to/api/articles?username=100lvlmaster`,
-    requestInit
-  );
+  const response = await fetch(`https://dev.to/api/articles/me/`, requestInit);
   const posts = (await response.json()) as Post[];
   /// Sort by descending
   return posts.sort((prev, curr) =>
@@ -19,8 +17,11 @@ export const blogArticles = async (): Promise<Post[]> => {
   );
 };
 
-export const articleById = async (id: number): Promise<Post> => {
-  const response = await fetch(`https://dev.to/api/articles/${id}`);
+export const articleBySlug = async (slug: string): Promise<Post> => {
+  const response = await fetch(
+    `https://dev.to/api/articles/100lvlmaster/${slug}`,
+    requestInit
+  );
   const post = (await response.json()) as Post;
   return post;
 };
