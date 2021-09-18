@@ -1,28 +1,26 @@
 import { Post } from "./types";
 
 const requestInit: RequestInit = {
-  cache: "only-if-cached",
   headers: {
     "User-Agent": "*",
-    "api-key": process.env.NEXT_PUBLIC_DEVTO_API_KEY,
+    // "api-key": process.env.NEXT_PUBLIC_DEVTO_API_KEY,
   },
 };
 
 export const blogArticles = async (): Promise<Post[]> => {
-  const response = await fetch(`https://dev.to/api/articles/me/`, requestInit);
-  const unSortedPosts: Post[] = (await response.json()) as Post[];
+  const response = await fetch(
+    `https://dev.to/api/articles?username=100lvlmaster`,
+    requestInit
+  );
+  const posts = (await response.json()) as Post[];
   /// Sort by descending
-  console.log("building");
-  return unSortedPosts.sort((prev, curr) =>
+  return posts.sort((prev, curr) =>
     prev.published_at > curr.published_at ? -1 : 1
   );
 };
 
 export const articleById = async (id: number): Promise<Post> => {
-  const response = await fetch(
-    `https://dev.to/api/articles/${id}`,
-    requestInit
-  );
+  const response = await fetch(`https://dev.to/api/articles/${id}`);
   const post = (await response.json()) as Post;
   return post;
 };
