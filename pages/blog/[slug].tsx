@@ -97,11 +97,11 @@ export async function getStaticPaths() {
         slug: p.slug,
       },
     })),
-    fallback: false,
+    fallback: `blocking`,
   };
 }
 ///
 export async function getStaticProps({ params }) {
   const post = await articleBySlug(params.slug);
-  return { props: { post } };
+  return { props: { post }, revalidate: 21600 };
 }

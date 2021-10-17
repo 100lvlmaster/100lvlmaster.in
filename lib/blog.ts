@@ -21,6 +21,7 @@ export const articleBySlug = async (slug: string): Promise<Post> => {
     `https://dev.to/api/articles/100lvlmaster/${slug}`,
     requestInit
   );
+
   const post = (await response.json()) as Post;
   return post;
 };
