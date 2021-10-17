@@ -1,7 +1,6 @@
 import { Post } from "./types";
 
 const requestInit: RequestInit = {
-  cache: "force-cache",
   headers: {
     "User-Agent": "*",
     "api-key": process.env.NEXT_PUBLIC_DEVTO_API_KEY,

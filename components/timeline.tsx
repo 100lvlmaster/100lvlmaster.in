@@ -102,6 +102,18 @@ export const TimelineComponent = () => (
       date={`April/2020`}
       subtitle={"RedCarpetUp"}
       title={`SDE`}
+      description={
+        <ul className="list-disc space-y-2">
+          <li>Used OpenAI&apos;s Davinci codex</li>
+          <li>Created performant mobile apps with flutter</li>
+          <li>Worked with firebase as a backend 🔥</li>
+        </ul>
+      }
+    ></Milestone>
+    <Milestone
+      date={`October/2021`}
+      subtitle={`Jelly.buzz`}
+      title={`SDE`}
       description={<ul className="list-disc space-y-2"></ul>}
     ></Milestone>
   </Timeline>

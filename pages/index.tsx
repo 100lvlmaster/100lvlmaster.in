@@ -9,9 +9,9 @@ export default function Home() {
         </div>
         <div className="dark:text-gray-400 text-gray-600 py-2">
           I&apos;m a Fullstack developer at &nbsp;
-          <a rel="noreferrer" href="https://www.alekha.net" target="_blank_">
+          <a rel="noreferrer" href="https://www.jelly.buzz" target="_blank_">
             <span className="underline text-black dark:text-white">
-              Alekha.
+              Jelly.buzz
             </span>
           </a>
           &nbsp; I work on NodeJs, Golang, Flutter, NextJs and Svelte.
