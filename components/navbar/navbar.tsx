@@ -22,7 +22,7 @@ export const NavBar = () => {
   const NextLink = ({ title, href }) => {
     return (
       <Link href={href}>
-        <a className="text-black hover:bg-gray-800 p-2 rounded-md dark:text-white">
+        <a className="text-black hover:bg-gray-200 dark:hover:bg-gray-800 p-2 rounded-md dark:text-white">
           <span>{title}</span>
         </a>
       </Link>
