@@ -22,7 +22,7 @@ export const NavBar = () => {
   const NextLink = ({ title, href }) => {
     return (
       <Link href={href}>
-        <a className="text-black dark:text-white">
+        <a className="text-black hover:bg-gray-800 p-2 rounded-md dark:text-white">
           <span>{title}</span>
         </a>
       </Link>
@@ -34,7 +34,7 @@ export const NavBar = () => {
   }, [onChangeTheme]);
   ///
   return (
-    <nav className="sticky z-10 bg-white dark:bg-dark top-0 w-full flex flex-row dark:bg-opacity-95 bg-opacity-95 items-center space-x-5 max-w-2xl px-5  py-2 backdrop-filter backdrop-blur-sm">
+    <nav className="sticky z-10 bg-white dark:bg-dark top-0 w-full flex flex-row dark:bg-opacity-95 bg-opacity-95 items-center space-x-3 max-w-2xl px-5  py-2 backdrop-filter backdrop-blur-sm">
       <NextLink href="/" title={`Home`} />
       <NextLink href="/about" title={`About`} />
       <NextLink href="/blog" title={`Blog`} />
@@ -46,7 +46,7 @@ export const NavBar = () => {
         className="flex flex-col justify-center items-center"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
-        <span className="p-5">
+        <span className="p-3 bg-gray-300 dark:bg-gray-800 rounded-lg">
           {mounted && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
