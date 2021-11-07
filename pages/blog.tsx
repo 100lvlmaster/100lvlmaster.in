@@ -56,5 +56,5 @@ export default BlogPage;
 ///
 export async function getStaticProps() {
   const posts = await blogArticles();
-  return { props: { posts } };
+  return { props: { posts }, revalidate: 21600 };
 }
