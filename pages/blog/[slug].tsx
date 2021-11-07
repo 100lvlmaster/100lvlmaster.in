@@ -6,6 +6,7 @@ import gfm from "remark-gfm";
 import lint from "remark-lint";
 import ReactMarkdown from "react-markdown";
 import { articleBySlug, blogArticles } from "lib/blog";
+import ViewCounter from "components/view_counter";
 // import highlight from "remark-syntax-highlight";
 // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
@@ -39,7 +40,7 @@ const BlogPost = ({ post }: Props) => {
       <div className="flex flex-col md:flex-row w-full justify-between items-start md:items-center mt-2">
         <div className="flex items-center">
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            {"Navin Kodag"}
+            <ViewCounter slug={post.slug} />
             {` • `}
             {`${frontMatter.readingTime} mins`}
           </p>

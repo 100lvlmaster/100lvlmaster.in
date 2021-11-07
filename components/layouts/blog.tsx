@@ -1,12 +1,14 @@
 import { FrontMatter } from "lib/types";
 import { Container } from "./container";
 import dateformat from "dateformat";
+import ViewCounter from "components/view_counter";
 
 interface Props {
   children: JSX.Element | JSX.Element[];
   frontMatter: FrontMatter;
+  slug: string;
 }
-const BlogLayout = ({ children, frontMatter }: Props) => {
+const BlogLayout = ({ children, frontMatter, slug }: Props) => {
   return (
     <Container frontMatter={frontMatter} className={`prose`}>
       <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
@@ -15,7 +17,7 @@ const BlogLayout = ({ children, frontMatter }: Props) => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full mt-2">
         <div className="flex items-center">
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            {"Navin Kodag"}
+            <ViewCounter slug={slug} />
             {` • `}
             {`${frontMatter.readingTime} mins`}
           </p>

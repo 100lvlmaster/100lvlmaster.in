@@ -34,3 +34,7 @@ export interface Post {
   body_html: string;
   body_markdown: string;
 }
+
+interface Views {
+  count: number;
+}

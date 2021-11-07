@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <link
             rel="preload"
-            href="fonts/inter-var-latin.woff2"
+            href="/fonts/inter-var-latin.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
