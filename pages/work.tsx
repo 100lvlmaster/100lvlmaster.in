@@ -13,6 +13,13 @@ const WorkPage = () => {
       <h2 className="font-black text-4xl text-left w-full">Work</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Card
+          lang="Dart"
+          href="https://pub.dev/packages/micro_bloc"
+          title="Mirco BLoC"
+          githubLink="https://github.com/100lvlmaster/micro_bloc"
+          description="Easy state management for small projects with flutter using rxdart"
+        />
+        <Card
           lang="Svelte"
           href="https://flowfi.live"
           title="FlowFi"
