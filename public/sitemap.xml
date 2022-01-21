@@ -1,18 +1,103 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+  <url>
+    <loc>https://100lvlmaster.in/</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
   <url>
     <loc>https://100lvlmaster.in/about</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
-
   <url>
     <loc>https://100lvlmaster.in/blog</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
-
-  <url>
-    <loc>https://100lvlmaster.in</loc>
-  </url>
-
   <url>
     <loc>https://100lvlmaster.in/work</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/managing-multiple-github-account-on-your-machine-no2</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/adding-view-count-to-your-nextjs-blog-55lj</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/5chan-the-4chan-clone-with-nextjs-3969</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/5chan-api-golang-gorm-go-fiber-10gi</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/5chan-the-4chan-clone-1n7p</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/seeding-nestjs-with-prisma-and-faker-2fgn</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/create-a-pwa-with-sveltekit-svelte-a36</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/deploying-golang-api-to-heroku-2mnh</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/nextjs-web-app-for-the-intersect-26d1</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/golang-image-search-api-4ilo</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/title-1-de4</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/the-vs-code-dark-theme-i-ve-been-waiting-for-54h</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/fetch-any-youtube-video-s-metadata-in-2-lines-3343</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/flutter-local-notifications-and-cloud-firestore-queries-in-the-background-1gb</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/3-obstacles-of-a-beginner-junior-developer-and-how-to-overcome-them-2edc</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://100lvlmaster.in/blog/the-alchemist-by-paulo-coelho-book-review-4fam</loc>
+    <lastmod>2022-01-21T12:14:44+00:00</lastmod>
+    <priority>0.64</priority>
   </url>
 </urlset>
