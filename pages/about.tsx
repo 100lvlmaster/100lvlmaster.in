@@ -22,23 +22,6 @@ const AboutPage: NextPage = () => {
           NestJs, Gin-gonic, Gofiber or Firebase for Back-end. I&apos;ve created
           consistent and realtime APIs with GraphQL and REST.
         </Text>
-        <Grid py="20px" gap={"5"}>
-          <GridItem>
-            <Box border={"1px"} p="5" borderRadius={"lg"} borderColor={"gray"}>
-              <Text>Hello</Text>
-            </Box>
-          </GridItem>
-          <GridItem>
-            <Box border={"1px"} p="5" borderRadius={"lg"} borderColor={"gray"}>
-              <Text>Hello</Text>
-            </Box>
-          </GridItem>
-          <GridItem>
-            <Box border={"1px"} p="5" borderRadius={"lg"} borderColor={"gray"}>
-              <Text>Hello</Text>
-            </Box>
-          </GridItem>
-        </Grid>
       </Box>
     </MainLayout>
   );

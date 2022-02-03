@@ -15,3 +15,7 @@ export interface Post {
   body_html: string;
   body_markdown: string;
 }
+
+export interface Views {
+  count: number;
+}

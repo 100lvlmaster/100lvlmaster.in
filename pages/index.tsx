@@ -1,4 +1,4 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Button, Divider, Text, VStack } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import MainLayout from "../layouts/main-layout";
 ///
@@ -19,8 +19,8 @@ const Home: NextPage = () => {
         &nbsp;I work on NodeJs, Golang, Flutter, NextJs and Svelte.
         <Text>
           I see that you&apos;ve stumbled upon my small kingdom on the internet.
-          I write, read, listen and everything in between. Feel free to contact
-          me for projects.
+          I like to solve problems with code and everything in between. Feel
+          free to contact me for projects.
         </Text>
       </Box>
       <Box py="10">
