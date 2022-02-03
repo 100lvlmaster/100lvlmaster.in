@@ -10,6 +10,13 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <link
+            rel="preload"
+            href="/firasans.woff2"
+            as="font"
+            crossOrigin=""
+            type="font/woff2"
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
