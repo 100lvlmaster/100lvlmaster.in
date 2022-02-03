@@ -1,8 +1,10 @@
 import { Box, Button, Divider, Text, VStack } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import MainLayout from "../layouts/main-layout";
 ///
 const Home: NextPage = () => {
+  const route = useRouter();
   return (
     <MainLayout>
       <Text py="5" fontWeight={"black"} fontSize={{ lg: "5xl", sm: "4xl" }}>
