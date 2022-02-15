@@ -84,7 +84,7 @@ const BlogPost = ({ post }: Props) => {
           />
         </Box>
         <HStack color={"grey"}>
-          <ViewCounter slug={post.slug} />
+          <ViewCounter shouldRegisterView={true} slug={post.slug} />
           <Text>{` • `}</Text>
           <Text>{`${frontMatter.readingTime} mins`}</Text>
           <Spacer />
