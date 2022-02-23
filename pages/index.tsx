@@ -21,8 +21,8 @@ const Home: NextPage = () => {
         &nbsp;I work on NodeJs, Golang, Flutter, NextJs and Svelte.
         <Text>
           I see that you&apos;ve stumbled upon my small kingdom on the internet.
-          I like to solve problems with code and everything in between. Feel
-          free to contact me for projects.
+          I like to solve problems with code. Feel free to contact me for
+          projects.
         </Text>
       </Box>
       <Box py="10">

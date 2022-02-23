@@ -19,3 +19,21 @@ export interface Post {
 export interface Views {
   count: number;
 }
+
+export interface Project {
+  title: string;
+  technology:
+    | "json"
+    | "dart"
+    | "flutter"
+    | "javascript"
+    | "typescript"
+    | "go"
+    | "svelte"
+    | "nextjs";
+  description: string;
+  url: string;
+  github?: string;
+  playstore?: string;
+  image?: string;
+}
