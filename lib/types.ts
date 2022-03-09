@@ -1,3 +1,5 @@
+import { PostgrestError } from "@supabase/supabase-js";
+
 export interface Post {
   id: number;
   title: string;
@@ -20,6 +22,10 @@ export interface Views {
   count: number;
 }
 
+export interface SupabaseResult {
+  data?: { count: number };
+  error?: PostgrestError;
+}
 export interface Project {
   title: string;
   technology:

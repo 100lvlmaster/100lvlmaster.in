@@ -1,10 +1,11 @@
-import { Box, Button, Divider, Text, VStack } from "@chakra-ui/react";
-import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import { Box, Button, HStack, Spacer, Text, VStack } from "@chakra-ui/react";
+import NextLink from "next/link";
+import ViewCounter from "../components/views_count";
 import MainLayout from "../layouts/main-layout";
+import { topArticles } from "../lib/top-articles";
+import { Post } from "../lib/types";
 ///
-const Home: NextPage = () => {
-  const route = useRouter();
+const Home = ({ posts }: { posts: Post[] }) => {
   return (
     <MainLayout>
       <Text py="5" fontWeight={"black"} fontSize={{ lg: "5xl", sm: "4xl" }}>
@@ -60,8 +61,59 @@ const Home: NextPage = () => {
           </Button>
         </a>
       </Box>
+
+      <HStack alignItems={"end"}>
+        <Text fontSize={"3xl"} fontWeight={"black"}>
+          Top posts
+        </Text>
+        <Spacer />
+        <button>
+          <NextLink href={"/blog"}>
+            <HStack>
+              <Text fontSize={"sm"}>See all</Text>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                fill="currentColor"
+                height="12"
+                viewBox="0 0 24 24"
+              >
+                <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
+              </svg>
+            </HStack>
+          </NextLink>
+        </button>
+      </HStack>
+      <VStack py="10" experimental_spaceY={"5"} align={"stretch"}>
+        {posts &&
+          posts?.map((e, i) => {
+            return (
+              <NextLink href={`/blog/${e.slug}`} key={`${e.slug}-${i}`}>
+                <a>
+                  <Box>
+                    <VStack align={"stretch"}>
+                      <Text fontSize={"20px"} fontWeight={"semibold"}>
+                        {e.title}
+                      </Text>
+                      <Text color={"grey"}>{e.description}</Text>
+                      <Text color={"grey"} fontSize={"xs"} align={"end"}>
+                        <ViewCounter slug={e.slug} />
+                      </Text>
+                    </VStack>
+                  </Box>
+                </a>
+              </NextLink>
+            );
+          })}
+      </VStack>
     </MainLayout>
   );
 };
 
 export default Home;
+///
+export async function getStaticProps() {
+  const data = await topArticles();
+
+  return { props: { posts: data }, revalidate: 21600 };
+}

@@ -8,7 +8,7 @@ const WorkPage: NextPage = () => {
   return (
     <MainLayout>
       <SimpleGrid py="20px" columns={{ sm: 2, md: 3 }} gap={4}>
-        {projects.map((e, _i) => {
+        {projects.reverse().map((e, _i) => {
           return (
             <GridItem key={e.description.split(" ").join("-").toLowerCase()}>
               <ProjectCard project={e} />

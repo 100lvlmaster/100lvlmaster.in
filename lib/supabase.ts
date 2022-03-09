@@ -1,13 +1,20 @@
 import { createClient, PostgrestError } from "@supabase/supabase-js";
+import { articleBySlug } from "./devto";
+import { Post } from "./types";
 const supabase = createClient(
   process.env.SUPABASE_URL ?? "",
   process.env.SUPABASE_KEY ?? ""
 );
 
-interface SupabaseResult {
-  data?: { count: number };
-  error?: PostgrestError;
-}
+export const getTopSlugsByCount = async (): Promise<{ slug: string }[]> => {
+  const { data, error } = await supabase
+    .from("views")
+    .select("slug,count")
+    .order("count", { ascending: false })
+    .limit(5);
+
+  return data as { slug: string }[];
+};
 
 ///
 const getViews = async (slug: string): Promise<number> => {

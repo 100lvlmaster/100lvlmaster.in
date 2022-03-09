@@ -5,6 +5,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  if (process.env.NODE_ENV == "development") {
+    return res.status(200).json({ isPlaying: false });
+  }
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {

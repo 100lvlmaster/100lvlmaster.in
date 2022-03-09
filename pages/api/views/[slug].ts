@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getViews, registerView } from "../../../lib/views";
+import { getViews, registerView } from "../../../lib/supabase";
 
 interface Data {
   message?: string;

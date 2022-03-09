@@ -30,12 +30,18 @@ const BlogPost = ({ post }: Props) => {
       const { children, src } = props;
       return (
         <Box
-          width={"100%"}
           pos={"relative"}
-          objectFit={"cover"}
-          borderRadius={"md"}
+          height="400px"
+          width={"100%"}
+          overflow={"hidden"}
+          borderRadius="10px"
         >
-          <NextImage src={src} layout="fill" />
+          <NextImage
+            layout={"fill"}
+            objectFit={"contain"}
+            src={src}
+            alt={src}
+          />
         </Box>
       );
     },
@@ -75,12 +81,17 @@ const BlogPost = ({ post }: Props) => {
         <Text fontSize={"4xl"} fontWeight={"black"}>
           {frontMatter.title}
         </Text>
-        <Box bgColor={"red"} borderRadius={"md"}>
-          <img
+        <Box
+          pos={"relative"}
+          height="400px"
+          width={"100%"}
+          overflow={"hidden"}
+          borderRadius="10px"
+        >
+          <NextImage
             src={post.cover_image}
             alt={post.cover_image}
-            height={"100px"}
-            width={"100%"}
+            layout={"fill"}
           />
         </Box>
         <HStack color={"grey"}>
