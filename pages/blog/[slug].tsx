@@ -79,7 +79,7 @@ const BlogPost = ({ post }: Props) => {
           <img
             src={post.cover_image}
             alt={post.cover_image}
-            height={"40px"}
+            height={"100px"}
             width={"100%"}
           />
         </Box>

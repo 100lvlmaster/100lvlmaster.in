@@ -22,7 +22,7 @@ const ViewCounter = ({ slug, shouldRegisterView = false }: Props) => {
       });
 
     registerView();
-  }, [slug]);
+  }, [shouldRegisterView, slug]);
   return (
     <Text>{`${
       (data?.count ?? 0) > 0 ? data!.count.toLocaleString() : "–––"
