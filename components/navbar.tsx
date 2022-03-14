@@ -11,10 +11,15 @@ import { useRouter } from "next/router";
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { pathname } = useRouter();
+  const onClickToggle = () => {
+    toggleColorMode();
+  };
   return (
     <HStack minW={"100%"} experimental_spaceX={"5"} py="20px">
       <NextLink href={"/"}>
         <Button
+          as="a"
+          cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
           variant={pathname == "/" ? "solid" : "ghost"}
@@ -24,6 +29,8 @@ const NavBar = () => {
       </NextLink>
       <NextLink href={"/about"}>
         <Button
+          as="a"
+          cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
           variant={pathname == "/about" ? "solid" : "ghost"}
@@ -33,6 +40,8 @@ const NavBar = () => {
       </NextLink>
       <NextLink href={"/blog"}>
         <Button
+          as="a"
+          cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
           variant={pathname == "/blog" ? "solid" : "ghost"}
@@ -42,6 +51,8 @@ const NavBar = () => {
       </NextLink>
       <NextLink href="/work">
         <Button
+          as="a"
+          cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
           variant={pathname == "/work" ? "solid" : "ghost"}
@@ -53,7 +64,7 @@ const NavBar = () => {
       <Spacer />
       <IconButton
         size={"sm"}
-        onClick={toggleColorMode}
+        onClick={() => onClickToggle()}
         aria-label="Toggle dark mode"
         icon={colorMode == "dark" ? <SunIcon /> : <MoonIcon />}
       />
