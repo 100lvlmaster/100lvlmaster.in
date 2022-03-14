@@ -43,3 +43,10 @@ export interface Project {
   playstore?: string;
   image?: string;
 }
+
+export interface Seo {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+}
