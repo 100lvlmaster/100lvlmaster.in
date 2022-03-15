@@ -24,7 +24,7 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
                         {e.title}
                       </Text>
                       <Text color={"grey"}>{e.description}</Text>
-                      <Box color={"grey"} fontSize={"xs"} align={"end"}>
+                      <Box color={"grey"} fontSize={"xs"} alignItems={"end"}>
                         <ViewCounter slug={e.slug} />
                       </Box>
                     </VStack>
