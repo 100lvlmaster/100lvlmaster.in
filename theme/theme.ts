@@ -7,7 +7,7 @@ const colors = {
   },
 };
 const config = {
-  initialColorMode: "light",
+  initialColorMode: "dark",
   useSystemColorMode: false,
 };
 const theme = extendTheme({ colors, config });
