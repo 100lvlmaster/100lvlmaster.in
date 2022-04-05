@@ -25,7 +25,7 @@ const ProjectCard = ({ project }: Props) => {
         flexDir="column"
         borderColor={colorMode === "dark" ? "grey.700" : "grey.100"}
       >
-        <Box flexGrow={"1"} p="15px" experimental_spaceY={"5px"}>
+        <Box flexGrow={1} p="15px" experimental_spaceY={"5px"}>
           <Text fontSize={"lg"}>{project.title}</Text>
           <Text
             fontSize={"sm"}
