@@ -1,31 +1,58 @@
-import { Box, Button, HStack, Spacer, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  HStack,
+  Spacer,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import Image from "next/image";
 import NextLink from "next/link";
 import ViewCounter from "../components/views_count";
 import MainLayout from "../layouts/main-layout";
 import { topArticles } from "../lib/top-articles";
 import { Post } from "../lib/types";
+import avatarImage from "../public/navin-avatar.webp";
 ///
 const Home = ({ posts }: { posts: Post[] }) => {
   return (
     <MainLayout>
-      <Text py="5" fontWeight={"black"} fontSize={{ lg: "5xl", sm: "4xl" }}>
-        Hey, I&apos;m Navin Kodag
-      </Text>
-      <Box>
-        I&apos;m a Fullstack developer at&nbsp;
-        <a rel="noreferrer" href="https://www.jelly.buzz" target="_blank_">
-          <Text display={"inline"} decoration={"underline"}>
-            Jelly
+      <Flex
+        marginTop={"30px"}
+        flexDir={["column-reverse", "column-reverse", "row"]}
+        alignItems={"center"}
+        justifyItems={"center"}
+      >
+        <Box>
+          <Text py="5" fontWeight={"black"} fontSize={{ lg: "5xl", sm: "4xl" }}>
+            Hey, I&apos;m Navin Kodag
           </Text>
-          .
-        </a>
-        &nbsp;I work on NodeJs, Golang, Flutter, NextJs and Svelte.
-        <Text>
-          I see that you&apos;ve stumbled upon my small kingdom on the internet.
-          I like to solve problems with code. Feel free to contact me for
-          projects.
-        </Text>
-      </Box>
+          I&apos;m a Fullstack developer at&nbsp;
+          <a rel="noreferrer" href="https://www.jelly.buzz" target="_blank_">
+            <Text display={"inline"} decoration={"underline"}>
+              Jelly
+            </Text>
+            .
+          </a>
+          &nbsp;I work on NodeJs, Golang, Flutter, NextJs and Svelte.
+          <Text>
+            I see that you&apos;ve stumbled upon my small kingdom on the
+            internet. I like to solve problems with code. Feel free to contact
+            me for projects.
+          </Text>
+        </Box>
+        <Container alignSelf={"center"} width={[150, 150, 250]}>
+          <Image
+            className="profile-image"
+            src={avatarImage}
+            height={"100%"}
+            width={"100%"}
+            alt="Navin Kodag"
+          />
+        </Container>
+      </Flex>
       <Box py="10">
         <a
           rel="noreferrer"

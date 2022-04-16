@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Fira Sans";
   src: url("/firasans.woff2");
+  font-display: swap;
 }
 html,
 body {
@@ -37,4 +38,7 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+.profile-image {
+  border-radius: 50%;
 }

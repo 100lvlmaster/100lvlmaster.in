@@ -18,7 +18,7 @@ const NavBar = () => {
     <HStack minW={"100%"} experimental_spaceX={"5"} py="20px">
       <NextLink href={"/"}>
         <Button
-          as="a"
+          // as="a"
           cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
@@ -29,7 +29,7 @@ const NavBar = () => {
       </NextLink>
       <NextLink href={"/about"}>
         <Button
-          as="a"
+          // as="a"
           cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
@@ -40,7 +40,7 @@ const NavBar = () => {
       </NextLink>
       <NextLink href={"/blog"}>
         <Button
-          as="a"
+          // as="a"
           cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}
@@ -51,7 +51,7 @@ const NavBar = () => {
       </NextLink>
       <NextLink href="/work">
         <Button
-          as="a"
+          // as="a"
           cursor="pointer"
           size={"sm"}
           fontWeight={"medium"}

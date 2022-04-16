@@ -6,9 +6,16 @@ const colors = {
     700: "#2a69ac",
   },
 };
+const breakpoints = {
+  sm: "320px",
+  md: "768px",
+  lg: "960px",
+  xl: "1200px",
+  "2xl": "1536px",
+};
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,
 };
-const theme = extendTheme({ colors, config });
+const theme = extendTheme({ colors, config, breakpoints });
 export { theme };

@@ -3,6 +3,7 @@ module.exports = {
   future: {
     strictPostcssConfiguration: true,
   },
+  productionBrowserSourceMaps: true,
   async headers() {
     return [
       {
