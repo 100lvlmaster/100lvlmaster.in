@@ -1,4 +1,4 @@
-import { Box, Container, Flex, useColorMode, VStack } from "@chakra-ui/react";
+import { Container, Flex, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";
@@ -15,6 +15,7 @@ const MainLayout = ({ meta: metaProps, children }: Props) => {
       "Navin Kodag is a software developer based in India. He is a self-taught developer with a passion for building Fullstack applications.",
     url: "https://www.100lvlmaster.in",
     image: "https://www.100lvlmaster.in/avatar.jpeg",
+    ...metaProps,
   };
   const { colorMode } = useColorMode();
 

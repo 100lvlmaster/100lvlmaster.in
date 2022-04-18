@@ -1,9 +1,9 @@
+import { Box, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import MainLayout from "../layouts/main-layout";
-import { Box, Divider, Grid, GridItem, HStack, Text } from "@chakra-ui/react";
 const AboutPage: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout meta={{ title: "About - Navin Kodag, Developer" }}>
       <Text fontWeight={"black"} fontSize={"3xl"}>
         About
       </Text>

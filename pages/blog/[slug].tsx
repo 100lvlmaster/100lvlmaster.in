@@ -1,25 +1,23 @@
 // import highlight from "remark-syntax-highlight";
 // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-import ReactMarkdown from "react-markdown";
-import NextImage from "next/image";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
-import type { defaults } from "chakra-ui-markdown-renderer";
+import NextImage from "next/image";
+import ReactMarkdown from "react-markdown";
 
 import {
   Box,
-  Container,
   HStack,
   Spacer,
   Text,
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
-import { Post } from "../../lib/types";
+import moment from "moment";
+import ViewCounter from "../../components/views_count";
 import MainLayout from "../../layouts/main-layout";
 import { articleBySlug, blogArticles } from "../../lib/devto";
-import ViewCounter from "../../components/views_count";
-import moment from "moment";
+import { Post } from "../../lib/types";
 interface Props {
   post: Post;
 }
@@ -76,7 +74,7 @@ const BlogPost = ({ post }: Props) => {
   };
 
   return (
-    <MainLayout>
+    <MainLayout meta={frontMatter}>
       <VStack align="stretch" experimental_spaceY={"5"}>
         <Text fontSize={"4xl"} fontWeight={"black"}>
           {frontMatter.title}

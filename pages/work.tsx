@@ -1,12 +1,15 @@
+import { GridItem, SimpleGrid } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import ProjectCard from "../components/project_card";
 import MainLayout from "../layouts/main-layout";
 import { projects } from "../lib/work";
-import { GridItem, SimpleGrid } from "@chakra-ui/react";
-import ProjectCard from "../components/project_card";
 
 const WorkPage: NextPage = () => {
+  const meta = {
+    title: "Work - Navin Kodag | Developer",
+  };
   return (
-    <MainLayout>
+    <MainLayout meta={meta}>
       <SimpleGrid py="20px" columns={{ sm: 2, md: 3 }} gap={4}>
         {projects.reverse().map((e, _i) => {
           return (

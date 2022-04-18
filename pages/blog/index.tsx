@@ -1,14 +1,13 @@
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Text, VStack } from "@chakra-ui/react";
+import NextLink from "next/link";
+import ViewCounter from "../../components/views_count";
 import MainLayout from "../../layouts/main-layout";
 import { blogArticles } from "../../lib/devto";
-import NextLink from "next/link";
 import { Post } from "../../lib/types";
-import moment from "moment";
-import ViewCounter from "../../components/views_count";
 
 const BlogPage = ({ posts }: { posts: Post[] }) => {
   return (
-    <MainLayout>
+    <MainLayout meta={{ title: "Blog - Navin Kodag | Developer" }}>
       <Text fontWeight={"black"} fontSize={"3xl"}>
         Blog
       </Text>
