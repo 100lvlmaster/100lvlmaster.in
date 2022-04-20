@@ -10,7 +10,7 @@ const WorkPage: NextPage = () => {
   };
   return (
     <MainLayout meta={meta}>
-      <SimpleGrid py="20px" columns={{ sm: 2, md: 3 }} gap={4}>
+      <SimpleGrid py="20px" columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} gap={4}>
         {projects.reverse().map((e, _i) => {
           return (
             <GridItem key={e.description.split(" ").join("-").toLowerCase()}>
