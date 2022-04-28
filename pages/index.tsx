@@ -29,18 +29,20 @@ const Home = ({ posts }: { posts: Post[] }) => {
           <Text py="5" fontWeight={"black"} fontSize={{ lg: "5xl", sm: "4xl" }}>
             Hey, I&apos;m Navin Kodag
           </Text>
-          I&apos;m a Fullstack developer at&nbsp;
-          <a rel="noreferrer" href="https://www.jelly.buzz" target="_blank_">
+          I&apos;m a Fullstack developer.
+          {/* at&nbsp; */}
+          {/* <a rel="noreferrer" href="https://www.jelly.buzz" target="_blank_">
             <Text display={"inline"} decoration={"underline"}>
               Jelly
             </Text>
             .
-          </a>
+          </a> */}
           &nbsp;I work on NodeJs, Golang, Flutter, NextJs and Svelte.
           <Text>
             I see that you&apos;ve stumbled upon my small kingdom on the
-            internet. I like to solve problems with code. Feel free to contact
-            me for projects.
+            internet. I like to solve problems with code.
+            {/* Feel free to contact
+            me for projects. */}
           </Text>
         </Box>
         <Container alignSelf={"center"} width={[150, 150, 250]}>
