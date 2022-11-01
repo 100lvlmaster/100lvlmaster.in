@@ -16,19 +16,17 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
           posts?.map((e, i) => {
             return (
               <NextLink href={`/blog/${e.slug}`} key={`${e.slug}-${i}`}>
-                <a>
-                  <Box>
-                    <VStack align={"stretch"}>
-                      <Text fontSize={"20px"} fontWeight={"semibold"}>
-                        {e.title}
-                      </Text>
-                      <Text color={"grey"}>{e.description}</Text>
-                      <Box color={"grey"} fontSize={"xs"} alignItems={"end"}>
-                        <ViewCounter slug={e.slug} />
-                      </Box>
-                    </VStack>
-                  </Box>
-                </a>
+                <Box>
+                  <VStack align={"stretch"}>
+                    <Text fontSize={"20px"} fontWeight={"semibold"}>
+                      {e.title}
+                    </Text>
+                    <Text color={"grey"}>{e.description}</Text>
+                    <Box color={"grey"} fontSize={"xs"} alignItems={"end"}>
+                      <ViewCounter slug={e.slug} />
+                    </Box>
+                  </VStack>
+                </Box>
               </NextLink>
             );
           })}

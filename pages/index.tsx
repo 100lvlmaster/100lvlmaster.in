@@ -29,28 +29,19 @@ const Home = ({ posts }: { posts: Post[] }) => {
           <Text py="5" fontWeight={"black"} fontSize={{ lg: "5xl", sm: "4xl" }}>
             Hey, I&apos;m Navin Kodag
           </Text>
-          I&apos;m a Fullstack developer.
-          {/* at&nbsp; */}
-          {/* <a rel="noreferrer" href="https://www.jelly.buzz" target="_blank_">
-            <Text display={"inline"} decoration={"underline"}>
-              Jelly
-            </Text>
-            .
-          </a> */}
-          &nbsp;I work on NodeJs, Golang, Flutter, NextJs and Svelte.
+          I&apos;m a Fullstack developer. &nbsp;I work on NodeJs, Golang,
+          Flutter, NextJs and Svelte.
           <Text>
             I see that you&apos;ve stumbled upon my small kingdom on the
             internet. I like to solve problems with code.
-            {/* Feel free to contact
-            me for projects. */}
           </Text>
         </Box>
         <Container alignSelf={"center"} width={[150, 150, 250]}>
           <Image
             className="profile-image"
             src={avatarImage}
-            height={"100%"}
-            width={"100%"}
+            height={"120"}
+            width={"120"}
             alt="Navin Kodag"
           />
         </Container>
@@ -118,19 +109,17 @@ const Home = ({ posts }: { posts: Post[] }) => {
           posts?.map((e, i) => {
             return (
               <NextLink href={`/blog/${e.slug}`} key={`${e.slug}-${i}`}>
-                <a>
-                  <Box>
-                    <VStack align={"stretch"}>
-                      <Text fontSize={"20px"} fontWeight={"semibold"}>
-                        {e.title}
-                      </Text>
-                      <Text color={"grey"}>{e.description}</Text>
-                      <Box color={"grey"} fontSize={"xs"} alignItems={"end"}>
-                        <ViewCounter slug={e.slug} />
-                      </Box>
-                    </VStack>
-                  </Box>
-                </a>
+                <Box>
+                  <VStack align={"stretch"}>
+                    <Text fontSize={"20px"} fontWeight={"semibold"}>
+                      {e.title}
+                    </Text>
+                    <Text color={"grey"}>{e.description}</Text>
+                    <Box color={"grey"} fontSize={"xs"} alignItems={"end"}>
+                      <ViewCounter slug={e.slug} />
+                    </Box>
+                  </VStack>
+                </Box>
               </NextLink>
             );
           })}

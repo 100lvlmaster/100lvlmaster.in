@@ -1,7 +1,6 @@
-import { createClient, PostgrestError } from "@supabase/supabase-js";
-import { articleBySlug } from "./devto";
-import { Post } from "./types";
-const supabase = createClient(
+import { createClient } from "@supabase/supabase-js";
+import { Database } from "./database.types";
+const supabase = createClient<Database>(
   process.env.SUPABASE_URL ?? "",
   process.env.SUPABASE_KEY ?? ""
 );
@@ -27,15 +26,17 @@ const getViews = async (slug: string): Promise<number> => {
   if (error && error.details.includes(`0 rows`)) {
     const { data } = await supabase
       .from(`views`)
-      .insert({ slug: slug, count: 1 }, { returning: `representation` })
+      .insert({ slug: slug, count: 1 }, { count: `planned` })
+      .returns()
       .single();
-    return data.count;
+
+    return (data as { count: number })?.count ?? 0;
   }
   return views?.count ?? 0;
 };
 ///
 const registerView = async (slug: string): Promise<void> => {
-  const { data, error } = await supabase.rpc("increment", {
+  await supabase.rpc("increment", {
     slug_text: slug,
   });
 };
