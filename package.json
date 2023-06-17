@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
-    "@next/codemod": "^13.4.6",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "eslint": "8.43.0",
