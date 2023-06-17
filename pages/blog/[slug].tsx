@@ -1,19 +1,17 @@
-// import highlight from "remark-syntax-highlight";
-// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import NextImage from "next/image";
 import ReactMarkdown from "react-markdown";
 
 import {
   Box,
+  Container,
   HStack,
   Spacer,
   Text,
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
-import moment from "moment";
+import { format, parseISO } from "date-fns";
 import ViewCounter from "../../components/views_count";
 import MainLayout from "../../layouts/main-layout";
 import { articleBySlug, blogArticles } from "../../lib/devto";
@@ -27,25 +25,24 @@ const BlogPost = ({ post }: Props) => {
     img: (props: any) => {
       const { children, src } = props;
       return (
-        <Box
+        <Container
           pos={"relative"}
           height="400px"
           width={"100%"}
-          overflow={"hidden"}
           borderRadius="10px"
+          marginY={5}
         >
-          <NextImage
-            layout={"fill"}
-            objectFit={"contain"}
-            src={src}
-            alt={src}
-          />
-        </Box>
+          <NextImage src={src} alt={src} fill={true} />
+        </Container>
       );
     },
     blockquote: (props: any) => {
       const { children } = props;
       return <Box fontStyle={"italic"}>{children}</Box>;
+    },
+    p: (props: any) => {
+      const { children } = props;
+      return <div>{children}</div>;
     },
     code: (props: any) => {
       const { children } = props;
@@ -75,7 +72,7 @@ const BlogPost = ({ post }: Props) => {
 
   return (
     <MainLayout meta={frontMatter}>
-      <VStack align="stretch" experimental_spaceY={"5"}>
+      <VStack align="stretch">
         <Text fontSize={"4xl"} fontWeight={"black"}>
           {frontMatter.title}
         </Text>
@@ -83,13 +80,13 @@ const BlogPost = ({ post }: Props) => {
           pos={"relative"}
           height="400px"
           width={"100%"}
-          overflow={"hidden"}
+          padding={5}
           borderRadius="10px"
         >
           <NextImage
             src={post.cover_image}
             alt={post.cover_image}
-            layout={"fill"}
+            fill={true}
           />
         </Box>
         <HStack color={"grey"}>
@@ -98,7 +95,7 @@ const BlogPost = ({ post }: Props) => {
           <Text>{`${frontMatter.readingTime} mins`}</Text>
           <Spacer />
           <Text align="end">
-            {moment(frontMatter.publishedAt).format("D MMM YYYY")}
+            {format(parseISO(frontMatter.publishedAt), "d MMM yyyy")}
           </Text>
         </HStack>
         <ReactMarkdown skipHtml components={ChakraUIRenderer(newTheme)}>

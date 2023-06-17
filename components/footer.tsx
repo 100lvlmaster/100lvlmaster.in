@@ -58,7 +58,7 @@ const Footer = () => {
   return (
     <VStack
       py="10px"
-      experimental_spaceY={"20px"}
+      // experimental_spaceY={"20px"}
       align={"stretch"}
       textAlign={"left"}
     >

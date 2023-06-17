@@ -6,7 +6,7 @@ export interface Post {
   description: string;
   slug: string;
   url: string;
-  published_timestamp: Date;
+  published_timestamp: string;
   cover_image: string;
   social_image: string;
   canonical_url: string;

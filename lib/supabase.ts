@@ -2,7 +2,12 @@ import { createClient } from "@supabase/supabase-js";
 import { Database } from "./database.types";
 const supabase = createClient<Database>(
   process.env.SUPABASE_URL ?? "",
-  process.env.SUPABASE_KEY ?? ""
+  process.env.SUPABASE_KEY ?? "",
+  {
+    auth: {
+      persistSession: false,
+    },
+  }
 );
 
 export const getTopSlugsByCount = async (): Promise<{ slug: string }[]> => {
@@ -22,15 +27,13 @@ const getViews = async (slug: string): Promise<number> => {
     .select(`count`)
     .match({ slug: slug })
     .single();
-
   if (error && error.details.includes(`0 rows`)) {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from(`views`)
       .insert({ slug: slug, count: 1 }, { count: `planned` })
       .returns()
       .single();
-
-    return (data as { count: number })?.count ?? 0;
+    return (data as unknown as { count: number })?.count ?? 0;
   }
   return views?.count ?? 0;
 };
