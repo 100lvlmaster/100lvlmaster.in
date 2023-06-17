@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  swcMinify: true,
   productionBrowserSourceMaps: true,
   headers: async () => {
     return [
@@ -23,6 +24,17 @@ module.exports = {
       "media3.giphy.com",
       "imgur.com",
     ],
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        "react/jsx-runtime.js": "preact/compat/jsx-runtime",
+        react: "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
+      });
+    }
+    return config;
   },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
