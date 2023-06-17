@@ -1,6 +1,3 @@
-// import highlight from "remark-syntax-highlight";
-// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import NextImage from "next/image";
 import ReactMarkdown from "react-markdown";
@@ -13,7 +10,7 @@ import {
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
-import moment from "moment";
+import { format, parseISO } from "date-fns";
 import ViewCounter from "../../components/views_count";
 import MainLayout from "../../layouts/main-layout";
 import { articleBySlug, blogArticles } from "../../lib/devto";
@@ -75,7 +72,10 @@ const BlogPost = ({ post }: Props) => {
 
   return (
     <MainLayout meta={frontMatter}>
-      <VStack align="stretch" experimental_spaceY={"5"}>
+      <VStack
+        align="stretch"
+        //  experimental_spaceY={"5"}
+      >
         <Text fontSize={"4xl"} fontWeight={"black"}>
           {frontMatter.title}
         </Text>
@@ -98,7 +98,7 @@ const BlogPost = ({ post }: Props) => {
           <Text>{`${frontMatter.readingTime} mins`}</Text>
           <Spacer />
           <Text align="end">
-            {moment(frontMatter.publishedAt).format("D MMM YYYY")}
+            {format(parseISO(frontMatter.publishedAt), "d MMM yyyy")}
           </Text>
         </HStack>
         <ReactMarkdown skipHtml components={ChakraUIRenderer(newTheme)}>

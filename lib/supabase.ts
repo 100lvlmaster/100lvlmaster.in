@@ -2,11 +2,16 @@ import { createClient } from "@supabase/supabase-js";
 import { Database } from "./database.types";
 const supabase = createClient<Database>(
   process.env.SUPABASE_URL ?? "",
-  process.env.SUPABASE_KEY ?? ""
+  process.env.SUPABASE_KEY ?? "",
+  {
+    auth: {
+      persistSession: false,
+    },
+  }
 );
 
 export const getTopSlugsByCount = async (): Promise<{ slug: string }[]> => {
-  const { data, error } = await supabase
+  const { data } = await supabase
     .from("views")
     .select("slug,count")
     .order("count", { ascending: false })
@@ -30,7 +35,7 @@ const getViews = async (slug: string): Promise<number> => {
       .returns()
       .single();
 
-    return (data as { count: number })?.count ?? 0;
+    return (data as unknown as { count: number })?.count ?? 0;
   }
   return views?.count ?? 0;
 };

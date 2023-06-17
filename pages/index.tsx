@@ -104,7 +104,11 @@ const Home = ({ posts }: { posts: Post[] }) => {
           </NextLink>
         </button>
       </HStack>
-      <VStack py="10" experimental_spaceY={"5"} align={"stretch"}>
+      <VStack
+        py="10"
+        // /experimental_spaceY={"5"}
+        align={"stretch"}
+      >
         {posts &&
           posts?.map((e, i) => {
             return (

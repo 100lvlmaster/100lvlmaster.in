@@ -15,7 +15,11 @@ const NavBar = () => {
     toggleColorMode();
   };
   return (
-    <HStack minW={"100%"} experimental_spaceX={"5"} py="20px">
+    <HStack
+      minW={"100%"}
+      // experimental_spaceX={"5"}
+      py="20px"
+    >
       <NextLink href={"/"}>
         <Button
           // as="a"
