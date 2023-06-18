@@ -30,7 +30,7 @@ const Home = ({ posts }: { posts: Post[] }) => {
             Hey, I&apos;m Navin Kodag
           </Text>
           I&apos;m a Fullstack developer. &nbsp;I work on NodeJs, Golang,
-          Flutter, NextJs and Svelte.
+          Flutter, React and Svelte.
           <Text>
             I see that you&apos;ve stumbled upon my small kingdom on the
             internet. I like to solve problems with code.

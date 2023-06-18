@@ -18,10 +18,6 @@ const Footer = () => {
       href: "/",
     },
     {
-      name: "About",
-      href: "/about",
-    },
-    {
       name: "Blog",
       href: "/blog",
     },
@@ -81,7 +77,12 @@ const Footer = () => {
           );
         })}
       </Grid>
-      <Text fontSize={"smaller"} textColor={"gray.500"} textAlign={"center"}>
+      <Text
+        fontSize={"smaller"}
+        textColor={"gray.500"}
+        marginTop={"30px"}
+        textAlign={"center"}
+      >
         Made with nextjs and ❤
       </Text>
     </VStack>

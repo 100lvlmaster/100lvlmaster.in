@@ -31,17 +31,6 @@ const NavBar = () => {
           Home
         </Button>
       </NextLink>
-      <NextLink href={"/about"}>
-        <Button
-          // as="a"
-          cursor="pointer"
-          size={"sm"}
-          fontWeight={"medium"}
-          variant={pathname == "/about" ? "solid" : "ghost"}
-        >
-          About
-        </Button>
-      </NextLink>
       <NextLink href={"/blog"}>
         <Button
           // as="a"

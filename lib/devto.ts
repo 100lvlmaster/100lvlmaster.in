@@ -1,4 +1,3 @@
-import { getTopSlugsByCount } from "./supabase";
 import { Post } from "./types";
 
 const requestInit = {

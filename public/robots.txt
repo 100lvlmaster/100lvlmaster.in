@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.100lvlmaster.com
+
+# Sitemaps
+Sitemap: https://www.100lvlmaster.com/sitemap.xml

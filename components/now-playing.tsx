@@ -6,7 +6,7 @@ const NowPlaying = () => {
   const { data } = useSWR("/api/now-playing", fetcher);
 
   return (
-    <HStack>
+    <HStack marginY={"20px"}>
       <Box h="5" w="5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
