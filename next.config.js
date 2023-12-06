@@ -11,20 +11,14 @@ module.exports = {
     ];
   },
   images: {
-    domains: [
-      "res.cloudinary.com",
-      "flowfi.live",
-      "encrypted-tbn0.gstatic.com",
-      "www.pngkit.com",
-      "raw.githubusercontent.com",
-      "i.ibb.co",
-      "cdn.icon-icons.com",
-      "www.freepnglogos.com",
-      "media.giphy.com",
-      "media3.giphy.com",
-      "imgur.com",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
     ],
   },
+  /// TODO: add preact back once we change css framework or something
   webpack: (config, { dev, isServer }) => {
     //   // Replace React with Preact only in client production build
     //   // This is causing an issue if used with chakra-ui refer here:
