@@ -12,7 +12,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { format, parseISO } from "date-fns";
-import ViewCounter from "../../components/views_count";
 import MainLayout from "../../layouts/main-layout";
 import { articleBySlug, blogArticles } from "../../lib/devto";
 import { Post } from "../../lib/types";
@@ -90,7 +89,6 @@ const BlogPost = ({ post }: Props) => {
           />
         </Box>
         <HStack color={"grey"}>
-          <ViewCounter shouldRegisterView={true} slug={post.slug} />
           <Text>{` • `}</Text>
           <Text>{`${frontMatter.readingTime} mins`}</Text>
           <Spacer />

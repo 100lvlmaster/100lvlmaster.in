@@ -1,6 +1,5 @@
 import { Box, Text, VStack } from "@chakra-ui/react";
 import NextLink from "next/link";
-import ViewCounter from "../../components/views_count";
 import MainLayout from "../../layouts/main-layout";
 import { blogArticles } from "../../lib/devto";
 import { Post } from "../../lib/types";
@@ -26,9 +25,6 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
                       {e.title}
                     </Text>
                     <Text color={"grey"}>{e.description}</Text>
-                    <Box color={"grey"} fontSize={"xs"} alignItems={"end"}>
-                      <ViewCounter slug={e.slug} />
-                    </Box>
                   </VStack>
                 </Box>
               </NextLink>
