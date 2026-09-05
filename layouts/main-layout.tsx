@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Head from "next/head";
 import Footer from "../components/footer";
 import NavBar from "../components/navbar";
@@ -5,7 +6,7 @@ import { SITE_URL } from "../lib/site";
 import { Seo } from "../lib/types";
 
 interface Props {
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
   meta?: Seo;
 }
 
