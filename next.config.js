@@ -1,7 +1,10 @@
-module.exports = {
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   swcMinify: true,
-  productionBrowserSourceMaps: true,
   headers: async () => {
     return [
       {
@@ -10,30 +13,17 @@ module.exports = {
       },
     ];
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-  },
-  /// TODO: add preact back once we change css framework or something
   webpack: (config, { dev, isServer }) => {
-    //   // Replace React with Preact only in client production build
-    //   // This is causing an issue if used with chakra-ui refer here:
-    //   // https://github.com/chakra-ui/chakra-ui/issues/2012
-    //   // if (!dev && !isServer) {
-    //   //   Object.assign(config.resolve.alias, {
-    //   //     react: "preact/compat",
-    //   //     "react-dom/test-utils": "preact/test-utils",
-    //   //     "react-dom": "preact/compat",
-    //   //   });
-    //   // }
-
+    // Replace React with Preact only in the client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: "preact/compat",
+        "react-dom": "preact/compat",
+      });
+    }
     return config;
   },
-};
+});
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';

@@ -1,67 +1,75 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import {
-  Button,
-  HStack,
-  IconButton,
-  Spacer,
-  useColorMode,
-} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
+import { useTheme } from "../lib/use-theme";
+
 const NavBar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { pathname } = useRouter();
-  const onClickToggle = () => {
-    toggleColorMode();
-  };
+  const { theme, toggle } = useTheme();
+
+  const active =
+    "bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-white";
+  const inactive =
+    "text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800";
+
   return (
-    <HStack
-      minW={"100%"}
-      // experimental_spaceX={"5"}
-      py="20px"
-    >
-      <NextLink href={"/"}>
-        <Button
-          // as="a"
-          cursor="pointer"
-          size={"sm"}
-          fontWeight={"medium"}
-          variant={pathname == "/" ? "solid" : "ghost"}
+    <nav className="flex w-full items-center gap-1 py-5">
+      <NextLink href="/">
+        <button
+          className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+            pathname === "/" ? active : inactive
+          }`}
         >
           Home
-        </Button>
+        </button>
       </NextLink>
-      <NextLink href={"/blog"}>
-        <Button
-          // as="a"
-          cursor="pointer"
-          size={"sm"}
-          fontWeight={"medium"}
-          variant={pathname == "/blog" ? "solid" : "ghost"}
+      <NextLink href="/blog">
+        <button
+          className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+            pathname === "/blog" ? active : inactive
+          }`}
         >
           Blog
-        </Button>
+        </button>
       </NextLink>
       <NextLink href="/work">
-        <Button
-          // as="a"
-          cursor="pointer"
-          size={"sm"}
-          fontWeight={"medium"}
-          variant={pathname == "/work" ? "solid" : "ghost"}
+        <button
+          className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+            pathname === "/work" ? active : inactive
+          }`}
         >
           Work
-        </Button>
+        </button>
       </NextLink>
 
-      <Spacer />
-      <IconButton
-        size={"sm"}
-        onClick={() => onClickToggle()}
+      <div className="flex-1" />
+      <button
+        onClick={toggle}
         aria-label="Toggle dark mode"
-        icon={colorMode == "dark" ? <SunIcon /> : <MoonIcon />}
-      />
-    </HStack>
+        className="cursor-pointer rounded-md p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
+      >
+        {theme === "dark" ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12.43 2.3a9.917 9.917 0 0 0-6.63.64c-.35.16-.41.64-.1.86C8.3 5.76 9.5 8.72 9.5 12c0 3.28-1.2 6.24-3.8 8.2-.31.22-.25.7.1.86a9.917 9.917 0 0 0 6.63.64c5.16-.52 9.17-4.53 9.65-9.69.53-5.7-3.89-10.33-9.65-9.71z" />
+          </svg>
+        )}
+      </button>
+    </nav>
   );
 };
 export default NavBar;

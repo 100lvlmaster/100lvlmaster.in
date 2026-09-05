@@ -1,23 +1,16 @@
-export interface Post {
-	id: number;
+export interface PostMeta {
 	title: string;
 	description: string;
 	slug: string;
-	url: string;
-	published_timestamp: string;
-	cover_image: string;
-	social_image: string;
-	canonical_url: string;
-	created_at: Date;
-	edited_at: Date | null;
-	published_at: Date;
-	reading_time_minutes: number;
-	body_html: string;
-	body_markdown: string;
+	publishedAt: string;
+	coverImage?: string;
+	readingTime?: number;
+	tags?: string[];
+	canonicalUrl?: string;
 }
 
-export interface Views {
-	count: number;
+export interface Post extends PostMeta {
+	content: string;
 }
 
 export interface Project {

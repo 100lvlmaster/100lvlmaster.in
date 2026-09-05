@@ -1,124 +1,97 @@
-import ChakraUIRenderer from "chakra-ui-markdown-renderer";
-import NextImage from "next/image";
-import ReactMarkdown from "react-markdown";
-
-import {
-  Box,
-  Container,
-  HStack,
-  Spacer,
-  Text,
-  useColorMode,
-  VStack,
-} from "@chakra-ui/react";
-import { format, parseISO } from "date-fns";
+import Head from "next/head";
 import MainLayout from "../../layouts/main-layout";
-import { articleBySlug, blogArticles } from "../../lib/devto";
+import { getAllPosts, getPostBySlug } from "../../lib/posts";
+import { SITE_URL } from "../../lib/site";
 import { Post } from "../../lib/types";
+
 interface Props {
   post: Post;
 }
+
 const BlogPost = ({ post }: Props) => {
-  const { colorMode } = useColorMode();
-  const newTheme = {
-    img: (props: any) => {
-      const { children, src } = props;
-      return (
-        <Container
-          pos={"relative"}
-          height="400px"
-          width={"100%"}
-          borderRadius="10px"
-          marginY={5}
-        >
-          <NextImage src={src} alt={src} fill={true} />
-        </Container>
-      );
-    },
-    blockquote: (props: any) => {
-      const { children } = props;
-      return <Box fontStyle={"italic"}>{children}</Box>;
-    },
-    p: (props: any) => {
-      const { children } = props;
-      return <div>{children}</div>;
-    },
-    code: (props: any) => {
-      const { children } = props;
-      return (
-        <Box
-          bgColor={colorMode == "dark" ? "gray.800" : "gray.100"}
-          p="4"
-          borderRadius={"md"}
-          overflow={"auto"}
-          my="2"
-        >
-          {children}
-        </Box>
-      );
-    },
+  const articleUrl = `${SITE_URL}/blog/${post.slug}`;
+
+  const meta = {
+    title: post.title,
+    description: post.description,
+    image: post.coverImage ?? `${SITE_URL}/avatar.jpeg`,
+    url: articleUrl,
   };
 
-  const frontMatter = {
-    title: post.title,
-    description: post.title,
-    image: post.cover_image,
-    type: `article`,
-    url: post.url,
-    readingTime: post.reading_time_minutes,
-    publishedAt: post.published_timestamp,
+  const publishedAt = post.publishedAt ? new Date(post.publishedAt) : null;
+  const publishedDate =
+    publishedAt && !Number.isNaN(publishedAt.getTime())
+      ? new Intl.DateTimeFormat("en-GB", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+        }).format(publishedAt)
+      : "";
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: post.coverImage,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: "Navin Kodag",
+      url: SITE_URL,
+    },
+    mainEntityOfPage: articleUrl,
   };
 
   return (
-    <MainLayout meta={frontMatter}>
-      <VStack align="stretch">
-        <Text fontSize={"4xl"} fontWeight={"black"}>
-          {frontMatter.title}
-        </Text>
-        <Box
-          pos={"relative"}
-          height="400px"
-          width={"100%"}
-          padding={5}
-          borderRadius="10px"
-        >
-          <NextImage
-            src={post.cover_image}
-            alt={post.cover_image}
-            fill={true}
-          />
-        </Box>
-        <HStack color={"grey"}>
-          <Text>{` • `}</Text>
-          <Text>{`${frontMatter.readingTime} mins`}</Text>
-          <Spacer />
-          <Text align="end">
-            {format(parseISO(frontMatter.publishedAt), "d MMM yyyy")}
-          </Text>
-        </HStack>
-        <ReactMarkdown skipHtml components={ChakraUIRenderer(newTheme)}>
-          {post.body_markdown}
-        </ReactMarkdown>
-      </VStack>
+    <MainLayout meta={meta}>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+      <div className="flex flex-col">
+        <h1 className="text-4xl font-black">{post.title}</h1>
+        {post.coverImage && (
+          <div className="relative my-5 h-[400px] w-full overflow-hidden rounded-[10px]">
+            <img
+              src={post.coverImage}
+              alt={post.title}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        )}
+        <div className="flex text-gray-500">
+          <span>{` • `}</span>
+          <span>{`${post.readingTime ?? 1} mins`}</span>
+          <div className="flex-1" />
+          <span className="text-right">{publishedDate}</span>
+        </div>
+        <div
+          className="markdown"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </div>
     </MainLayout>
   );
 };
 
 export default BlogPost;
-///
+
 export async function getStaticPaths() {
-  const posts = await blogArticles();
+  const posts = getAllPosts();
   return {
-    paths: posts.map((p) => ({
-      params: {
-        slug: p.slug,
-      },
-    })),
-    fallback: `blocking`,
+    paths: posts.map((p) => ({ params: { slug: p.slug } })),
+    fallback: false,
   };
 }
-///
+
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const post = await articleBySlug(params.slug);
-  return { props: { post }, revalidate: 21600 };
+  const post = getPostBySlug(params.slug);
+  if (!post) {
+    return { notFound: true };
+  }
+  return { props: { post } };
 }

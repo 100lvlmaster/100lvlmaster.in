@@ -1,22 +1,10 @@
-@font-face {
-  font-family: "Fira Sans";
-  src: url("/firasans.woff2");
-  font-display: swap;
-}
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Fira Sans", monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Fira Sans", monospace;
 }
 
 ::-webkit-scrollbar {
@@ -41,4 +29,67 @@ pre {
 }
 .profile-image {
   border-radius: 50%;
+}
+
+.markdown pre {
+  background: #1a1b1e;
+  color: #e4e4e7;
+  padding: 16px;
+  border-radius: 8px;
+  overflow: auto;
+}
+.markdown code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.markdown img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.markdown blockquote {
+  font-style: italic;
+  border-left: 3px solid #9ca3af;
+  padding-left: 12px;
+}
+
+/* highlight.js token colors (VSCode-dark-ish) */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type {
+  color: #c586c0;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #ce9178;
+}
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #b5cea8;
+}
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+  color: #6a9955;
+}
+.hljs-function,
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #dcdcaa;
+}
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attr,
+.hljs-name {
+  color: #9cdcfe;
 }
