@@ -1,6 +1,8 @@
 import NextLink from "next/link";
 import MainLayout from "../layouts/main-layout";
+import ExperienceCounter, { ExperienceYears } from "../components/experience_counter";
 import { PostMeta } from "../lib/types";
+import { formatDate } from "../lib/date";
 import { getAllPosts } from "../lib/posts";
 
 const Home = ({ posts }: { posts: PostMeta[] }) => {
@@ -8,25 +10,25 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
     <MainLayout>
       <div className="mt-8 flex flex-col-reverse items-center lg:flex-row">
         <div>
-          <p className="py-5 text-4xl font-black sm:text-5xl">
-            Hey, I&apos;m Navin Kodag
-          </p>
-          I&apos;m a Fullstack developer. &nbsp;I work on NodeJs, Golang,
-          Flutter, React and Svelte.
+          <p className="py-5 text-4xl sm:text-5xl">Hey, I&apos;m Navin Kodag</p>
+          I&apos;m a Fullstack developer with{" "}
+          <span className="group relative inline-block cursor-help underline decoration-dotted decoration-gray-400 underline-offset-4">
+            <ExperienceYears /> +
+            <span className="pointer-events-none absolute left-1/2 top-full z-20 mt-2 -translate-x-1/2 whitespace-nowrap rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm shadow-lg opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:border-gray-700 dark:bg-gray-900">
+              <ExperienceCounter />
+            </span>
+          </span>{" "}
+          of experience.
           <p>
-            I see that you&apos;ve stumbled upon my small kingdom on the
-            internet. I like to solve problems with code.
+            I see that you&apos;ve stumbled upon my small kingdom on the internet. I like to solve
+            problems with code.
           </p>
         </div>
       </div>
 
       <div className="py-10">
         <div className="flex gap-3">
-          <a
-            rel="noreferrer"
-            href="https://github.com/100lvlmaster"
-            target="_blank"
-          >
+          <a rel="noreferrer" href="https://github.com/100lvlmaster" target="_blank">
             <button
               className="cursor-pointer rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label="github"
@@ -53,11 +55,7 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
               </svg>
             </button>
           </a>
-          <a
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/navin-kodag/"
-            target="_blank"
-          >
+          <a rel="noreferrer" href="https://www.linkedin.com/in/navin-kodag/" target="_blank">
             <button
               className="cursor-pointer rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label="linkedin"
@@ -77,9 +75,9 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
       </div>
 
       <div className="flex items-end">
-        <p className="text-3xl font-black">Posts</p>
+        <p className="text-3xl">Posts</p>
         <div className="flex-1" />
-        <button className="cursor-pointer">
+        <button className="cursor-pointer hover:underline">
           <NextLink href="/blog">
             <span className="flex items-center gap-1 text-sm">
               See all
@@ -99,12 +97,16 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
 
       <div className="flex flex-col gap-3 py-3">
         {posts &&
-          posts?.map((e, i) => {
+          posts?.map((e) => {
             return (
-              <NextLink href={`/blog/${e.slug}`} key={`${e.slug}-${i}`}>
+              <NextLink className="py-2" href={`/blog/${e.slug}`} key={`${e.slug}-${e.title} `}>
                 <div>
                   <div className="flex flex-col">
-                    <span className="text-xl font-semibold">{e.title}</span>
+                    <span className="text-xl">
+                      {e.title}{" "}
+                      <span className="text-sm text-gray-500">{formatDate(e.publishedAt)}</span>
+                    </span>
+
                     <span className="text-gray-500">{e.description}</span>
                   </div>
                 </div>

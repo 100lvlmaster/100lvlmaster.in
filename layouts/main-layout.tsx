@@ -21,7 +21,7 @@ const MainLayout = ({ meta: metaProps, children }: Props) => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col border-t-2 border-blue-500">
+    <div className="flex min-h-screen flex-col">
       <Head>
         <title>{meta.title}</title>
         <link rel="canonical" href={meta.url} />

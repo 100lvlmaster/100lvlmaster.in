@@ -12,7 +12,7 @@ export default class Document extends NextDocument {
             }}
           />
         </Head>
-        <body className="bg-white text-gray-900 dark:bg-[#101111] dark:text-gray-100">
+        <body className="bg-white text-gray-800 dark:bg-[#101111] dark:text-gray-300">
           <Main />
           <NextScript />
         </body>

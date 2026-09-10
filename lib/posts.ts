@@ -81,7 +81,10 @@ export function getAllPosts(): PostMeta[] {
     })
     .filter((p): p is PostMeta => p !== null);
 
-  return posts.sort((a, b) => (a.publishedAt > b.publishedAt ? -1 : 1));
+  return posts.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
 }
 
 export function getPostBySlug(slug: string): Post | null {

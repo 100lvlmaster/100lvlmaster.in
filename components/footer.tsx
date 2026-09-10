@@ -1,13 +1,9 @@
 const Footer = () => {
   return (
-    <div className="py-2.5">
-      <hr className="border-gray-200 dark:border-gray-700" />
+    <div className="my-4">
+      <hr className="border-gray-200 dark:border-gray-700 py-2" />
       <div className="flex justify-end gap-3">
-        <a
-          rel="noreferrer"
-          href="https://github.com/100lvlmaster"
-          target="_blank"
-        >
+        <a rel="noreferrer" href="https://github.com/100lvlmaster" target="_blank">
           <button
             className="cursor-pointer rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
             aria-label="github"
@@ -34,11 +30,7 @@ const Footer = () => {
             </svg>
           </button>
         </a>
-        <a
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/navin-kodag/"
-          target="_blank"
-        >
+        <a rel="noreferrer" href="https://www.linkedin.com/in/navin-kodag/" target="_blank">
           <button
             className="cursor-pointer rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
             aria-label="linkedin"
@@ -56,7 +48,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="mt-7 text-center text-xs text-gray-500">
-        Copyright © 2023 | All rights reserved.
+        Copyright © Navin Kodag 2023 - 2026 | All rights reserved.
       </p>
     </div>
   );

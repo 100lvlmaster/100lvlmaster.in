@@ -6,22 +6,18 @@ interface Props {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <a target="_blank" rel="noreferrer" href={project.url || project.github}>
+    <div>
       <div className="flex h-full flex-col rounded-lg border border-gray-200 transition-shadow hover:shadow-md dark:border-gray-700">
         <div className="flex-grow p-4">
           <p className="text-lg">{project.title}</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            {project.description}
-          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">{project.description}</p>
         </div>
         <div className="flex w-full items-center px-4 py-2.5">
-          <span className="tracking-widest">
-            {project.technology.toUpperCase()}
-          </span>
+          <span className="tracking-widest">{project.technology.toUpperCase()}</span>
           <div className="flex-1" />
           {project.url && (
-            <a target="_blank" rel="noreferrer" href={project.url}>
-              <button className="cursor-pointer p-2">
+            <a target="_blank" rel="noreferrer" href={project.url} aria-label={project.title}>
+              <button className="cursor-pointer p-2" aria-label={project.title}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="15"
@@ -35,8 +31,8 @@ const ProjectCard = ({ project }: Props) => {
             </a>
           )}
           {project.github && (
-            <a target="_blank" rel="noreferrer" href={project.github}>
-              <button className="cursor-pointer p-2">
+            <a target="_blank" rel="noreferrer" href={project.github} aria-label={project.title}>
+              <button className="cursor-pointer p-2" aria-label={project.title}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="15"
@@ -51,7 +47,7 @@ const ProjectCard = ({ project }: Props) => {
           )}
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

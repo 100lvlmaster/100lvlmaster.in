@@ -6,16 +6,14 @@ const NavBar = () => {
   const { pathname } = useRouter();
   const { theme, toggle } = useTheme();
 
-  const active =
-    "bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-white";
-  const inactive =
-    "text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800";
+  const active = "bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-white";
+  const inactive = "text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800";
 
   return (
     <nav className="flex w-full items-center gap-1 py-5">
       <NextLink href="/">
         <button
-          className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+          className={`cursor-pointer rounded-md px-3 py-1 text-base ${
             pathname === "/" ? active : inactive
           }`}
         >
@@ -24,7 +22,7 @@ const NavBar = () => {
       </NextLink>
       <NextLink href="/blog">
         <button
-          className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+          className={`cursor-pointer rounded-md px-3 py-1 text-base  ${
             pathname === "/blog" ? active : inactive
           }`}
         >
@@ -33,7 +31,7 @@ const NavBar = () => {
       </NextLink>
       <NextLink href="/work">
         <button
-          className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+          className={`cursor-pointer rounded-md px-3 py-1 text-base  ${
             pathname === "/work" ? active : inactive
           }`}
         >

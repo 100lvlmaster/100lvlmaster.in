@@ -2,6 +2,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+
 a {
   color: inherit;
   text-decoration: none;

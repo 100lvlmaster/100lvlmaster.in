@@ -53,14 +53,10 @@ const BlogPost = ({ post }: Props) => {
         />
       </Head>
       <div className="flex flex-col">
-        <h1 className="text-4xl font-black">{post.title}</h1>
+        <h1 className="text-4xl">{post.title}</h1>
         {post.coverImage && (
           <div className="relative my-5 h-[400px] w-full overflow-hidden rounded-[10px]">
-            <img
-              src={post.coverImage}
-              alt={post.title}
-              className="h-full w-full object-cover"
-            />
+            <img src={post.coverImage} alt={post.title} className="h-full w-full object-cover" />
           </div>
         )}
         <div className="flex text-gray-500">
@@ -69,10 +65,7 @@ const BlogPost = ({ post }: Props) => {
           <div className="flex-1" />
           <span className="text-right">{publishedDate}</span>
         </div>
-        <div
-          className="markdown"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="markdown" dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </MainLayout>
   );
