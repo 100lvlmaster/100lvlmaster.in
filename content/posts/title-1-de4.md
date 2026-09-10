@@ -36,3 +36,7 @@ As I'm writing this, it sounds so weird for someone who isn't familiar with the 
 Alright then,
 LESGOOOOO!
 ![drake.gif](https://media.giphy.com/media/S5yqNNTQlEZfqQ7InC/giphy.gif)
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

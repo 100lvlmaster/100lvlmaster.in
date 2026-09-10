@@ -29,13 +29,13 @@ const NavBar = () => {
           Blog
         </button>
       </NextLink>
-      <NextLink href="/work">
+      <NextLink href="/projects">
         <button
           className={`cursor-pointer rounded-md px-3 py-1 text-base  ${
-            pathname === "/work" ? active : inactive
+            pathname === "/projects" ? active : inactive
           }`}
         >
-          Work
+          Projects
         </button>
       </NextLink>
 

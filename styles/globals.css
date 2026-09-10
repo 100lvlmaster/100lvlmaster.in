@@ -32,12 +32,18 @@ pre {
   border-radius: 50%;
 }
 
+.markdown p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .markdown pre {
   background: #1a1b1e;
   color: #e4e4e7;
   padding: 16px;
   border-radius: 8px;
   overflow: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .markdown code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -45,11 +51,48 @@ pre {
 .markdown img {
   max-width: 100%;
   border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .markdown blockquote {
   font-style: italic;
   border-left: 3px solid #9ca3af;
   padding-left: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.markdown ul,
+.markdown ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.markdown ul {
+  list-style: disc;
+}
+.markdown ol {
+  list-style: decimal;
+}
+.markdown li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.markdown li ul,
+.markdown li ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.markdown li > p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.markdown ul ul,
+.markdown ol ul {
+  list-style: circle;
+}
+.markdown ul ul ul,
+.markdown ol ul ul {
+  list-style: square;
 }
 
 /* highlight.js token colors (VSCode-dark-ish) */

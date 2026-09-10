@@ -164,4 +164,6 @@ export default ViewCounter;
  
  The code of this project lives at : https://github.com/100lvlmaster/www.navinkodag.com 
  ---
-You can find me at: https://www.navinkodag.com
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

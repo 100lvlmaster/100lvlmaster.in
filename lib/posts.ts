@@ -8,20 +8,16 @@ import type { Post, PostMeta } from "./types";
 const postsDirectory = path.join(process.cwd(), "content", "posts");
 
 const escapeHtml = (str: string) =>
-  str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+  str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const md = new MarkdownIt({
   html: true,
   linkify: true,
+  breaks: true,
   highlight: (str, lang) => {
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return hljs.highlight(str, { language: lang, ignoreIllegals: true })
-          .value;
+        return hljs.highlight(str, { language: lang, ignoreIllegals: true }).value;
       } catch {
         return escapeHtml(str);
       }
@@ -46,9 +42,7 @@ function getPostFiles(): string[] {
   return fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
 }
 
-function readPostFile(
-  slug: string,
-): { data: Record<string, unknown>; content: string } | null {
+function readPostFile(slug: string): { data: Record<string, unknown>; content: string } | null {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   if (!fs.existsSync(fullPath)) {
     return null;
@@ -67,8 +61,7 @@ function toMeta(slug: string, data: Record<string, unknown>): PostMeta {
   if (data.coverImage != null) meta.coverImage = data.coverImage as string;
   if (data.readingTime != null) meta.readingTime = data.readingTime as number;
   if (data.tags != null) meta.tags = data.tags as string[];
-  if (data.canonicalUrl != null)
-    meta.canonicalUrl = data.canonicalUrl as string;
+  if (data.canonicalUrl != null) meta.canonicalUrl = data.canonicalUrl as string;
   return meta;
 }
 
@@ -82,8 +75,7 @@ export function getAllPosts(): PostMeta[] {
     .filter((p): p is PostMeta => p !== null);
 
   return posts.sort(
-    (a, b) =>
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   );
 }
 

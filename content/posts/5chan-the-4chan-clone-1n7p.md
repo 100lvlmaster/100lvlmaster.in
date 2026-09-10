@@ -52,8 +52,6 @@ So ... LESGOOOO
 ![cat-ready.gif](https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif?cid=ecf05e47kq1h576i6japfzxpjvqixjrl4rihalyop04ipgsf&rid=giphy.gif&ct=g)
  
 ---
-You can find me at:
-
-Website : https://www.navinkodag.com 
-
-Github : https://github.com/100lvlmaster
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

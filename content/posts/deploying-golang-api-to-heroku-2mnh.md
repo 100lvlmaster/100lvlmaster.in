@@ -72,3 +72,7 @@ That's about it.
 Now we can check our server at,
 
 https://intersect-api-v2.herokuapp.com
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

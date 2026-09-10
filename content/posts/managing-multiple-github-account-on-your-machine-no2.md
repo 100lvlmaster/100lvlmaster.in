@@ -28,4 +28,6 @@ git clone https://{username}:{PAT}@github.com/{username/org}/{repo}
 
 Yes, it was as simple as that.
 
-You can find me at https://www.navinkodag.com
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

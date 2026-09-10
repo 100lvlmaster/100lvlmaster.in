@@ -58,5 +58,6 @@ The Alchemist is a fantastic book and has a story filled with optimism with some
 
 “*There is only one thing that makes a dream impossible to achieve: the fear of failure*.”
 
-Find me at:
-[www.navinkodag.com](https://www.navinkodag.com)
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

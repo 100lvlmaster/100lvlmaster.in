@@ -135,3 +135,7 @@ now we can simply call this code in our firebase messaging onBackgroundMessage c
 ```
 and now we can make cloud firestore queries even if the app is in background.
 ![mindblown.gif](https://media.giphy.com/media/SACoDGYTvVNhZYNb5a/giphy.gif)
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

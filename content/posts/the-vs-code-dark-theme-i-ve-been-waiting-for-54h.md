@@ -71,6 +71,6 @@ I initially made the theme to help my eyes, but if there’s someone like me out
 
 [**One for all - Visual Studio Marketplace**](https://marketplace.visualstudio.com/items?itemName=100lvlmaster.one-for-all)
 
-Find me at:
-
-[https://navinko.netlify.app/](https://navinko.netlify.app/)
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

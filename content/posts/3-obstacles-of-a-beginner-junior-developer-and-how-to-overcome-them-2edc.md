@@ -52,3 +52,7 @@ Divide the tasks into smaller sub-tasks and estimate all of their time together.
 ## But Then Again
 
 Since we’re all different and we navigate through life in our own ways. It’d be nice to hear how **you** overcame these obstacles.
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

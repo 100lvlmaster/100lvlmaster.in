@@ -103,6 +103,6 @@ The source code of this project lies at:
 
 https://github.com/100lvlmaster/svelte-pwa
 
-You can find me at:
-
-https://www.navinkodag.com
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

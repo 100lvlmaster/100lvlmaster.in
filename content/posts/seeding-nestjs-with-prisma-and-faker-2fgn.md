@@ -126,5 +126,6 @@ The preview of the database:
 
 > (If you're a beginner) don't be alarmed at the number of packages because devDependencies aren't bundled in the production build :]
 
-You can find me at:
-https://www.navinkodag.com
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

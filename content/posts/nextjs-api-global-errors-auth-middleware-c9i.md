@@ -15,7 +15,9 @@ tags:
 
 
 This one's going to be quick. no bs. I was working on a Next.js project and needed a way to handle API Route Errors Globally. Similar to Express in Node.js.
-This is what I've come up with and it works wonders for my setup.
+
+This is what I've come up with and it works wonders for my setup.    
+
 
 - We create a handler function that will take multiple handlers and run them one by one. 
 ```typescript
@@ -124,5 +126,6 @@ literally me profiting
 
 ---
 
-You can look at the code here: [Github](https://github.com/100lvlmaster/next-custom-middleware-example)
-Follow me everywhere. [OG Blog](https://www.navinkodag.com)
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

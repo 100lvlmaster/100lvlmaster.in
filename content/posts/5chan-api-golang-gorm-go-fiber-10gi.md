@@ -327,8 +327,6 @@ After making some test requests these are the screenshots:
 The source code of this project lies at:
 https://github.com/100lvlmaster/5chan-go
 ---- 
-You can find me at:
-Website 
-https://www.navinkodag.com
-Github
-https://github.com/100lvlmaster
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

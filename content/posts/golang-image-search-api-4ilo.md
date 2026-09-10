@@ -250,3 +250,7 @@ go build -o /bin/Intersect_api -v .
 ```
 
 ### Now that's almost all the code we'll need.
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

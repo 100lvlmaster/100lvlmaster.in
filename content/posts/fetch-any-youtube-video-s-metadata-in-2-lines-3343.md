@@ -40,4 +40,7 @@ Gives us a response like this…
     **}**
 
 That’s pretty neat :]
-[**navinko**](https://navinko.netlify.app)
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

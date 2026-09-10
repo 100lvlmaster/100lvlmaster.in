@@ -10,9 +10,6 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
-    "highlight.js": "^11.12.0",
-    "markdown-it": "^15.0.1",
     "next": "16.3.4",
     "preact": "^10.29.8",
     "react": "19.2.8",
@@ -24,6 +21,9 @@
     "@types/markdown-it": "^14.2.0",
     "@types/node": "26.4.1",
     "@types/react": "19.2.18",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.12.0",
+    "markdown-it": "^15.0.1",
     "next-sitemap": "^4.2.3",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",

@@ -180,3 +180,7 @@ const Spacer = () => <div className="flex-grow"></div>;
 ```
 yarn dev
 ```
+
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>

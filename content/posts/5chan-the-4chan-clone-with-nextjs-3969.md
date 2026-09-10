@@ -259,10 +259,8 @@ Here are the screenshots ✨✨
 This project is live at:
 https://5chan.vercel.app/
 
-The source code of this project lies at: https://github.com/100lvlmaster/5chan-go
+The source code of this project lies at: <span class="hover:underline">*https://github.com/100lvlmaster/5chan-go*</span>
 ---- 
-You can find me at:
-Website 
-https://www.navinkodag.com
-Github
-https://github.com/100lvlmaster
+---- 
+Github: <span class="hover:underline">*https://github.com/100lvlmaster*</span>
+Find me at: <span class="hover:underline">*https://www.navinkodag.com*</span>
