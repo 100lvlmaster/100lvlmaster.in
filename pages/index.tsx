@@ -18,7 +18,7 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
               <ExperienceCounter />
             </span>
           </span>{" "}
-          of experience.
+          years of experience.
           <p>
             I see that you&apos;ve stumbled upon my small kingdom on the internet. I like to solve
             problems with code.
